@@ -23,44 +23,44 @@
     5. About
     6. Contact
     7. Free Consultation
-  
-    ### Home
-    
-      - Hero / Intro
-      - Conatct Details
-      - Social Media Accounts
-        Facebook, Instagram, Linkedin, Youtube
 
-    ### Projects
-      - Client Projects
-      - Github Projects
+  ## Home
 
-    ### Services
-      - Web Design & Development
-          - Corporate Basic Website
-          - E-Commerce Shop
-          - Landing Pages
-          - Personal Portfolios
-          - Advanced Custom Websites
-          
-      - Digital Marketing
-          - Google Ads
-          - Linkedin Ads
-          - Facebook Ads
-          
-      - Corporate Branding
-          - Logo Design
-          - Business Cards
-          - Company Profile
-          - Company Leterheads
-          - Email Signitures
+    - Hero / Intro
+    - Conatct Details
+    - Social Media Accounts
+      Facebook, Instagram, Linkedin, Youtube
 
-    ### About
+  ## Projects
+    - Client Projects
+    - Github Projects
 
-    ### Contact
+  ## Services
+    1. Web Design & Development
+        - Corporate Basic Website
+        - E-Commerce Shop
+        - Landing Pages
+        - Personal Portfolios
+        - Advanced Custom Websites
 
-    ### Consultation
-  
+    2. Digital Marketing
+        - Google Ads
+        - Linkedin Ads
+        - Facebook Ads
+
+    3. Corporate Branding
+        - Logo Design
+        - Business Cards
+        - Company Profile
+        - Company Leterheads
+        - Email Signitures
+
+  ### About
+
+  ### Contact
+
+  ### Consultation
+
   
   
  
