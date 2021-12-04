@@ -36,24 +36,24 @@
     - Github Projects
 
   ## Services
-    1. Web Design & Development
-        - Corporate Basic Website
-        - E-Commerce Shop
-        - Landing Pages
-        - Personal Portfolios
-        - Advanced Custom Websites
+  ### 1. Web Design & Development
+      - Corporate Basic Website
+      - E-Commerce Shop
+      - Landing Pages
+      - Personal Portfolios
+      - Advanced Custom Websites
 
-    2. Digital Marketing
-        - Google Ads
-        - Linkedin Ads
-        - Facebook Ads
+  ### 2. Digital Marketing
+      - Google Ads
+      - Linkedin Ads
+      - Facebook Ads
 
-    3. Corporate Branding
-        - Logo Design
-        - Business Cards
-        - Company Profile
-        - Company Leterheads
-        - Email Signitures
+  ### 3. Corporate Branding
+      - Logo Design
+      - Business Cards
+      - Company Profile
+      - Company Leterheads
+      - Email Signitures
 
   ### About
 
