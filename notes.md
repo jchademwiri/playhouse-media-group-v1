@@ -1,33 +1,52 @@
 # Portfolio Development Notes
-
+  ## Importent Notes
+  1) Domain - www.jacdev.co.za
+  2) Web Hosting - Versel
+  3) Email Hosting - Axxess
+  4) Tech Stack 
+     1) Next JS
+     2) SCSS
+     3) MongoDB
+  5) Version Control - Github
+  6) Media Storage - Cloudnary
+     
   ## Check List
-    - SEO,
-    - Perfomance,
-    - SiteMap.
-    - Web Dev - Testing,
-    - Page Insights,
+    - SEO Optimisation
+    - SSG 
+    - SSR
+    - Dark Mode
+    
+    - Perfomance
+    - SiteMap
+    - Web Dev - Testing
+    - Page Insights
     - Lighthouse
+
   
- ## APIs & Database
+  ## APIs
     - Youtube
     - Github
-    - MongoDB
+    - Google Maps
+    
+  ## Analytics
     - Google Analytics
   
   
  ## Pages
     1. Home
     2. Projects
-    3. Project/project-name
-    4. Services/service-name
-    5. About
-    6. Contact
-    7. Free Consultation
+        .../single-project-name
+    3. Services
+        .../single-service-name
+    4. About
+    5. Contact
+    6. Consultation
 
   ## Home
 
     - Hero / Intro
     - Conatct Details
+    - Call To Action
     - Social Media Accounts
       Facebook, Instagram, Linkedin, Youtube
 
@@ -36,30 +55,53 @@
     - Github Projects
 
   ## Services
-  ### 1. Web Design & Development
+   ### 1. Web Design & Development
       - Corporate Basic Website
       - E-Commerce Shop
       - Landing Pages
       - Personal Portfolios
       - Advanced Custom Websites
 
-  ### 2. Digital Marketing
+   ### 2. Digital Marketing
       - Google Ads
       - Linkedin Ads
       - Facebook Ads
 
-  ### 3. Corporate Branding
+   ### 3. Corporate Branding
       - Logo Design
       - Business Cards
       - Company Profile
       - Company Leterheads
       - Email Signitures
 
-  ### About
+ ## About
+    - A brief description about me.
+    - Give a brief background
+  
+  ## Contact
+     Contact Form
+     
+        - Send Grid
+        - Email JS
+      
+     Contact Details & Links
+     
+        - Phone Number | WhatsApp | Email
+        - Facebook | Instagram | Linkedin
+      
 
-  ### Contact
-
-  ### Consultation
+ ## Consultation
+    - Book a free consulting appoinment to talk about your business
+        Website Redesigning
+        New website Design
+        Marketing Your Product
+        Lead Generation
+        Website Trafic
+        Brand Awareness
+        
+    - Microsoft Meeting
+    - Google Meet
+    - Zoom Meeting
 
   
   
