@@ -1,20 +1,19 @@
+import styles from '../../styles/contact.module.scss';
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/home.module.scss';
-
-export default function home() {
+const contact = () => {
 	return (
-		<div className={styles.container}>
+		<>
 			<Head>
-				<title>Jacob C - Web Developer</title>
+				<title>Contact</title>
 				<meta
 					name='description'
 					content='A professional web developer and digital marketing specialist'
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-
-			<h1>Home</h1>
-		</div>
+			<h1>Contact</h1>
+		</>
 	);
-}
+};
+
+export default contact;

@@ -1,0 +1,22 @@
+.nav {
+	display: flex;
+	justify-content: space-around;
+
+	&__brand {
+		cursor: pointer;
+		color: hsl(268, 85%, 34%);
+	}
+	&__links {
+		display: flex;
+		justify-content: flex-end;
+		font-weight: 500;
+
+		& :hover {
+			color: hsl(268, 85%, 34%);
+		}
+	}
+	li {
+		margin-right: 2rem;
+		list-style: none;
+	}
+}
