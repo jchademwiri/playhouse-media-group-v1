@@ -11,7 +11,7 @@ const about = () => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			;<h1>About</h1>
+			<h1>About</h1>
 		</>
 	);
 };
