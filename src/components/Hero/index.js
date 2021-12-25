@@ -4,7 +4,7 @@ const Hero = () => {
 		<header className={styles.container}>
 			<div className={styles.container__hero}>
 				<div className={styles.container__left}>
-					<h3 className={styles.title}>Welcome, I'm Jacob</h3>
+					<h3 className={styles.title}>Welcome, I&apos;m Jacob</h3>
 					<h1 className={styles.hero_text}>
 						I design and build <br />
 						<span className={styles.custom_web}>custom web solutions</span>{' '}
