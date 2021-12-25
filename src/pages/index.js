@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Hero from '../components/Hero';
 import styles from '../styles/home.module.scss';
 
 export default function home() {
@@ -14,7 +15,7 @@ export default function home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<h1>Home </h1>
+			<Hero />
 		</div>
 	);
 }

@@ -10,7 +10,7 @@ const service = () => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			;<h1>Service Name</h1>
+			<h1>Service Name</h1>
 		</>
 	);
 };

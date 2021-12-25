@@ -1,6 +1,12 @@
 @import '../../styles/variables.scss';
 
 .nav {
+	// margin-top: -60px;
+	transition: all 0.6s ease;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	.container {
 		position: relative;
 		height: 50px;
@@ -45,7 +51,7 @@
 	}
 }
 // This applies from 600px onwards
-@media (min-width: 650px) {
+@media (min-width: 700px) {
 	.nav {
 		.container {
 			.navigation {
