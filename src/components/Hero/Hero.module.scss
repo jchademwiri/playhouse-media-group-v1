@@ -9,12 +9,12 @@
 	object-fit: contain;
 
 	&__hero {
-		width: 90%;
+		width: 80%;
 		margin: 0 auto;
 		padding: 10px;
 		margin-top: 20px;
 		margin-bottom: 20px;
-		// height: 80vh;
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -43,7 +43,7 @@
 				.btn {
 					margin: 0.5rem;
 					padding: 0.8rem;
-					border: 1px solid #fff;
+					border: 1px solid $primary;
 					border-radius: 4rem;
 					font-size: 0.9rem;
 				}
@@ -80,6 +80,7 @@
 				.hero_text {
 					font-size: 3rem;
 					font-weight: 600;
+					transition: all 1s ease-in-out;
 				}
 				.buttons {
 					display: flex;
@@ -89,25 +90,26 @@
 					.btn {
 						margin: 0.5rem;
 						padding: 0.8rem;
-						border: 1px solid #fff;
+						border: 1px solid $primary;
 						border-radius: 4rem;
+						cursor: pointer;
 					}
 				}
 			}
 
 			.container__right {
-				width: 12.5rem;
 				display: block;
 				margin: 0.625rem;
 				padding: 0.625rem;
 				border-radius: 0.3125rem;
-				background-color: #0e0d1d;
+				background-color: rgb(14, 13, 29);
+				// background-color: $bg-faint;
 				font-size: 1rem;
+				transition: all 1s ease-in-out;
 
 				.quote {
-					// margin: 1rem;
 					padding: 1rem;
-					font-size: 1rem;
+					font-size: 1.2rem;
 					font-family: 'Poller One', cursive;
 				}
 			}

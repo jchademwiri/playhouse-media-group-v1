@@ -4,12 +4,12 @@
 	grid-template-columns: 1fr;
 	width: 90%;
 	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 20px;
 	.services {
 		display: flex;
 		flex-direction: column;
 		.service {
-			background: rgba(0, 0, 0, 0.2);
-
 			padding: 10px;
 			margin: 5px auto;
 			border-radius: 5px;
@@ -24,6 +24,7 @@
 
 @media (min-width: 700px) {
 	.container {
+		width: 80%;
 		.services {
 			display: grid;
 			grid-template-columns: 1fr 1fr;

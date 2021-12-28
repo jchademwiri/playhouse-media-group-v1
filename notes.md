@@ -1,38 +1,48 @@
 # Portfolio Development Notes
-  ## Importent Notes
-  1) Domain - www.jacdev.co.za
-  2) Web Hosting - Versel
-  3) Email Hosting - Axxess
-  4) Tech Stack 
-     1) Next JS
-     2) SCSS
-     3) MongoDB
-  5) Version Control - Github
-  6) Media Storage - Cloudnary
-     
-  ## Check List
+
+## Importent Notes
+
+1. Domain - www.jacdev.co.za
+2. Web Hosting - Versel
+3. Email Hosting - Axxess
+4. Tech Stack
+   1. Next JS
+   2. SCSS
+   3. MongoDB
+5. Version Control - Github
+6. # Media Storage - Cloudnary
+   (https://mendelgroup.net/)
+
+Have a Project on mind?
+Whether you have a small business that needs a web presence or a more customized ecommerce shopping cart solution, our specialized team will collaborate with you to develop a strategic solution to strengthen your brand.
+
+# Let's Connect
+
+## Check List
+
     - SEO Optimisation
-    - SSG 
+    - SSG
     - SSR
     - Dark Mode
-    
+
     - Perfomance
     - SiteMap
     - Web Dev - Testing
     - Page Insights
     - Lighthouse
 
-  
-  ## APIs
+## APIs
+
     - Youtube
     - Github
     - Google Maps
-    
-  ## Analytics
+
+## Analytics
+
     - Google Analytics
-  
-  
- ## Pages
+
+## Pages
+
     1. Home
     2. Projects
         .../single-project-name
@@ -42,7 +52,7 @@
     5. Contact
     6. Consultation
 
-  ## Home
+## Home
 
     - Hero / Intro
     - Conatct Details
@@ -50,47 +60,54 @@
     - Social Media Accounts
       Facebook, Instagram, Linkedin, Youtube
 
-  ## Projects
+## Projects
+
     - Client Projects
     - Github Projects
 
-  ## Services
-   ### 1. Web Design & Development
+## Services
+
+### 1. Web Design & Development
+
       - Corporate Basic Website
       - E-Commerce Shop
       - Landing Pages
       - Personal Portfolios
       - Advanced Custom Websites
 
-   ### 2. Digital Marketing
+### 2. Digital Marketing
+
       - Google Ads
       - Linkedin Ads
       - Facebook Ads
 
-   ### 3. Corporate Branding
+### 3. Corporate Branding
+
       - Logo Design
       - Business Cards
       - Company Profile
       - Company Leterheads
       - Email Signitures
 
- ## About
+## About
+
     - A brief description about me.
     - Give a brief background
-  
-  ## Contact
+
+## Contact
+
      Contact Form
-     
+
         - Send Grid
         - Email JS
-      
+
      Contact Details & Links
-     
+
         - Phone Number | WhatsApp | Email
         - Facebook | Instagram | Linkedin
-      
 
- ## Consultation
+## Consultation
+
     - Book a free consulting appoinment to talk about your business
         Website Redesigning
         New website Design
@@ -98,12 +115,7 @@
         Lead Generation
         Website Trafic
         Brand Awareness
-        
+
     - Microsoft Meeting
     - Google Meet
     - Zoom Meeting
-
-  
-  
- 
-  

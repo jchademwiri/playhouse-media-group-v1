@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+.container {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr;
+
+	&__text {
+		padding: 1.25rem;
+		background: rgba(0, 0, 0, 0.2);
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 700;
+			color: $primary;
+			margin-bottom: 1rem;
+		}
+		a {
+			font-size: 1.5rem;
+			border-bottom: 2px solid $primary;
+			&:hover {
+				color: $accent;
+				border-bottom: 2px solid $accent;
+			}
+		}
+	}
+	&__image {
+		background-image: url('/images/start-a-project.jpg');
+		background: center cover no-repeat;
+		object-fit: cover;
+	}
+}
+
+@media (min-width: 800px) {
+	.container {
+		width: 80%;
+		grid-template-columns: 1fr 1fr;
+	}
+}

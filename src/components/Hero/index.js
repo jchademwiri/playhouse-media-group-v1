@@ -21,10 +21,11 @@ const Hero = () => {
 				<div className={styles.container__right}>
 					<p>
 						<i>
-							<span className={styles.quote}>“</span> Working as a dynamic
-							complement to your team, we design, build and launch custom
-							digital solutions that add sustainable value to your business.
+							<span className={styles.quote}>“</span> Coming together is a
+							beginning, staying together is progress, and working together is
+							success.
 							<span className={styles.quote}>”</span>
+							<br /> <i>- Edward Everett Hale</i>
 						</i>
 					</p>
 				</div>

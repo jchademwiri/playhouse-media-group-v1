@@ -4,18 +4,27 @@
 	grid-template-columns: 1fr;
 	width: 90%;
 	margin: 0 auto;
+	padding-bottom: 20px;
+	background: $bg-faint;
+	.hed {
+		margin: 0 auto;
+		width: 100%;
+		font-size: 1.2rem;
+		padding: 10px;
+	}
 	.services {
-		display: flex;
-		flex-direction: column;
-		.service {
-			background: rgba(0, 0, 0, 0.2);
+		display: grid;
+		gap: 10px;
+		grid-template-columns: 1fr;
 
+		.service {
+			
 			padding: 10px;
 			margin: 5px auto;
 			border-radius: 5px;
 			width: 100%;
 
-			.link {
+			a {
 				color: $accent !important;
 			}
 		}
@@ -24,16 +33,25 @@
 
 @media (min-width: 700px) {
 	.container {
+		width: 100%;
+		.hed {
+			width: 80%;
+			font-size: 1.5rem;
+		}
 		.services {
-			display: grid;
+			margin: 0 auto;
+			width: 80%;
+
 			grid-template-columns: 1fr 1fr;
-			gap: 5px;
 		}
 	}
 }
 
 @media (min-width: 1024px) {
 	.container {
+		.hed {
+			font-size: 1.7rem;
+		}
 		.services {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
