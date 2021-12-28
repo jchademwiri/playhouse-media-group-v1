@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '../components/Hero';
+import OurServices from '../components/OurServices';
 import styles from '../styles/home.module.scss';
 
-export default function home() {
+const index = () => {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -16,6 +17,8 @@ export default function home() {
 			</Head>
 
 			<Hero />
+			<OurServices />
 		</div>
 	);
-}
+};
+export default index;
