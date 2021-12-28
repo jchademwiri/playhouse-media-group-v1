@@ -14,8 +14,8 @@ const Hero = () => {
 						I love to visualise ideas and make them come alive in a website.
 					</p>
 					<div className={styles.buttons}>
-						<div className={styles.btn}>View My Works</div>
 						<div className={styles.btn}>Request A Quote</div>
+						<div className={styles.btn}>View My Works</div>
 					</div>
 				</div>
 				<div className={styles.container__right}>

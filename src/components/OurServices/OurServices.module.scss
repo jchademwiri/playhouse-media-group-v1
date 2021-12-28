@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+.container {
+	width: 90%;
+	margin: 0 auto;
+	.services {
+		display: flex;
+		flex-direction: column;
+		.service {
+			background: rgba(0, 0, 0, 0.5);
+
+			padding: 20px;
+			margin: 10px;
+			border-radius: 5px;
+			width: 100%;
+
+			.link {
+				color: $accent;
+			}
+		}
+	}
+}
+
+@media (min-width: 700px) {
+	.container {
+		.services {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 5px;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		.services {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+}
