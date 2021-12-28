@@ -19,6 +19,8 @@ const OurServices = () => {
 							blurDataURL={service.image}
 							width={1440}
 							height={1024}
+							layout='responsive'
+							objectFit='cover'
 						/>
 						<h3>{service.name}</h3>
 						<p> {service.description} </p>
