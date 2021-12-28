@@ -6,10 +6,11 @@ body {
 	font-family: poppins, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	background: $bg;
-	color: #fafafa;
+	color: $primary;
 }
 
 a {
+	color: $primary;
 	text-decoration: none;
 }
 
