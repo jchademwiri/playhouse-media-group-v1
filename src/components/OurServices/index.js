@@ -1,20 +1,22 @@
 import styles from './OurServices.module.scss';
-import { services } from './serviceData';
+import { services } from '../../data/index';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const OurServices = () => {
-	console.log(services);
-
 	return (
 		<section className={styles.container}>
-			<h2>Services</h2>
+			<div className={styles.hed}>
+				<h2>Services</h2>
+			</div>
 			<div className={styles.services}>
 				{services.map((service) => (
 					<div key={service.id} className={styles.service}>
 						<Image
+							placeholder='blur'
 							src={service.image}
 							alt={service.name}
+							blurDataURL={service.image}
 							width={1440}
 							height={1024}
 						/>

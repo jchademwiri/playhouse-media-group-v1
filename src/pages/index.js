@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '../components/Hero';
 import OurServices from '../components/OurServices';
+import RecentProjects from '../components/RecentProjects';
 import styles from '../styles/home.module.scss';
 
 const index = () => {
@@ -18,6 +19,7 @@ const index = () => {
 
 			<Hero />
 			<OurServices />
+			<RecentProjects />
 		</div>
 	);
 };
