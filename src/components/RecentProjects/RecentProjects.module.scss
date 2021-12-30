@@ -14,7 +14,6 @@
 			margin: 5px auto;
 			border-radius: 5px;
 			width: 100%;
-			
 
 			.techstack {
 				color: $accent;
@@ -25,10 +24,16 @@
 			}
 			.technology {
 				width: 100%;
-				background: $bg-faint;
+				display: flex;
+				flex-wrap: wrap;
+
 				span {
+					background: $bg-faint;
 					color: $primary;
-					// padding: 2rem 1rem;
+					padding: 0.3rem;
+					line-height: 3rem;
+					border-radius: 0.5rem;
+					margin-right: 5px;
 				}
 			}
 		}

@@ -80,11 +80,11 @@ export const recentProjects = [
 	{
 		id: '1',
 		image: '/images/bg.png',
-		name: 'Playhouse Media Group',
-		slug: 'playhouse-media-group',
+		name: 'Crypro Price Tracker',
+		slug: 'crypro-price-tracker',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		technologies: ['React', 'Node', 'Express', 'MongoDB']
+		technologies: ['Node', 'Express', 'MongoDB', 'React', 'Next Js']
 	},
 	{
 		id: '2',
@@ -93,7 +93,7 @@ export const recentProjects = [
 		slug: 'edurite-website',
 		description:
 			'Lorem ipsum dolor sit amet consectetur anatus! Omnis, architecto.',
-		technologies: ['React', 'Node', 'Express', 'MongoDB']
+		technologies: ['Wordpress', 'WooCommerce', 'Elementor']
 	},
 	{
 		id: '3',
@@ -102,7 +102,7 @@ export const recentProjects = [
 		slug: 'micro-finance',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		technologies: ['React', 'Node', 'Express', 'MongoDB']
+		technologies: ['React', 'Styled Components']
 	}
 ];
 export const projects = [
