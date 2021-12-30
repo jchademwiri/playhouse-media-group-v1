@@ -7,7 +7,7 @@
 	padding-bottom: 20px;
 	background: $bg-faint;
 	.hed {
-		margin: 0 auto;
+		margin: 0 20px;
 		width: 100%;
 		font-size: 1.2rem;
 		padding: 10px;
@@ -16,6 +16,7 @@
 		display: grid;
 		gap: 10px;
 		grid-template-columns: 1fr;
+		margin: 0 20px;
 
 		.service {
 			padding: 10px;
