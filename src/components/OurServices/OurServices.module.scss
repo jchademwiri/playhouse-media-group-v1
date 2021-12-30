@@ -2,7 +2,7 @@
 .container {
 	display: grid;
 	grid-template-columns: 1fr;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	padding-bottom: 20px;
 	background: $bg-faint;
@@ -36,7 +36,6 @@
 
 @media (min-width: 700px) {
 	.container {
-		width: 100%;
 		.hed {
 			width: 90%;
 			font-size: 1.5rem;
