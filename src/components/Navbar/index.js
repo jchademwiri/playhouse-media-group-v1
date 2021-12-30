@@ -1,5 +1,6 @@
 import styles from './navbar.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
@@ -8,8 +9,17 @@ const Navbar = () => {
 		<nav className={styles.nav}>
 			<div className={styles.container}>
 				<div onClick={() => setOpen(false)} className={styles.brand}>
-					<Link href='/' scroll>
-						<h2>Jacob C.</h2>
+					<Link href='/' scroll className={styles.logo}>
+						<>
+							<Image
+								src={'/images/logo.svg'}
+								width={50}
+								height={50}
+								blurDataURL='/images/logo.svg'
+								placeholder='blur'
+								alt='logo'
+							/>
+						</>
 					</Link>
 				</div>
 				<div className={styles.navigation}>

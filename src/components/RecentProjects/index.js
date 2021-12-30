@@ -19,6 +19,15 @@ const RecentProjects = () => {
 						/>
 						<h3>{project.name}</h3>
 						<p> {project.description} </p>
+						<h4 className={styles.techstack}>Tech Stack</h4>
+						<p className={styles.technology}>
+							{project.technologies
+								.toString()
+								.split(',')
+								.map((technology) => (
+									<span key={technology}>{technology}</span>
+								))}
+						</p>
 						<Link href={`/projects/${project.slug}`} className={styles.link}>
 							Learn More
 						</Link>

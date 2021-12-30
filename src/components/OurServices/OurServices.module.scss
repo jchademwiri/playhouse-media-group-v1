@@ -18,11 +18,14 @@
 		grid-template-columns: 1fr;
 
 		.service {
-			
 			padding: 10px;
 			margin: 5px auto;
 			border-radius: 5px;
 			width: 100%;
+
+			h3 {
+				border-bottom: 1px dotted $accent;
+			}
 
 			a {
 				color: $accent !important;
@@ -35,12 +38,12 @@
 	.container {
 		width: 100%;
 		.hed {
-			width: 80%;
+			width: 90%;
 			font-size: 1.5rem;
 		}
 		.services {
 			margin: 0 auto;
-			width: 80%;
+			width: 90%;
 
 			grid-template-columns: 1fr 1fr;
 		}

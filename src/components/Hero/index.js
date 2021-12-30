@@ -1,4 +1,5 @@
 import styles from './Hero.module.scss';
+import Link from 'next/link';
 const Hero = () => {
 	return (
 		<header className={styles.container}>
@@ -14,8 +15,12 @@ const Hero = () => {
 						I love to visualise ideas and make them come alive in a website.
 					</p>
 					<div className={styles.buttons}>
-						<div className={styles.btn}>Request A Quote</div>
-						<div className={styles.btn}>View My Works</div>
+						<div className={styles.btn}>
+							<Link href='/contact'>Request A Quote</Link>
+						</div>
+						<div className={styles.btn}>
+							<Link href='/projects'>View My Works</Link>
+						</div>
 					</div>
 				</div>
 				<div className={styles.container__right}>

@@ -15,8 +15,21 @@
 			border-radius: 5px;
 			width: 100%;
 
-			.link {
-				color: $accent !important;
+			.techstack {
+				color: $accent;
+			}
+
+			a {
+				border-bottom: 2px solid $primary;
+			}
+			.technology {
+				width: 100%;
+				background: $bg-faint;
+				span {
+					// color: $accent;
+					color: $primary;
+					padding: 1rem;
+				}
 			}
 		}
 	}
@@ -24,12 +37,17 @@
 
 @media (min-width: 700px) {
 	.container {
-		width: 80%;
 		.services {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 5px;
 		}
+	}
+}
+
+@media (min-width: 800px) {
+	.container {
+		width: 90%;
 	}
 }
 

@@ -83,7 +83,8 @@ export const recentProjects = [
 		name: 'Playhouse Media Group',
 		slug: 'playhouse-media-group',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.'
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
+		technologies: ['React', 'Node', 'Express', 'MongoDB']
 	},
 	{
 		id: '2',
@@ -91,7 +92,8 @@ export const recentProjects = [
 		name: 'Edurite Website',
 		slug: 'edurite-website',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.'
+			'Lorem ipsum dolor sit amet consectetur anatus! Omnis, architecto.',
+		technologies: ['React', 'Node', 'Express', 'MongoDB']
 	},
 	{
 		id: '3',
@@ -99,7 +101,8 @@ export const recentProjects = [
 		name: 'Micro Finance',
 		slug: 'micro-finance',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.'
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
+		technologies: ['React', 'Node', 'Express', 'MongoDB']
 	}
 ];
 export const projects = [
@@ -109,15 +112,20 @@ export const projects = [
 		name: 'Playhouse Media Group',
 		slug: 'playhouse-media-group',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.'
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
+		link: 'https://www.seaharvest.co.zw',
+		github: 'https://github.com/jchademwiri/micro-finance'
 	},
 	{
 		id: '2',
 		image: '/images/bg.png',
-		name: 'Edurite Website',
-		slug: 'edurite-website',
+		name: 'Sea Harvest Website',
+		slug: 'sea-harvest-website',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.'
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
+		link: 'https://www.seaharvest.co.zw',
+		github: 'https://github.com/jchademwiri/micro-finance',
+		technologies: 'React, Node, Express, MongoDB'
 	},
 	{
 		id: '3',
@@ -125,6 +133,8 @@ export const projects = [
 		name: 'Micro Finance',
 		slug: 'micro-finance',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.'
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
+		link: 'https://mycrofinance.netlify.app',
+		github: 'https://github.com/jchademwiri/micro-finance'
 	}
 ];

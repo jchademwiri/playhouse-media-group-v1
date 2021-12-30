@@ -1,5 +1,73 @@
+@import '../../styles/variables.scss';
+
 .container {
-	margin: 20px;
-	text-align: center;
-	padding: 20px;
+	width: 90%;
+	margin: 0 auto;
+
+	&__title {
+		display: flex;
+		margin: 20px 0;
+		align-items: center;
+		width: 100%;
+		h2 {
+			font-size: 1.5rem;
+			margin: 20px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 15px;
+		margin-bottom: 40px;
+
+		&__links,
+		&__item {
+			border-radius: 0.3125rem;
+			padding: 15px;
+		}
+
+		&__item {
+			background: $bg-faint;
+		}
+
+		&__links {
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin: 10px 0;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) {
+	.container {
+		&__content {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (min-width: 800px) {
+	.container {
+		width: 90%;
+	}
+}
+
+@media (min-width: 960px) {
+	.container {
+		&__title {
+			h2 {
+				font-size: 2rem;
+			}
+		}
+		&__content {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
 }

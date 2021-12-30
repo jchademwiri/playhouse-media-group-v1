@@ -1,7 +1,5 @@
 import styles from './OurServices.module.scss';
 import { helps } from '../../data/index';
-import Link from 'next/link';
-import Image from 'next/image';
 
 const OurServices = () => {
 	return (
