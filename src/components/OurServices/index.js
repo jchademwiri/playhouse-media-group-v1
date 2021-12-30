@@ -1,5 +1,5 @@
 import styles from './OurServices.module.scss';
-import { helps } from '../../data/index';
+import { helps } from '../../data/helps';
 
 const OurServices = () => {
 	return (

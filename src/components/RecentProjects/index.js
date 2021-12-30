@@ -1,5 +1,5 @@
 import styles from './RecentProjects.module.scss';
-import { recentProjects } from '../../data/index';
+import { recentProjects } from '../../data/recentProjects';
 import Link from 'next/link';
 import Image from 'next/image';
 const RecentProjects = () => {
