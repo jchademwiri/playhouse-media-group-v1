@@ -39,8 +39,7 @@ const projects = ({ projects }) => {
 
 export default projects;
 
-// export async function getStaticProps() {
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	const response = await fetch(`${server}/api/projects`);
 	const data = await response.json();
 	// console.log(data);

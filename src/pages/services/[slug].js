@@ -29,19 +29,18 @@ const service = ({ service }) => {
 
 export default service;
 
-// export async function getStaticPaths() {
-// 	return {
-// 		paths: [
-// 			{ params: { slug: 'web-development' } },
-// 			{ params: { slug: 'digital-marketing' } },
-// 			{ params: { slug: 'search-engine-optimization' } }
-// 		],
-// 		fallback: false
-// 	};
-// }
+export async function getStaticPaths() {
+	return {
+		paths: [
+			{ params: { slug: 'web-development' } },
+			{ params: { slug: 'digital-marketing' } },
+			{ params: { slug: 'search-engine-optimization' } }
+		],
+		fallback: false
+	};
+}
 
-// export async function getStaticProps(context) {
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
 	const { params } = context;
 	const response = await fetch(`${server}/api/services/${params.slug}`);
 	const data = await response.json();
