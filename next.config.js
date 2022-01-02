@@ -4,5 +4,6 @@ module.exports = {
 
 	images: {
 		domains: ['http://localhost:3000/']
-	}
+	},
+	distDir: 'build'
 };

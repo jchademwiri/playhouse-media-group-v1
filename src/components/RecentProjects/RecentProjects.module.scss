@@ -20,7 +20,13 @@
 			}
 
 			a {
-				border-bottom: 2px solid $primary;
+				// color: $accent;
+				border-bottom: 2px solid $accent;
+
+				&:hover {
+					color: $accent;
+					border-bottom: 2px solid $primary;
+				}
 			}
 			.technology {
 				width: 100%;
@@ -28,7 +34,8 @@
 				flex-wrap: wrap;
 
 				span {
-					background: $bg-faint;
+					// background: $bg-faint;
+					border: 1px solid $primary;
 					color: $primary;
 					padding: 0.3rem;
 					// line-height: 1.5rem;

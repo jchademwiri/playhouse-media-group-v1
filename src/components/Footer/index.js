@@ -27,6 +27,9 @@ const Footer = () => {
 						/>
 						<h3>{consulting.name}</h3>
 						<p>{consulting.description}</p>
+						<Link className={styles.project_link} href='#'>
+							Let&apos;s get started
+						</Link>
 					</div>
 				))}
 

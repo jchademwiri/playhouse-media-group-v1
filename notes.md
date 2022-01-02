@@ -11,7 +11,6 @@
    3. MongoDB
 5. Version Control - Github
 6. # Media Storage - Cloudnary
-   (https://mendelgroup.net/)
 
 Have a Project on mind?
 Whether you have a small business that needs a web presence or a more customized ecommerce shopping cart solution, our specialized team will collaborate with you to develop a strategic solution to strengthen your brand.
@@ -48,6 +47,11 @@ Whether you have a small business that needs a web presence or a more customized
         .../single-project-name
     3. Services
         .../single-service-name
+        # page Design
+             - https://mendelgroup.net/
+             - https://www.searchberg.com/web-design-packages/
+             - https://advertisingsolutions.co.za/website-design/
+             - https://owlmedia.co.za/digital-online-marketing-seo/
     4. About
     5. Contact
     6. Consultation

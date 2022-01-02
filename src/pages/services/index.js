@@ -1,6 +1,8 @@
 import styles from '../../styles/services.module.scss';
+import Image from 'next/image';
 import Head from 'next/head';
-const services = () => {
+import Link from 'next/link';
+const services = ({ services }) => {
 	<Head>
 		<title>Services</title>
 		<meta
@@ -19,9 +21,39 @@ const services = () => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<h1>New Service</h1>
+			<h1>Our Service</h1>
+
+			{services.map((service) => (
+				<div key={service.id} className={styles.service}>
+					<Image
+						placeholder='blur'
+						src={service.image}
+						alt={service.name}
+						blurDataURL={service.image}
+						width={720}
+						height={512}
+					/>
+					<h2>{service.name}</h2>
+					<p>{service.description}</p>
+					<Link href={`/services/${service.slug}`}>
+						<a>{service.name}</a>
+					</Link>
+				</div>
+			))}
 		</>
 	);
 };
 
 export default services;
+
+export async function getStaticProps() {
+	const response = await fetch(`{http://localhost:3000/api/services/}`);
+	const data = await response.json();
+	// console.log(data);
+
+	return {
+		props: {
+			services: data
+		}
+	};
+}

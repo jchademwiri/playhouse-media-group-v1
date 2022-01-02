@@ -25,10 +25,20 @@
 		&__item {
 			border-radius: 0.3125rem;
 			padding: 15px;
+			padding-bottom: 40px;
 		}
 
 		&__item {
 			background: $bg-faint;
+
+			a {
+				border-bottom: 2px solid $accent;
+
+				&:hover {
+					color: $accent;
+					border-bottom: 2px solid $primary;
+				}
+			}
 		}
 
 		&__links {

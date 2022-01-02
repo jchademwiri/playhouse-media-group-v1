@@ -24,10 +24,11 @@
 			}
 			a {
 				font-size: 1.5rem;
-				border-bottom: 2px solid $primary;
+				border-bottom: 2px solid $accent;
+
 				&:hover {
 					color: $accent;
-					border-bottom: 2px solid $accent;
+					border-bottom: 2px solid $primary;
 				}
 			}
 		}
