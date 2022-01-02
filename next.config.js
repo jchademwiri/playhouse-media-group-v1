@@ -3,7 +3,7 @@ module.exports = {
 	swcMinify: true,
 
 	images: {
-		domains: ['http://localhost:3000/']
+		domains: ['http://localhost:3000/', 'https://jacobc.playhousemedia.net/']
 	},
 	distDir: 'build'
 };

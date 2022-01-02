@@ -43,7 +43,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
 	const { params } = context;
 	const response = await fetch(
-		`http://localhost:3000/api/projects/${params.slug}`
+		`https://jacobc.playhousemedia.net/api/projects/${params.slug}`
 	);
 	const data = await response.json();
 

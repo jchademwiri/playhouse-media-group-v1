@@ -39,7 +39,9 @@ const projects = ({ projects }) => {
 export default projects;
 
 export async function getStaticProps() {
-	const response = await fetch('http://localhost:3000/api/projects');
+	const response = await fetch(
+		'https://jacobc.playhousemedia.net/api/projects'
+	);
 	const data = await response.json();
 	// console.log(data);
 

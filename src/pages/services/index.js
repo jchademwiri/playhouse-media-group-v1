@@ -47,7 +47,9 @@ const services = ({ services }) => {
 export default services;
 
 export async function getStaticProps() {
-	const response = await fetch(`{http://localhost:3000/api/services/}`);
+	const response = await fetch(
+		`{https://jacobc.playhousemedia.net/api/services/}`
+	);
 	const data = await response.json();
 	// console.log(data);
 
