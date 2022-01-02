@@ -2,6 +2,7 @@ import styles from '../../styles/projects.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { server } from '../../config';
 const projects = ({ projects }) => {
 	// console.log(projects);
 	return (
@@ -39,9 +40,7 @@ const projects = ({ projects }) => {
 export default projects;
 
 export async function getStaticProps() {
-	const response = await fetch(
-		'https://jacobc.playhousemedia.net/api/projects'
-	);
+	const response = await fetch(`${server}/api/projects`);
 	const data = await response.json();
 	// console.log(data);
 

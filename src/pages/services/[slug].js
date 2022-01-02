@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { server } from '../../config';
 const service = ({ service }) => {
 	return (
 		<>
@@ -41,9 +42,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
 	const { params } = context;
-	const response = await fetch(
-		`https://jacobc.playhousemedia.net/api/services/${params.slug}`
-	);
+	const response = await fetch(`${server}/api/services/${params.slug}`);
 	const data = await response.json();
 
 	return {

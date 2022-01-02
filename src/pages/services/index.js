@@ -2,6 +2,7 @@ import styles from '../../styles/services.module.scss';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
+import { server } from '../../config';
 const services = ({ services }) => {
 	<Head>
 		<title>Services</title>
@@ -47,9 +48,7 @@ const services = ({ services }) => {
 export default services;
 
 export async function getStaticProps() {
-	const response = await fetch(
-		`{https://jacobc.playhousemedia.net/api/services/}`
-	);
+	const response = await fetch(`${server}/api/services`);
 	const data = await response.json();
 	// console.log(data);
 

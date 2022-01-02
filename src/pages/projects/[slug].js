@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { server } from '../../config';
 const project = ({ project }) => {
 	return (
 		<>
@@ -42,9 +43,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
 	const { params } = context;
-	const response = await fetch(
-		`https://jacobc.playhousemedia.net/api/projects/${params.slug}`
-	);
+	const response = await fetch(`${server}/api/projects/${params.slug}`);
 	const data = await response.json();
 
 	return {
