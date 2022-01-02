@@ -30,16 +30,16 @@ const project = ({ project }) => {
 
 export default project;
 
-export async function getStaticPaths() {
-	return {
-		paths: [
-			{ params: { slug: 'playhouse-media-group' } },
-			{ params: { slug: 'sea-harvest-website' } },
-			{ params: { slug: 'micro-finance' } }
-		],
-		fallback: false
-	};
-}
+// export async function getStaticPaths() {
+// 	return {
+// 		paths: [
+// 			{ params: { slug: 'playhouse-media-group' } },
+// 			{ params: { slug: 'sea-harvest-website' } },
+// 			{ params: { slug: 'micro-finance' } }
+// 		],
+// 		fallback: false
+// 	};
+// }
 
 export async function getStaticProps(context) {
 	const { params } = context;
