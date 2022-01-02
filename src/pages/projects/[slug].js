@@ -41,7 +41,8 @@ export default project;
 // 	};
 // }
 
-export async function getStaticProps(context) {
+// export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 	const { params } = context;
 	const response = await fetch(`${server}/api/projects/${params.slug}`);
 	const data = await response.json();

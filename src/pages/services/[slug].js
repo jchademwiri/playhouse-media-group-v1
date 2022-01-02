@@ -40,7 +40,8 @@ export default service;
 // 	};
 // }
 
-export async function getStaticProps(context) {
+// export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 	const { params } = context;
 	const response = await fetch(`${server}/api/services/${params.slug}`);
 	const data = await response.json();
