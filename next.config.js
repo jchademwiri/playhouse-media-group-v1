@@ -4,6 +4,5 @@ module.exports = {
 
 	images: {
 		domains: ['http://localhost:3000', 'https://jacobc.playhousemedia.net']
-	},
-	distDir: 'build'
+	}
 };
