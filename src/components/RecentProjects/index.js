@@ -16,6 +16,7 @@ const RecentProjects = () => {
 							blurDataURL={project.image}
 							width={1440}
 							height={1024}
+							objectFit='cover'
 						/>
 						<h3>{project.name}</h3>
 						<p> {project.description} </p>

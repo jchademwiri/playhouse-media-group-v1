@@ -6,7 +6,8 @@ export const projects = [
 		slug: 'playhouse-media-group',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		link: 'https://www.seaharvest.co.zw',
+		technologies: ['Node', 'Express', 'MongoDB', 'React', 'Next Js'],
+		website: 'https://www.seaharvest.co.zw',
 		github: 'https://github.com/jchademwiri/micro-finance'
 	},
 	{
@@ -16,7 +17,8 @@ export const projects = [
 		slug: 'sea-harvest-website',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		link: 'https://www.seaharvest.co.zw',
+		technologies: ['Node', 'Express', 'MongoDB', 'React', 'Next Js'],
+		website: 'https://www.seaharvest.co.zw',
 		github: 'https://github.com/jchademwiri/micro-finance',
 		technologies: 'React, Node, Express, MongoDB'
 	},
@@ -27,7 +29,8 @@ export const projects = [
 		slug: 'micro-finance',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		link: 'https://mycrofinance.netlify.app',
+		technologies: ['Node', 'Express', 'MongoDB', 'React', 'Next Js'],
+		website: 'https://mycrofinance.netlify.app',
 		github: 'https://github.com/jchademwiri/micro-finance'
 	}
 ];

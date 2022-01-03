@@ -1,0 +1,80 @@
+@import '../../styles/variables.scss';
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	.services {
+		display: flex;
+		flex-direction: column;
+		.service {
+			padding: 10px;
+			margin: 5px auto;
+			border-radius: 5px;
+			width: 100%;
+
+			.techstack {
+				color: $accent;
+			}
+			.links {
+				display: flex;
+
+				a {
+					margin: 5px;
+
+					border-bottom: 2px solid $accent;
+
+					&:hover {
+						color: $accent;
+						border-bottom: 2px solid $primary;
+					}
+				}
+			}
+			.technology {
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+
+				span {
+					border: 1px solid $primary;
+					color: $primary;
+					padding: 0.3rem;
+					margin: 0.3rem;
+					border-radius: 5px;
+				}
+			}
+
+			a {
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 700px) {
+	.container {
+		.services {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 5px;
+		}
+	}
+}
+
+@media (min-width: 800px) {
+	.container {
+		width: 90%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		.services {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+}

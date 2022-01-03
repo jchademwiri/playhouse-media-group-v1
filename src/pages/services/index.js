@@ -1,4 +1,4 @@
-import styles from '../../styles/services.module.scss';
+import styles from './services.module.scss';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -22,25 +22,31 @@ const services = ({ services }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<h1>Our Service</h1>
 
-			{services.map((service) => (
-				<div key={service.id} className={styles.service}>
-					<Image
-						placeholder='blur'
-						src={service.image}
-						alt={service.name}
-						blurDataURL={service.image}
-						width={720}
-						height={512}
-					/>
-					<h2>{service.name}</h2>
-					<p>{service.description}</p>
-					<Link href={`/services/${service.slug}`}>
-						<a>{service.name}</a>
-					</Link>
+			<section className={styles.container}>
+				<h1>Our Services</h1>
+				<div className={styles.services}>
+					{services.map((service) => (
+						<div key={service.id} className={styles.service}>
+							<Image
+								placeholder='blur'
+								src={service.image}
+								alt={service.name}
+								blurDataURL={service.image}
+								width={1440}
+								height={1024}
+								objectFit='cover'
+							/>
+							<h3>{service.name}</h3>
+							<p> {service.description} </p>
+
+							<Link href={`/services/${service.slug}`} className={styles.link}>
+								Learn More
+							</Link>
+						</div>
+					))}
 				</div>
-			))}
+			</section>
 		</>
 	);
 };

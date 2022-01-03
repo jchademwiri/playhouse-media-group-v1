@@ -1,4 +1,4 @@
-import styles from '../../styles/contact.module.scss';
+import styles from './contact.module.scss';
 import Head from 'next/head';
 const contact = () => {
 	return (
@@ -11,7 +11,9 @@ const contact = () => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<h1>Contact</h1>
+			<section className={styles.container}>
+				<h1>Contact</h1>
+			</section>
 		</>
 	);
 };

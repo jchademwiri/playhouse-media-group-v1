@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { server } from '../../config';
+import styles from './service.module.scss';
 const service = ({ service }) => {
 	return (
 		<>
@@ -12,17 +13,19 @@ const service = ({ service }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-
-			<Image
-				placeholder='blur'
-				src={service.image}
-				alt={service.name}
-				blurDataURL={service.image}
-				width={720}
-				height={512}
-			/>
-			<h1>{service.name}</h1>
-			<p>{service.description} </p>
+			<section className={styles.container}>
+				<Image
+					placeholder='blur'
+					src={service.image}
+					alt={service.name}
+					blurDataURL={service.image}
+					width={720}
+					height={512}
+					objectFit='cover'
+				/>
+				<h1>{service.name}</h1>
+				<p>{service.description} </p>
+			</section>
 		</>
 	);
 };

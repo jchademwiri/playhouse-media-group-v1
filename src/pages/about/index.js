@@ -1,4 +1,4 @@
-import styles from '../../styles/about.module.scss';
+import styles from './about.module.scss';
 import Head from 'next/head';
 const about = () => {
 	return (
@@ -11,7 +11,9 @@ const about = () => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<h1>About</h1>
+			<section className={styles.container}>
+				<h1>About</h1>
+			</section>
 		</>
 	);
 };

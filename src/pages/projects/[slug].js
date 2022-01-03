@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { server } from '../../config';
+import styles from './project.module.scss';
 const project = ({ project }) => {
 	return (
 		<>
@@ -12,18 +13,21 @@ const project = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Image
-				placeholder='blur'
-				src={project.image}
-				alt={project.name}
-				blurDataURL={project.image}
-				width={720}
-				height={512}
-			/>
-			<h1>{project.name}</h1>
-			<p>{project.description} </p>
-			<p> {project.link} </p>
-			<p> {project.github} </p>
+			<section className={styles.container}>
+				<Image
+					placeholder='blur'
+					src={project.image}
+					alt={project.name}
+					blurDataURL={project.image}
+					width={720}
+					height={512}
+					objectFit='cover'
+				/>
+				<h1>{project.name}</h1>
+				<p>{project.description} </p>
+				<p> {project.link} </p>
+				<p> {project.github} </p>
+			</section>
 		</>
 	);
 };
