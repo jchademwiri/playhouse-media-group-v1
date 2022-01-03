@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { server } from '../../config';
 const services = ({ services }) => {
 	<Head>
-		<title>Services</title>
+		<title>{services.name}</title>
 		<meta
 			name='description'
 			content='A professional web developer and digital marketing specialist'
