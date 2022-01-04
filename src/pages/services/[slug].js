@@ -13,35 +13,37 @@ const service = ({ service }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<section className={styles.container}>
-				<Image
-					placeholder='blur'
-					src={service.image}
-					alt={service.name}
-					blurDataURL={service.image}
-					width={720}
-					height={512}
-					objectFit='cover'
-				/>
+			<header className={styles.banner}>
 				<h1>{service.name}</h1>
-				<p>{service.description} </p>
-			</section>
+				<p>{service.description}</p>
+			</header>
+			<main className={styles.container}>
+				<section className={styles.container__content}>
+					{service.details.map((detail) => (
+						<div key={detail.id} className={styles.container__content__details}>
+							<h3>{detail.title}</h3>
+							<p>{detail.description}</p>
+						</div>
+					))}
+				</section>
+			</main>
 		</>
 	);
 };
 
 export default service;
 
-export async function getStaticPaths() {
-	const res = await fetch(`${server}/api/services`);
-	const services = await res.json();
-	const paths = services.map((service) => ({
-		params: { slug: service.slug }
-	}));
-	return { paths, fallback: false };
-}
+// export async function getStaticPaths() {
+// 	const res = await fetch(`${server}/api/services`);
+// 	const services = await res.json();
+// 	const paths = services.map((service) => ({
+// 		params: { slug: service.slug }
+// 	}));
+// 	return { paths, fallback: false };
+// }
 
-export async function getStaticProps(context) {
+// export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 	const { params } = context;
 	const res = await fetch(`${server}/api/services/${params.slug}`);
 	const data = await res.json();

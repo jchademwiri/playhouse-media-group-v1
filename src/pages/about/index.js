@@ -82,8 +82,8 @@ const about = ({ details }) => {
 
 export default about;
 
-// export async function getStaticProps() {
-export async function getServerSideProps() {
+export async function getStaticProps() {
+	// export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/about`);
 	const data = await response.json();
 	// console.log(data);
