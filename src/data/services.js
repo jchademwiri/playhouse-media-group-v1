@@ -17,7 +17,7 @@ export const services = [
 				id: '2',
 				title: 'E-Commerce website',
 				description:
-					'We build responsive websites for your business or organization that are user friendly and easy to use,such that they deliver leads, clients, and revenue. We use the latest technologies to make your website look great on all devices. We design and develop websites '
+					'If your product or services needs to be sold online, we will guide you through the process developing and setting up the shopping including the selection of the payment gateway provider. We will also provide assistance with setting up the catalogue.'
 			},
 			{
 				id: '3',
@@ -35,7 +35,7 @@ export const services = [
 				id: '5',
 				title: 'Web Hosting',
 				description:
-					'We build responsive websites for your business or organization that are user friendly and easy to use,such that they deliver leads, clients, and revenue. We use the latest technologies to make your website look great on all devices. We design and develop websites '
+					'We will register your domain and set up the hosting for you. If you have an existing domain name hosted elsewhere, we will assist in moving your site. Alternatively, if you prefer utilizing your own domain, we can implement the website solution at your preferred location.'
 			},
 			{
 				id: '6',

@@ -16,8 +16,15 @@ const projects = ({ projects }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<section className={styles.container}>
-				<h1>Our Projects</h1>
+			<header className={styles.banner}>
+				<div className={styles.banner__content}>
+					<h1>Portfolio</h1>
+
+					<p> A custom solution for your business </p>
+				</div>
+			</header>
+			<main className={styles.container}>
+				{/* <h1>Completed Projects</h1> */}
 				<div className={styles.services}>
 					{projects.map((project) => (
 						<div key={project.id} className={styles.service}>
@@ -55,7 +62,7 @@ const projects = ({ projects }) => {
 						</div>
 					))}
 				</div>
-			</section>
+			</main>
 		</>
 	);
 };

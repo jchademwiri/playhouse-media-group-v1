@@ -13,12 +13,7 @@ const project = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<header className={styles.banner}>
-				<div className={styles.banner__content}>
-					<h1>{project.name}</h1>
-					<p>{project.description}</p>
-				</div>
-			</header>
+			
 			<main className={styles.container}>
 				{/* <Image
 					placeholder='blur'

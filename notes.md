@@ -1,5 +1,15 @@
 # Portfolio Development Notes
 
+## Copy
+
+    https://bitewebsolutions.co.za/
+    https://www.softsource.co.za/
+    https://future-code.dev/en/
+    https://devtechnosys.com/
+    https://www.vibemarketingdurban.co.za/
+    https://www.searchberg.com/
+    https://www.softsource.co.za/development/  -- Our Development Process
+
 ## Importent Notes
 
 1. Domain - www.jacdev.co.za
