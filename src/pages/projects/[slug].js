@@ -13,8 +13,14 @@ const project = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<section className={styles.container}>
-				<Image
+			<header className={styles.banner}>
+				<div className={styles.banner__content}>
+					<h1>{project.name}</h1>
+					<p>{project.description}</p>
+				</div>
+			</header>
+			<main className={styles.container}>
+				{/* <Image
 					placeholder='blur'
 					src={project.image}
 					alt={project.name}
@@ -22,12 +28,12 @@ const project = ({ project }) => {
 					width={720}
 					height={512}
 					objectFit='cover'
-				/>
+				/> */}
 				<h1>{project.name}</h1>
 				<p>{project.description} </p>
 				<p> {project.link} </p>
 				<p> {project.github} </p>
-			</section>
+			</main>
 		</>
 	);
 };

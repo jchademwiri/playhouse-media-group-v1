@@ -14,8 +14,10 @@ const service = ({ service }) => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<header className={styles.banner}>
-				<h1>{service.name}</h1>
-				<p>{service.description}</p>
+				<div className={styles.banner__content}>
+					<h1>{service.name}</h1>
+					<p>{service.description}</p>
+				</div>
 			</header>
 			<main className={styles.container}>
 				<section className={styles.container__content}>

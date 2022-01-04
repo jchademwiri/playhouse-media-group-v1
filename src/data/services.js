@@ -15,25 +15,37 @@ export const services = [
 			},
 			{
 				id: '2',
-				name: 'User Experience',
+				title: 'E-Commerce website',
 				description:
 					'We build responsive websites for your business or organization that are user friendly and easy to use,such that they deliver leads, clients, and revenue. We use the latest technologies to make your website look great on all devices. We design and develop websites '
 			},
 			{
 				id: '3',
-				title: 'Web Security',
+				title: 'WordPress website',
 				description:
 					'We build responsive websites for your business or organization that are user friendly and easy to use,such that they deliver leads, clients, and revenue. We use the latest technologies to make your website look great on all devices. We design and develop websites '
 			},
 			{
 				id: '4',
-				title: 'Web Performance',
+				title: 'Landing Page',
 				description:
 					'We build responsive websites for your business or organization that are user friendly and easy to use,such that they deliver leads, clients, and revenue. We use the latest technologies to make your website look great on all devices. We design and develop websites '
 			},
 			{
 				id: '5',
 				title: 'Web Hosting',
+				description:
+					'We build responsive websites for your business or organization that are user friendly and easy to use,such that they deliver leads, clients, and revenue. We use the latest technologies to make your website look great on all devices. We design and develop websites '
+			},
+			{
+				id: '6',
+				title: 'Website Maintenance',
+				description:
+					'We provide website maintainance to keep your website at the forefront of online marketing. We use the latest technologies to make your website look great on all devices. We design and develop websites '
+			},
+			{
+				id: '7',
+				title: 'Web Optimization',
 				description:
 					'We build responsive websites for your business or organization that are user friendly and easy to use,such that they deliver leads, clients, and revenue. We use the latest technologies to make your website look great on all devices. We design and develop websites '
 			}
@@ -49,33 +61,33 @@ export const services = [
 		details: [
 			{
 				id: '1',
-				title: 'SEO',
+				title: 'SEO Assessment',
 				description:
-					'Search Engine Optimization will improve your online presence and increase visitors to your website. We will optimize your website for search engines such as Google, Bing, Yahoo, and others which will help you to get more traffic to your website. '
+					'A critical analysis from the ground up from design infrastructure & content to link profile & brand strength '
 			},
 			{
 				id: '2',
-				title: 'SEM',
+				title: 'Business Profile Listings',
 				description:
-					'Search Engine Optimization will improve your online presence and increase visitors to your website. We will optimize your website for search engines such as Google, Bing, Yahoo, and others which will help you to get more traffic to your website. '
+					'These are influential, industry based directories that every business should target to gain traction in Local SEO.'
 			},
 			{
 				id: '3',
-				title: 'PPC',
+				title: 'Extensive Keyword Research',
 				description:
-					'Search Engine Optimization will improve your online presence and increase visitors to your website. We will optimize your website for search engines such as Google, Bing, Yahoo, and others which will help you to get more traffic to your website. '
+					'The most important step in SEO, our keyword research is exhaustive and focuses on "conversion keywords" that bring leads.'
 			},
 			{
 				id: '4',
-				title: 'Social Media',
+				title: 'Infographics',
 				description:
-					'Search Engine Optimization will improve your online presence and increase visitors to your website. We will optimize your website for search engines such as Google, Bing, Yahoo, and others which will help you to get more traffic to your website. '
+					'Give your content an engaging twist! Our designers will craft promotional infographics that get more conversions.'
 			},
 			{
 				id: '5',
-				title: 'Content Marketing',
+				title: 'Link-building Services',
 				description:
-					'Search Engine Optimization will improve your online presence and increase visitors to your website. We will optimize your website for search engines such as Google, Bing, Yahoo, and others which will help you to get more traffic to your website. '
+					'We build links on authoritative sites that ultimately link back to your website, leveraging their credibility and improving SEO.'
 			}
 		]
 	},
@@ -89,49 +101,25 @@ export const services = [
 		details: [
 			{
 				id: '1',
-				title: 'Social Media',
+				title: 'Google Ads Marketing',
 				description:
 					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
 			},
 			{
 				id: '2',
-				title: 'Email Marketing',
+				title: 'Linkedin Ads Marketing',
 				description:
 					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
 			},
 			{
 				id: '3',
-				title: 'SEO',
+				title: 'Facebook Ads Marketing',
 				description:
 					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
 			},
 			{
 				id: '4',
-				title: 'PPC',
-				description:
-					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
-			},
-			{
-				id: '5',
-				title: 'Content Marketing',
-				description:
-					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
-			},
-			{
-				id: '6',
-				title: 'SEM',
-				description:
-					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
-			},
-			{
-				id: '7',
-				title: 'Paid Search',
-				description:
-					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
-			},
-			{
-				id: '8',
-				title: 'Display Advertising',
+				title: 'Instagram Ads Marketing',
 				description:
 					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.'
 			}
