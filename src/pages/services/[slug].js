@@ -33,17 +33,17 @@ const service = ({ service }) => {
 
 export default service;
 
-// export async function getStaticPaths() {
-// 	const res = await fetch(`${server}/api/services`);
-// 	const services = await res.json();
-// 	const paths = services.map((service) => ({
-// 		params: { slug: service.slug }
-// 	}));
-// 	return { paths, fallback: false };
-// }
+export async function getStaticPaths() {
+	const res = await fetch(`${server}/api/services`);
+	const services = await res.json();
+	const paths = services.map((service) => ({
+		params: { slug: service.slug }
+	}));
+	return { paths, fallback: false };
+}
 
-// export async function getStaticProps(context) {
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
+	// export async function getServerSideProps(context) {
 	const { params } = context;
 	const res = await fetch(`${server}/api/services/${params.slug}`);
 	const data = await res.json();

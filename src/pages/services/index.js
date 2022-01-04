@@ -73,8 +73,8 @@ const services = ({ services }) => {
 
 export default services;
 
-// export async function getStaticProps() {
-export async function getServerSideProps() {
+export async function getStaticProps() {
+// export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/services`);
 	const data = await response.json();
 	// console.log(data);
