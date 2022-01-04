@@ -23,37 +23,58 @@ const services = ({ services }) => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<section className={styles.container}>
-				<h1>Our Services</h1>
-				<div className={styles.services}>
-					{services.map((service) => (
-						<div key={service.id} className={styles.service}>
-							<Image
-								placeholder='blur'
-								src={service.image}
-								alt={service.name}
-								blurDataURL={service.image}
-								width={1440}
-								height={1024}
-								objectFit='cover'
-							/>
-							<h3>{service.name}</h3>
-							<p> {service.description} </p>
+			<header className={styles.banner}>
+				<h1>Digital Strategy</h1>
+				<p>Web Development, Internet Strategy, SEO, SEM, Social Media, </p>
+			</header>
+			<main className={styles.container}>
+				<section className={styles.container__content}>
+					<div className={styles.container__content__title}>
+						<h2>Our Services</h2>
+						<p>
+							We provide website design and development, Internet strategy and
+							consulting, search engine optimization and marketing, and social
+							media management services.
+						</p>
+					</div>
 
-							<Link href={`/services/${service.slug}`} className={styles.link}>
-								Learn More
-							</Link>
-						</div>
-					))}
-				</div>
-			</section>
+					<div className={styles.container__content__services}>
+						{services.map((service) => (
+							<div
+								key={service.id}
+								className={styles.container__content__services__service}>
+								<Image
+									placeholder='blur'
+									src={service.image}
+									alt={service.name}
+									blurDataURL={service.image}
+									width={1440}
+									height={1024}
+									objectFit='cover'
+								/>
+								<h3>
+									<Link href={`/services/${service.slug}`}>{service.name}</Link>
+								</h3>
+								<p> {service.description} </p>
+
+								<Link
+									href={`/services/${service.slug}`}
+									className={styles.link}>
+									Learn More
+								</Link>
+							</div>
+						))}
+					</div>
+				</section>
+			</main>
 		</>
 	);
 };
 
 export default services;
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/services`);
 	const data = await response.json();
 	// console.log(data);

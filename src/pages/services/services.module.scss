@@ -1,80 +1,91 @@
 @import '../../styles/variables.scss';
+.banner {
+	background: url('/images/keyboard.jpg') center center/cover no-repeat;
+	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 40vh;
+
+	h1,
+	p {
+		margin: 0 2.5rem;
+		padding: 0;
+	}
+}
 .container {
-	display: grid;
-	grid-template-columns: 1fr;
-	width: 90%;
-	margin: 0 auto;
-	margin-top: 20px;
-	padding-bottom: 20px;
-	.services {
-		display: flex;
-		flex-direction: column;
-		.service {
-			padding: 10px;
-			margin: 5px auto;
-			border-radius: 5px;
-			width: 100%;
+	width: 100%;
 
-			.techstack {
-				color: $accent;
-			}
-			.links {
-				display: flex;
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+		width: 90%;
+		margin: 3.125rem auto;
 
+		&__services {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1.25rem;
+
+			&__service {
+				h3 {
+					a {
+						border: none;
+					}
+				}
 				a {
-					margin: 5px;
-
-					border-bottom: 2px solid $accent;
+					border-bottom: 0.13rem solid $accent;
 
 					&:hover {
 						color: $accent;
-						border-bottom: 2px solid $primary;
+						border-bottom: 0.13rem solid $primary;
 					}
 				}
 			}
-			.technology {
-				width: 100%;
-				display: flex;
-				flex-wrap: wrap;
+		}
+	}
+}
 
-				span {
-					border: 1px solid $primary;
-					color: $primary;
-					padding: 0.3rem;
-					margin: 0.3rem;
-					border-radius: 5px;
+@media (min-width: 43.75rem) {
+	.banner {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	.container {
+		&__content {
+			&__title {
+				h2 {
+					font-size: 2rem;
 				}
 			}
-
-			a {
-				&:hover {
-					color: $accent;
-				}
+			&__services {
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 	}
 }
 
-@media (min-width: 700px) {
+@media (min-width: 50rem) {
 	.container {
-		.services {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 5px;
+		&__content {
+			&__services {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
 		}
 	}
 }
 
-@media (min-width: 800px) {
+@media (min-width: 80rem) {
 	.container {
-		width: 90%;
-	}
-}
-
-@media (min-width: 1024px) {
-	.container {
-		.services {
-			grid-template-columns: 1fr 1fr 1fr;
+		&__content {
+			grid-template-columns: 1fr 3fr;
+			&__services {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
 		}
 	}
 }
