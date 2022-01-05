@@ -8,7 +8,7 @@ const Hero = () => {
 					<h3 className={styles.title}>Welcome, I&apos;m Jacob</h3>
 					<h1 className={styles.hero_text}>
 						I design and build <br />
-						<span className={styles.custom_web}>custom web solutions</span>{' '}
+						<span className={styles.custom_web}>custom web solutions</span>
 						<br /> for your Brand.
 					</h1>
 					<p>

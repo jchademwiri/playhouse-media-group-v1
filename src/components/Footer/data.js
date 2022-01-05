@@ -5,7 +5,7 @@ export const consulting = [
 		name: 'Consulting',
 
 		description:
-			'Your website is the foundation of your online presence. We will work with you to design and develop a custom'
+			'Your website is the foundation of your online presence. We will work with you to design and develop a custom website that will meet your business goals and objectives.'
 	},
 	{
 		id: '2',
@@ -13,6 +13,6 @@ export const consulting = [
 		name: 'Try a design Consept',
 
 		description:
-			'Design concepts are great for companies looking to update their product on a limited budget.'
+			'Design concepts are great for companies looking to update their product on a limited budget. We can help you create a concept that will meet your business goals and objectives.'
 	}
 ];

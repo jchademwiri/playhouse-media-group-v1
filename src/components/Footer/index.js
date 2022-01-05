@@ -42,7 +42,7 @@ const Footer = () => {
 							<Link href={'/services/web-development'}>Web Development</Link>
 						</li>
 						<li>
-							<Link href={'/services/search-engine-optimazation'}>
+							<Link href={'/services/search-engine-optimization'}>
 								Search Engine Optmization
 							</Link>
 						</li>

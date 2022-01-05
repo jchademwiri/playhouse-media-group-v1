@@ -12,6 +12,7 @@
 	&__content {
 		max-width: 50rem;
 		h1 {
+			transition: all 1s ease-in-out;
 			font-size: 1.5rem;
 		}
 	}
@@ -25,10 +26,18 @@
 .container {
 	display: grid;
 	grid-template-columns: 1fr;
+	gap: 10px;
 	width: 90%;
 	margin: 0 auto;
 	margin-top: 20px;
 	padding-bottom: 20px;
+
+	&__content {
+		border: 1px dotted $accent;
+		border-radius: 0.3125rem;
+		padding: 10px;
+		max-width: 450px;
+	}
 }
 
 @media (min-width: 700px) {
@@ -39,11 +48,14 @@
 			}
 		}
 	}
+	.container {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 	.container {
-		width: 90%;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 

@@ -20,14 +20,14 @@ const service = ({ service }) => {
 				</div>
 			</header>
 			<main className={styles.container}>
-				<section className={styles.container__content}>
-					{service.details.map((detail) => (
-						<div key={detail.id} className={styles.container__content__details}>
-							<h3>{detail.title}</h3>
-							<p>{detail.description}</p>
-						</div>
-					))}
-				</section>
+				{/* <section className={styles.container__content}> */}
+				{service.details.map((detail) => (
+					<div key={detail.id} className={styles.container__content}>
+						<h3>{detail.title}</h3>
+						<p>{detail.description}</p>
+					</div>
+				))}
+				{/* </section> */}
 			</main>
 		</>
 	);

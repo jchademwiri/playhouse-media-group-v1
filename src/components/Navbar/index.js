@@ -10,7 +10,7 @@ const Navbar = () => {
 			<div className={styles.container}>
 				<div onClick={() => setOpen(false)} className={styles.brand}>
 					<Link href='/' scroll className={styles.logo}>
-						<>
+						<span>
 							<Image
 								src={'/images/logo.svg'}
 								width={50}
@@ -19,7 +19,7 @@ const Navbar = () => {
 								placeholder='blur'
 								alt='logo'
 							/>
-						</>
+						</span>
 					</Link>
 				</div>
 				<div className={styles.navigation}>
