@@ -13,7 +13,7 @@ const WhatWeDo = () => {
 							Digital products successfully
 						</span>
 					</h3>
-					{/* </div> */}
+
 					<div className={styles.boxes}>
 						<div className={styles.box}>
 							<div className={styles.icon}>
