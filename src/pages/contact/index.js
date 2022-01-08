@@ -1,6 +1,7 @@
 import styles from './contact.module.scss';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
+import { server } from '../../config';
 const contact = () => {
 	const SEO = {
 		title: `Jacob Chademwiri | Contact`,

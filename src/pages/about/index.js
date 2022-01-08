@@ -4,23 +4,20 @@ import { server } from '../../config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+import { server } from '../../config';
 const about = ({ details }) => {
 	const SEO = {
-		title: 'Jacob Chademwiri | Web Developer',
-		description:
-			'A professional web developer and digital marketing specialist',
-		canonical: 'https://www.playhousemedia.net/about'
+		title: `Jacob Chademwiri | About`,
+		description: `A professional web developer and digital marketing specialist bassed in South Africa.`,
+		canonical: `${server}/about`,
+		openGraph: {
+			url: `${server}/about`,
+			title: `Jacob Chademwiri | About`,
+			description: `A professional web developer and digital marketing specialist`
+		}
 	};
 	return (
 		<>
-			{/* <Head>
-				<title> About - {myName} </title>
-				<meta
-					name='description'
-					content='A professional web developer and digital marketing specialist'
-				/>
-				<link rel='icon' href='/favicon.ico' />
-			</Head> */}
 			<NextSeo {...SEO} />
 			<section className={styles.container}>
 				{details.map((detail) => (
