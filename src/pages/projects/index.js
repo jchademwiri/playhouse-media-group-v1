@@ -10,14 +10,11 @@ const projects = ({ projects }) => {
 
 	const SEO = {
 		title: 'Jacob Chademwiri | Portfolio',
-		description:
-			'A professional web developer and digital marketing specialist',
+
 		canonical: `${server}/projects`,
 		openGraph: {
 			url: `${server}/projects`,
-			title: 'Jacob Chademwiri | Portfolio',
-			description:
-				'A professional web developer and digital marketing specialist'
+			title: 'Jacob Chademwiri | Portfolio'
 		}
 	};
 	return (

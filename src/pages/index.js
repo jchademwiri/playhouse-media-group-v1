@@ -12,14 +12,10 @@ import WhatWeDo from '../components/WhatWeDo';
 const index = () => {
 	const SEO = {
 		title: 'Jacob Chademwiri | Web Developer',
-		description:
-			'A professional web developer and digital marketing specialist',
 		canonical: `${server}/`,
 		openGraph: {
 			url: `${server}/`,
-			title: 'Jacob Chademwiri | Web Developer',
-			description:
-				'A professional web developer and digital marketing specialist'
+			title: 'Jacob Chademwiri | Web Developer'
 		}
 	};
 	return (
@@ -27,8 +23,8 @@ const index = () => {
 			<NextSeo {...SEO} />
 			<main className={styles.container}>
 				<Hero />
-				<WhatWeDo />
 				<OurServices />
+				<WhatWeDo />
 				<RecentProjects />
 				<StartProject />
 			</main>

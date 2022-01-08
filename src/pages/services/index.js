@@ -7,14 +7,10 @@ import { NextSeo } from 'next-seo';
 const services = ({ services }) => {
 	const SEO = {
 		title: `Jacob Chademwiri | Services`,
-		description:
-			'A professional web developer and digital marketing specialist',
 		canonical: `${server}/services`,
 		openGraph: {
 			url: `${server}/services`,
-			title: `Jacob Chademwiri | Services`,
-			description:
-				'A professional web developer and digital marketing specialist'
+			title: `Jacob Chademwiri | Services`
 		}
 	};
 
