@@ -3,25 +3,24 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import { server } from '../../config';
+import { NextSeo } from 'next-seo';
 const services = ({ services }) => {
-	<Head>
-		<title>{services.name}</title>
-		<meta
-			name='description'
-			content='A professional web developer and digital marketing specialist'
-		/>
-		<link rel='icon' href='/favicon.ico' />
-	</Head>;
+	const SEO = {
+		title: `Jacob Chademwiri | Services`,
+		description:
+			'A professional web developer and digital marketing specialist',
+		canonical: `${server}/services`,
+		openGraph: {
+			url: `${server}/services`,
+			title: `Jacob Chademwiri | Services`,
+			description:
+				'A professional web developer and digital marketing specialist'
+		}
+	};
+
 	return (
 		<>
-			<Head>
-				<title>Our Services</title>
-				<meta
-					name='description'
-					content='A professional web developer and digital marketing specialist'
-				/>
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
+			<NextSeo {...SEO} />
 
 			<header className={styles.banner}>
 				<h1>Digital Strategy</h1>
@@ -74,7 +73,7 @@ const services = ({ services }) => {
 export default services;
 
 export async function getStaticProps() {
-// export async function getServerSideProps() {
+	// export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/services`);
 	const data = await response.json();
 	// console.log(data);

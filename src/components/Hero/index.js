@@ -24,14 +24,15 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className={styles.container__right}>
-					<p>
-						<i>
-							<span className={styles.quote}>“</span> Coming together is a
-							beginning, staying together is progress, and working together is
-							success.
-							<span className={styles.quote}>”</span>
-							<br /> <i>- Edward Everett Hale</i>
-						</i>
+					<p className={styles.quote__text}>
+						<span className={styles.quotes}>“</span> Coming together is a
+						beginning, staying together is progress, and working together is
+						success.
+						<span className={styles.quotes}>”</span>
+						<br />
+						<small className={styles.quote__author}>
+							- Edward Everett Hale
+						</small>
 					</p>
 				</div>
 			</div>

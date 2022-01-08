@@ -5,7 +5,8 @@ export default {
 	openGraph: {
 		url: 'https://www.playhousemedia.net/',
 		title: 'Jacob Chademwiri | Web Developer',
-		description: 'A professional web developer and digital marketing specialist',
+		description:
+			'A professional web developer and digital marketing specialist',
 		images: [
 			{
 				url: 'https://www.example.ie/og-image-01.jpg',
@@ -26,9 +27,9 @@ export default {
 		],
 		site_name: 'Jacob Chademwiri | Web Developer'
 	},
-	twitter = {
+	twitter: {
 		handle: '@jchademwiri',
 		site: '@jchademwiri',
 		cardType: 'summary_large_image'
-	},
+	}
 };

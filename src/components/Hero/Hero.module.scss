@@ -116,10 +116,17 @@
 				font-size: 1rem;
 				transition: all 1s ease-in-out;
 
-				.quote {
-					padding: 1rem;
-					font-size: 1.2rem;
-					font-family: 'Poller One', cursive;
+				.quote__text {
+					.quotes {
+						padding: 1rem;
+						font-size: 1.3rem;
+						font-family: 'Poller One', cursive;
+					}
+					.quote__author {
+						font-style: italic;
+						font-weight: 100;
+						padding: 1rem;
+					}
 				}
 			}
 		}

@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 1rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+	width: 90%;
+
+	.title {
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 1rem;
+		text-align: center;
+		margin-top: 3rem;
+	}
+	.content {
+		.item {
+			.titles {
+				text-align: center;
+				margin: 1rem 0;
+				font-size: 1.5rem;
+				.digital {
+					color: $accent;
+					font-weight: 300;
+					font-size: 1.2rem;
+				}
+			}
+			.boxes {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 10px;
+
+				.box {
+					border-radius: 0.3125rem;
+					margin: 2rem 0;
+					padding: 1rem;
+					// background-color: $bg-faint;
+					background-color: rgba(14, 13, 29, 0.2);
+					.icon {
+						color: $accent;
+						height: 100px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 600px) {
+	.container {
+		.content {
+			.item {
+				.boxes {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		.content {
+			.item {
+				.boxes {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+		}
+	}
+}

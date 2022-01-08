@@ -4,18 +4,26 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { server } from '../../config';
+import { NextSeo } from 'next-seo';
 const projects = ({ projects }) => {
 	// console.log(projects);
+
+	const SEO = {
+		title: 'Jacob Chademwiri | Portfolio',
+		description:
+			'A professional web developer and digital marketing specialist',
+		canonical: `${server}/projects`,
+		openGraph: {
+			url: `${server}/projects`,
+			title: 'Jacob Chademwiri | Portfolio',
+			description:
+				'A professional web developer and digital marketing specialist'
+		}
+	};
 	return (
 		<>
-			<Head>
-				<title>Our Projects</title>
-				<meta
-					name='description'
-					content='A professional web developer and digital marketing specialist'
-				/>
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
+			<NextSeo {...SEO} />
+
 			<header className={styles.banner}>
 				<div className={styles.banner__content}>
 					<h1>Portfolio</h1>

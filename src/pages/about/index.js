@@ -3,18 +3,25 @@ import Head from 'next/head';
 import { server } from '../../config';
 import Link from 'next/link';
 import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 const about = ({ details }) => {
-	let myName = 'Jacob Chademwiwiri';
+	const SEO = {
+		title: 'Jacob Chademwiri | Web Developer',
+		description:
+			'A professional web developer and digital marketing specialist',
+		canonical: 'https://www.playhousemedia.net/about'
+	};
 	return (
 		<>
-			<Head>
+			{/* <Head>
 				<title> About - {myName} </title>
 				<meta
 					name='description'
 					content='A professional web developer and digital marketing specialist'
 				/>
 				<link rel='icon' href='/favicon.ico' />
-			</Head>
+			</Head> */}
+			<NextSeo {...SEO} />
 			<section className={styles.container}>
 				{details.map((detail) => (
 					<div key={detail.id} className={styles.container__about}>
