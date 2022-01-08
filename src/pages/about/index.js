@@ -4,7 +4,7 @@ import { server } from '../../config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
-import { server } from '../../config';
+
 const about = ({ details }) => {
 	const SEO = {
 		title: `Jacob Chademwiri | About`,
