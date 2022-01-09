@@ -1,7 +1,8 @@
 export const services = [
 	{
 		id: '1',
-		image: '/images/ui-ux.jpg',
+		image:
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719693/portfolio/ui-ux_ubmpde.jpg',
 		name: 'Web Development',
 		slug: 'web-development',
 		description:
@@ -53,7 +54,8 @@ export const services = [
 	},
 	{
 		id: '2',
-		image: '/images/search-engine-optimization-01.jpg',
+		image:
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719692/portfolio/search-engine-optimization-01_ovekvm.jpg',
 		name: 'Search Engine Optimization',
 		slug: 'search-engine-optimization',
 		description:
@@ -93,7 +95,8 @@ export const services = [
 	},
 	{
 		id: '3',
-		image: '/images/digital.jpg',
+		image:
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719695/portfolio/digital_phetma.jpg',
 		name: 'Digital Marketing',
 		slug: 'digital-marketing',
 		description:
