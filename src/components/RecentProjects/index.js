@@ -20,7 +20,7 @@ const RecentProjects = () => {
 						/>
 						<h3>{project.name}</h3>
 						<p> {project.description} </p>
-						<h4 className={styles.techstack}>View Project</h4>
+
 						<p className={styles.technology}>
 							{project.technologies
 								.toString()
@@ -30,7 +30,7 @@ const RecentProjects = () => {
 								))}
 						</p>
 						<Link href={`/projects/${project.slug}`} className={styles.link}>
-							Show Details
+							View Project
 						</Link>
 					</div>
 				))}
