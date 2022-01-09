@@ -13,8 +13,8 @@ const Navbar = () => {
 						<span>
 							<Image
 								src={'/images/logo.svg'}
-								width={50}
-								height={50}
+								width={68}
+								height={54}
 								blurDataURL='/images/logo.svg'
 								placeholder='blur'
 								alt='logo'

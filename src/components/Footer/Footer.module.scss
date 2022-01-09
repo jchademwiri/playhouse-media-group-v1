@@ -48,7 +48,11 @@
 				padding: 0;
 
 				li {
-					margin: 10px 0;
+					margin: 15px 0;
+					a {
+						padding: 5px 0;
+						// border: 2px solid $accent;
+					}
 				}
 			}
 		}

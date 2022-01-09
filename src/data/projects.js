@@ -1,7 +1,7 @@
 export const projects = [
 	{
 		id: '1',
-		image: '/images/bg.png',
+		image: '/images/bg.jpg',
 		name: 'Playhouse Media Group',
 		slug: 'playhouse-media-group',
 		description:
@@ -12,7 +12,7 @@ export const projects = [
 	},
 	{
 		id: '2',
-		image: '/images/bg.png',
+		image: '/images/bg.jpg',
 		name: 'Sea Harvest Website',
 		slug: 'sea-harvest-website',
 		description:
@@ -24,7 +24,7 @@ export const projects = [
 	},
 	{
 		id: '3',
-		image: '/images/bg.png',
+		image: '/images/bg.jpg',
 		name: 'Micro Finance',
 		slug: 'micro-finance',
 		description:

@@ -1,7 +1,7 @@
 export const recentProjects = [
 	{
 		id: '1',
-		image: '/images/bg.png',
+		image: '/images/bg.jpg',
 		name: 'Crypro Price Tracker',
 		slug: 'crypro-price-tracker',
 		description:
@@ -10,7 +10,7 @@ export const recentProjects = [
 	},
 	{
 		id: '2',
-		image: '/images/bg.png',
+		image: '/images/bg.jpg',
 		name: 'Edurite Website',
 		slug: 'edurite-website',
 		description:
@@ -19,7 +19,7 @@ export const recentProjects = [
 	},
 	{
 		id: '3',
-		image: '/images/bg.png',
+		image: '/images/bg.jpg',
 		name: 'Micro Finance',
 		slug: 'micro-finance',
 		description:

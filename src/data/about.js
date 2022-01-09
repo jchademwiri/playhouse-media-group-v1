@@ -1,7 +1,7 @@
 export const about = [
 	{
 		id: '1',
-		image: '/images/bg.png',
+		image: '/images/bg.jpg',
 		name: 'Jacob Chademwiri',
 		profession: 'Front-End Developer',
 		description:

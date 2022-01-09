@@ -30,7 +30,7 @@ const RecentProjects = () => {
 								))}
 						</p>
 						<Link href={`/projects/${project.slug}`} className={styles.link}>
-							Learn More
+							Show Details
 						</Link>
 					</div>
 				))}
