@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 .banner {
-	background: url('/images/keyboard.jpg') center center/cover no-repeat;
+	background: url('https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899584/portfolio/keyboard_abfraj.webp')
+		center center/cover no-repeat;
 	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
 	display: flex;
 	flex-direction: column;

@@ -46,12 +46,18 @@ const projects = ({ projects }) => {
 							<p> {project.description} </p>
 
 							<div className={styles.links}>
-								<Link href={`${project.github}`} className={styles.link}>
+								<a
+									href={`${project.github}`}
+									target='_blank'
+									className={styles.link}>
 									View on Github
-								</Link>
-								<Link href={`${project.website}`} className={styles.link}>
+								</a>
+								<a
+									href={`${project.website}`}
+									target='_blank'
+									className={styles.link}>
 									View Live
-								</Link>
+								</a>
 							</div>
 							<p className={styles.technology}>
 								{project.technologies
