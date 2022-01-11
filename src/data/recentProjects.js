@@ -2,7 +2,7 @@ export const recentProjects = [
 	{
 		id: '1',
 		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719695/portfolio/flower_cnrqp0.jpg',
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/responsive-web-design_volv9z.webp',
 		name: 'Crypro Price Tracker',
 		slug: 'crypro-price-tracker',
 		description:
@@ -12,7 +12,7 @@ export const recentProjects = [
 	{
 		id: '2',
 		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719695/portfolio/flower_cnrqp0.jpg',
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/responsive-web-design_volv9z.webp',
 		name: 'Edurite Website',
 		slug: 'edurite-website',
 		description:
@@ -22,7 +22,7 @@ export const recentProjects = [
 	{
 		id: '3',
 		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719695/portfolio/flower_cnrqp0.jpg',
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/responsive-web-design_volv9z.webp',
 		name: 'Micro Finance',
 		slug: 'micro-finance',
 		description:

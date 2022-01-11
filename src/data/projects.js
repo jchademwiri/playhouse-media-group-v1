@@ -2,7 +2,7 @@ export const projects = [
 	{
 		id: '1',
 		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719692/portfolio/responsive-web-design_cdubu8.jpg',
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/responsive-web-design_volv9z.webp',
 		name: 'Playhouse Media Group',
 		slug: 'playhouse-media-group',
 		description:
@@ -14,7 +14,7 @@ export const projects = [
 	{
 		id: '2',
 		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719692/portfolio/responsive-web-design_cdubu8.jpg',
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/responsive-web-design_volv9z.webp',
 		name: 'Sea Harvest Website',
 		slug: 'sea-harvest-website',
 		description:
@@ -27,7 +27,7 @@ export const projects = [
 	{
 		id: '3',
 		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641719692/portfolio/responsive-web-design_cdubu8.jpg',
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/responsive-web-design_volv9z.webp',
 		name: 'Micro Finance',
 		slug: 'micro-finance',
 		description:
