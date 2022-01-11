@@ -10,21 +10,21 @@ export default {
 			'Playhouse Media Group takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, and Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.',
 		images: [
 			{
-				url: 'https://www.example.ie/og-image-01.webp',
+				url: 'https://www.example.ie/og-image-01.jpg',
 				width: 800,
 				height: 600,
 				alt: 'Og Image Alt',
 				type: 'image/jpeg'
 			},
 			{
-				url: 'https://www.example.ie/og-image-02.webp',
+				url: 'https://www.example.ie/og-image-02.jpg',
 				width: 900,
 				height: 800,
 				alt: 'Og Image Alt Second',
 				type: 'image/jpeg'
 			},
-			{ url: 'https://www.example.ie/og-image-03.webp' },
-			{ url: 'https://www.example.ie/og-image-04.webp' }
+			{ url: 'https://www.example.ie/og-image-03.jpg' },
+			{ url: 'https://www.example.ie/og-image-04.jpg' }
 		],
 		site_name: 'Jacob Chademwiri | Web Developer'
 	},

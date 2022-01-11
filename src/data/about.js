@@ -1,8 +1,7 @@
 export const about = [
 	{
 		id: '1',
-		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899583/portfolio/bg_rhcn4f.webp',
+		image: '/images/bg.jpg',
 		name: 'Jacob Chademwiri',
 		profession: 'Front-End Developer',
 		description:
