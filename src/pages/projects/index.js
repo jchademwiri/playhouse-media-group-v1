@@ -49,12 +49,14 @@ const projects = ({ projects }) => {
 								<a
 									href={`${project.github}`}
 									target='_blank'
+									rel='noreferrer'
 									className={styles.link}>
 									View on Github
 								</a>
 								<a
 									href={`${project.website}`}
 									target='_blank'
+									rel='noreferrer'
 									className={styles.link}>
 									View Live
 								</a>
