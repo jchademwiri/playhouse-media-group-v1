@@ -5,7 +5,11 @@ export const pageview = (url) => {
 	});
 };
 
-// log specific events happening.
-export const event = ({ action, params }) => {
-	window.gtag('event', action, params);
+// https://developers.google.com/analytics/devguides/collection/gtagjs/events
+export const event = ({ action, category, label, value }) => {
+	window.gtag('event', action, {
+		event_category: category,
+		event_label: label,
+		value: value,
+	});
 };
