@@ -1,9 +1,9 @@
 import styles from './about.module.scss';
-import Head from 'next/head';
 import { server } from '../../config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+// import { useSWR } from 'swr';
 
 const about = ({ details }) => {
 	const SEO = {
@@ -13,9 +13,17 @@ const about = ({ details }) => {
 		openGraph: {
 			url: `${server}/about`,
 			title: `Jacob Chademwiri | About`,
-			description: `A professional web developer and digital marketing specialist`
-		}
+			description: `A professional web developer and digital marketing specialist`,
+		},
 	};
+
+	// fetch data using swr hook
+	// const { data, error } = useSWR(`${server}/api/projects`, {
+	// 	initialData: details,
+	// 	revalidateOnFocus: false,
+	// 	revalidateOnReconnect: false
+	// });
+
 	return (
 		<>
 			<NextSeo {...SEO} />
@@ -94,7 +102,7 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			details: data
-		}
+			details: data,
+		},
 	};
 }

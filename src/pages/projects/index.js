@@ -1,10 +1,10 @@
 // import styles from '../../styles/projects.module.scss';
 import styles from './projects.module.scss';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { server } from '../../config';
 import { NextSeo } from 'next-seo';
+import Loading from '../../components/Loading';
 const projects = ({ projects }) => {
 	// console.log(projects);
 
@@ -31,49 +31,61 @@ const projects = ({ projects }) => {
 			<main className={styles.container}>
 				{/* <h1>Completed Projects</h1> */}
 				<div className={styles.services}>
-					{projects.map((project) => (
-						<div key={project.id} className={styles.service}>
-							<Image
-								placeholder='blur'
-								src={project.image}
-								alt={project.name}
-								blurDataURL={project.image}
-								width={1440}
-								height={1024}
-								objectFit='cover'
-							/>
-							<h3>{project.name}</h3>
-							<p> {project.description} </p>
+					{projects ? (
+						projects.map((project) => (
+							<div key={project.id} className={styles.service}>
+								<Image
+									placeholder='blur'
+									src={project.image}
+									alt={project.name}
+									blurDataURL={project.image}
+									width={1440}
+									height={1024}
+									objectFit='cover'
+								/>
+								<h3>{project.name}</h3>
+								<p> {project.description} </p>
 
-							<div className={styles.links}>
-								<a
-									href={`${project.github}`}
-									target='_blank'
-									rel='noreferrer'
+								<div className={styles.links}>
+									<a
+										href={`${project.github}`}
+										target='_blank'
+										rel='noreferrer'
+										className={styles.link}>
+										View on Github
+									</a>
+									<a
+										href={`${project.website}`}
+										target='_blank'
+										rel='noreferrer'
+										className={styles.link}>
+										View Live
+									</a>
+								</div>
+								<p className={styles.technology}>
+									{project.technology ? (
+										project.technologies
+											.toString()
+											.split(',')
+											.map((technology) => (
+												<span key={technology}>{technology}</span>
+											))
+									) : (
+										<span>No technologies</span>
+									)}
+								</p>
+								<Link
+									href={`/projects/${project.slug}`}
 									className={styles.link}>
-									View on Github
-								</a>
-								<a
-									href={`${project.website}`}
-									target='_blank'
-									rel='noreferrer'
-									className={styles.link}>
-									View Live
-								</a>
+									View Project
+								</Link>
 							</div>
-							<p className={styles.technology}>
-								{project.technologies
-									.toString()
-									.split(',')
-									.map((technology) => (
-										<span key={technology}>{technology}</span>
-									))}
-							</p>
-							<Link href={`/projects/${project.slug}`} className={styles.link}>
-								View Project
-							</Link>
-						</div>
-					))}
+						))
+					) : (
+						<>
+							<Loading />
+						</>
+					)}
 				</div>
 			</main>
 		</>
@@ -83,7 +95,7 @@ const projects = ({ projects }) => {
 export default projects;
 
 // export async function getStaticProps() {
-	export async function getServerSideProps() {
+export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/projects`);
 	const data = await response.json();
 	// console.log(data);

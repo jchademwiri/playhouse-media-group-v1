@@ -8,6 +8,7 @@ import styles from '../styles/home.module.scss';
 import { NextSeo } from 'next-seo';
 import { server } from '../config';
 import WhatWeDo from '../components/WhatWeDo';
+import Clients from '../components/Clients';
 
 const index = () => {
 	const SEO = {
@@ -25,8 +26,10 @@ const index = () => {
 				<Hero />
 				<OurServices />
 				<WhatWeDo />
+				<Clients />
 				<RecentProjects />
 				<StartProject />
+			
 			</main>
 		</>
 	);
