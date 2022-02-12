@@ -5,6 +5,7 @@ import { server } from '../../config';
 import { NextSeo } from 'next-seo';
 import Loading from '../../components/Loading';
 import { useSWR } from 'swr';
+import OurServices from '../../components/OurServices';
 
 const services = ({ services }) => {
 	// const services = () => {
@@ -13,8 +14,8 @@ const services = ({ services }) => {
 		canonical: `${server}/services`,
 		openGraph: {
 			url: `${server}/services`,
-			title: `Jacob Chademwiri | Services`
-		}
+			title: `Jacob Chademwiri | Services`,
+		},
 	};
 
 	// const { data: services, error } = useSWR(`${server}/api/services`);
@@ -75,6 +76,7 @@ const services = ({ services }) => {
 						)}
 					</div>
 				</section>
+				<OurServices />
 			</main>
 		</>
 	);
@@ -90,7 +92,7 @@ export async function getServerSideProps() {
 
 	return {
 		props: {
-			services: data
-		}
+			services: data,
+		},
 	};
 }

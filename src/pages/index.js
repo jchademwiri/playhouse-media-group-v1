@@ -9,6 +9,7 @@ import { NextSeo } from 'next-seo';
 import { server } from '../config';
 import WhatWeDo from '../components/WhatWeDo';
 import Clients from '../components/Clients';
+import Featured from '../components/Featured';
 
 const index = () => {
 	const SEO = {
@@ -16,20 +17,20 @@ const index = () => {
 		canonical: `${server}/`,
 		openGraph: {
 			url: `${server}/`,
-			title: 'Jacob Chademwiri | Web Developer'
-		}
+			title: 'Jacob Chademwiri | Web Developer',
+		},
 	};
 	return (
 		<>
 			<NextSeo {...SEO} />
 			<main className={styles.container}>
 				<Hero />
+				<Featured />
 				<OurServices />
 				<WhatWeDo />
 				<Clients />
 				<RecentProjects />
 				<StartProject />
-			
 			</main>
 		</>
 	);
