@@ -5,6 +5,45 @@ import { useState } from 'react';
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
+	const humNav = (
+		<>
+			<svg
+				width='30'
+				height='24'
+				viewBox='0 0 30 24'
+				fill='none'
+				xmlns='http://www.w3.org/2000/svg'>
+				<line
+					x1='2'
+					y1='2'
+					x2='28'
+					y2='2'
+					stroke='#fafafa'
+					strokeWidth='4'
+					strokeLinecap='round'
+				/>
+				<line
+					x1='12'
+					y1='12'
+					x2='28'
+					y2='12'
+					stroke='#fafafa'
+					strokeWidth='4'
+					strokeLinecap='round'
+				/>
+				<line
+					x1='2'
+					y1='22'
+					x2='28'
+					y2='22'
+					stroke='#fafafa'
+					strokeWidth='4'
+					strokeLinecap='round'
+				/>
+			</svg>
+		</>
+	);
+
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.container}>
@@ -47,45 +86,13 @@ const Navbar = () => {
 					</div>
 					<nav className={styles.mobileNav}>
 						<div className={styles.hamburger} onClick={() => setOpen(!open)}>
-							<svg
-								width='30'
-								height='24'
-								viewBox='0 0 30 24'
-								fill='none'
-								xmlns='http://www.w3.org/2000/svg'>
-								<line
-									x1='2'
-									y1='2'
-									x2='28'
-									y2='2'
-									stroke='#fafafa'
-									strokeWidth='4'
-									strokeLinecap='round'
-								/>
-								<line
-									x1='12'
-									y1='12'
-									x2='28'
-									y2='12'
-									stroke='#fafafa'
-									strokeWidth='4'
-									strokeLinecap='round'
-								/>
-								<line
-									x1='2'
-									y1='22'
-									x2='28'
-									y2='22'
-									stroke='#fafafa'
-									strokeWidth='4'
-									strokeLinecap='round'
-								/>
-							</svg>
+							{humNav}
 						</div>
 						<ul
 							onClick={() => setOpen(false)}
 							className={styles.menu}
 							style={{ right: open ? '0px' : '-100vw' }}>
+							<li className={styles.closebtn}>{humNav}</li>
 							<li className='menuItem'>
 								<Link href='/' scroll>
 									Home
