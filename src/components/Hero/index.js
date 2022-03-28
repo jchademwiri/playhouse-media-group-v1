@@ -23,7 +23,7 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
-				{/* <div className={styles.container__right}>
+				<div className={styles.container__right}>
 					<p className={styles.quote__text}>
 						<span className={styles.quotes}>“</span> Coming together is a
 						beginning, staying together is progress, and working together is
@@ -34,7 +34,7 @@ const Hero = () => {
 							- Edward Everett Hale
 						</small>
 					</p>
-				</div> */}
+				</div>
 			</div>
 		</header>
 	);
