@@ -7,9 +7,9 @@ const Hero = () => {
 				<div className={styles.container__left}>
 					<h3 className={styles.title}>Welcome, I&apos;m Jacob</h3>
 					<h1 className={styles.hero_text}>
-						I design and build <br />
-						<span className={styles.custom_web}>custom web solutions</span>
-						<br /> for your Brand.
+						Welcome To <br />
+						<span className={styles.custom_web}>Playhouse Media Group</span>
+						<br /> Home Of Creative Designs.
 					</h1>
 					<p>
 						I love to visualise ideas and make them come alive in a website.
@@ -23,7 +23,7 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
-				<div className={styles.container__right}>
+				{/* <div className={styles.container__right}>
 					<p className={styles.quote__text}>
 						<span className={styles.quotes}>“</span> Coming together is a
 						beginning, staying together is progress, and working together is
@@ -34,7 +34,7 @@ const Hero = () => {
 							- Edward Everett Hale
 						</small>
 					</p>
-				</div>
+				</div> */}
 			</div>
 		</header>
 	);
