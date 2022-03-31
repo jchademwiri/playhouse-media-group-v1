@@ -9,10 +9,12 @@ const Hero = () => {
 					<h1 className={styles.hero_text}>
 						Welcome To <br />
 						<span className={styles.custom_web}>Playhouse Media Group</span>
-						<br /> Home Of Creative Designs.
+						<br />
+						Your Digital Agency.
 					</h1>
 					<p>
-						I love to visualise ideas and make them come alive in a website.
+						{/* I love to visualise ideas and make them come alive in a website. */}
+						Home Of Creative Designs
 					</p>
 					<div className={styles.buttons}>
 						<div className={styles.btn}>

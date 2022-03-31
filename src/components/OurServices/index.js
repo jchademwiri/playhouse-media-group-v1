@@ -5,9 +5,10 @@ import Loading from '../Loading';
 const OurServices = () => {
 	return (
 		<section className={styles.container}>
-			<div className={styles.hed}>
+			<div className={styles.header}>
 				<h2>How can we help you?</h2>
 			</div>
+
 			<div className={styles.services}>
 				{helps ? (
 					helps.map((help) => (
