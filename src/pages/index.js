@@ -1,8 +1,5 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import Hero from '../components/Hero';
 import OurServices from '../components/OurServices';
-import RecentProjects from '../components/RecentProjects';
 import StartProject from '../components/StartProject';
 import styles from '../styles/home.module.scss';
 import { NextSeo } from 'next-seo';
@@ -29,7 +26,6 @@ const index = () => {
 				<OurServices />
 				<WhatWeDo />
 				<Clients />
-				<RecentProjects />
 				<StartProject />
 			</main>
 		</>

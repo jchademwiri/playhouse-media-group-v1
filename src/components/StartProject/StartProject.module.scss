@@ -13,10 +13,9 @@
 	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
 
 	&__content {
-		width: 80%;
-		max-width: 75rem;
+		width: 90%;
 		margin: 0 auto;
-		padding: 1.25rem;
+		padding: 1.25rem 0;
 
 		&__text {
 			h2 {
@@ -37,10 +36,11 @@
 	}
 }
 
-// This applies from 600px onwards
-@media (min-width: 900px) {
+// This applies from 1024px onwards
+@media (min-width: 1200px) {
 	.container {
 		&__content {
+			max-width: 75rem;
 			&__text {
 				width: 75%;
 				h2 {

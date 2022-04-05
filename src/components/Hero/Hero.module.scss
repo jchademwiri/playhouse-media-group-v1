@@ -10,12 +10,10 @@
 	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
 	justify-content: center;
 	min-height: 50vh;
-	// padding: 20px;
 	margin: 0 auto;
 
 	&__hero {
-		width: 80%;
-		max-width: 75rem;
+		width: 90%;
 		margin: 0 auto;
 		padding: 10px;
 		margin-top: 20px;
@@ -69,7 +67,7 @@
 	}
 }
 // This applies from 600px onwards
-@media (min-width: 700px) {
+@media (min-width: 900px) {
 	.container {
 		&__hero {
 			.container__left {
@@ -87,6 +85,7 @@
 @media (min-width: 1024px) {
 	.container {
 		&__hero {
+			max-width: 75rem;
 			display: grid;
 			grid-template-columns: 2fr 1fr;
 

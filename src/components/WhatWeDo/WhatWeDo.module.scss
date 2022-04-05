@@ -6,8 +6,7 @@
 	grid-template-rows: auto;
 	grid-gap: 1rem;
 	margin: 0 auto;
-	width: 80%;
-	max-width: 75rem;
+	width: 90%;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 
@@ -38,7 +37,6 @@
 					border-radius: 0.3125rem;
 					padding: 1rem;
 					background-color: rgba(14, 13, 29, 0.2);
-					// .icon {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -72,6 +70,8 @@
 
 @media (min-width: 1240px) {
 	.container {
+		width: 80%;
+		// max-width: 75rem;
 		.content {
 			.item {
 				.boxes {

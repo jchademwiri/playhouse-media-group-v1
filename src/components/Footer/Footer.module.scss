@@ -1,8 +1,7 @@
 @import '../../styles/variables.scss';
 
 .container {
-	width: 80%;
-	max-width: 75rem;
+	width: 90%;
 	margin: 0 auto;
 
 	&__title {
@@ -68,8 +67,9 @@
 	}
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
 	.container {
+		max-width: 75rem;
 		&__title {
 			h2 {
 				font-size: 2rem;
