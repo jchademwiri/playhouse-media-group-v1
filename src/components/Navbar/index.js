@@ -92,7 +92,7 @@ const Navbar = () => {
 							onClick={() => setOpen(false)}
 							className={styles.menu}
 							style={{ right: open ? '0px' : '-100vw' }}>
-							<li className={styles.closebtn}>{humNav}</li>
+							<li className={styles.closebtn}>X</li>
 							<li className='menuItem'>
 								<Link href='/' scroll>
 									Home
