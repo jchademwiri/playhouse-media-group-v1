@@ -39,12 +39,7 @@
 
 @media (min-width: 700px) {
 	.container {
-		.header {
-			width: 90%;
-		}
 		.services {
-			margin: 0 auto;
-			width: 90%;
 			grid-template-columns: 1fr 1fr;
 		}
 	}
@@ -52,8 +47,14 @@
 
 @media (min-width: 1024px) {
 	.container {
+		.header {
+			width: 80%;
+		}
 		.services {
 			grid-template-columns: 1fr 1fr 1fr;
+			.header {
+				width: 80%;
+			}
 		}
 	}
 }
