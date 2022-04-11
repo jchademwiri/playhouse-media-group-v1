@@ -20,7 +20,12 @@ const Hero = () => {
 					</small>
 					<div className={styles.buttons}>
 						<div className={styles.btn}>
-							<Link href='/contact'>Request A Quote</Link>
+							<a
+								target='_blank'
+								href='https://wa.me/+27740491433'
+								rel='noopener noreferrer'>
+								Request A Quote
+							</a>
 						</div>
 						<div className={styles.btn}>
 							<Link href='/projects'>View My Works</Link>
