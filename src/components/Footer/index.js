@@ -68,6 +68,7 @@ const Footer = () => {
 						<li>
 							<a
 								target='_blank'
+								rel='noopener noreferrer'
 								href={'https://www.facebook.com/playhousemediagroup'}>
 								Facebook
 							</a>
@@ -75,6 +76,7 @@ const Footer = () => {
 						<li>
 							<a
 								target='_blank'
+								rel='noopener noreferrer'
 								href={'https://www.instagram.com/playhousemediagroup'}>
 								Instagram
 							</a>
@@ -82,6 +84,7 @@ const Footer = () => {
 						<li>
 							<a
 								target='_blank'
+								rel='noopener noreferrer'
 								href={'https://www.linkedin.com/in/jchademwiri/'}>
 								Linkedin
 							</a>
@@ -89,10 +92,11 @@ const Footer = () => {
 						<li>
 							<a
 								target='_blank'
+								rel='noopener noreferrer'
 								href={
 									'https://www.youtube.com/channel/UCgnCtM2Ih8L5xNXXpBREmEg'
 								}>
-								Youtube
+								YouTube
 							</a>
 						</li>
 					</ul>
