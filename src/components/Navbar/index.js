@@ -100,16 +100,24 @@ const Navbar = () => {
 							</li>
 
 							<li className='menuItem'>
-								<Link href='/services'>Services</Link>
+								<Link href='/services'>
+									<a>Services</a>
+								</Link>
 							</li>
 							<li className='menuItem'>
-								<Link href='/projects'>Portfolio</Link>
+								<Link href='/projects'>
+									<a>Portfolio</a>
+								</Link>
 							</li>
 							<li className='menuItem'>
-								<Link href='/about'>About</Link>
+								<Link href='/about'>
+									<a>About</a>
+								</Link>
 							</li>
 							<li className='menuItem'>
-								<Link href='/contact'>Contact</Link>
+								<Link href='/contact'>
+									<a>Contact</a>
+								</Link>
 							</li>
 						</ul>
 					</nav>
