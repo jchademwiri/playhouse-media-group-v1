@@ -47,14 +47,13 @@
 
 @media (min-width: 1024px) {
 	.container {
-		.header {
+		.header,
+		.services {
+			max-width: $containerMaxWidth;
 			width: 80%;
 		}
 		.services {
 			grid-template-columns: 1fr 1fr 1fr;
-			.header {
-				width: 80%;
-			}
 		}
 	}
 }

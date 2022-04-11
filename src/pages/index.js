@@ -10,11 +10,11 @@ import Featured from '../components/Featured';
 
 const index = () => {
 	const SEO = {
-		title: 'Jacob Chademwiri | Web Developer',
+		title: 'Playhouse Media Group | Web Developer',
 		canonical: `${server}/`,
 		openGraph: {
 			url: `${server}/`,
-			title: 'Jacob Chademwiri | Web Developer',
+			title: 'Playhouse Media Group | Web Developer',
 		},
 	};
 	return (
@@ -25,7 +25,7 @@ const index = () => {
 				<Featured />
 				<OurServices />
 				<WhatWeDo />
-				<Clients />
+				{/* <Clients /> */}
 				<StartProject />
 			</main>
 		</>

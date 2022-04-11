@@ -5,9 +5,9 @@ const Hero = () => {
 		<header className={styles.container}>
 			<div className={styles.container__hero}>
 				<div className={styles.container__left}>
-					<h3 className={styles.title}>
+					{/* <h3 className={styles.title}>
 						Welcome To the Home of Creative Design
-					</h3>
+					</h3> */}
 					<h1 className={styles.hero_text}>
 						Welcome To <br />
 						<span className={styles.custom_web}>Playhouse Media Group</span>
@@ -15,7 +15,7 @@ const Hero = () => {
 						Your Digital Agency.
 					</h1>
 					<small className={styles.quote}>
-						We love to visualise ideas and make them come alive in a website.
+						{/* We love to visualise ideas and make them come alive in a website. */}
 						{/* Home Of Creative Designs */}
 					</small>
 					<div className={styles.buttons}>

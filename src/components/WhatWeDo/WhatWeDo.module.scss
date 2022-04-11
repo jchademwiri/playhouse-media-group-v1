@@ -70,8 +70,8 @@
 
 @media (min-width: 1240px) {
 	.container {
+		max-width: $containerMaxWidth;
 		width: 80%;
-		// max-width: 75rem;
 		.content {
 			.item {
 				.boxes {

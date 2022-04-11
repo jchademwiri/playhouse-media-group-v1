@@ -46,19 +46,15 @@
 
 				.btn {
 					margin: 0.5rem;
-					padding: 0.5rem;
+					padding: 0.5rem 1rem;
 					border: 1px solid $accent;
-					border-radius: 0.5rem;
+					border-radius: 0.2rem;
 					font-size: 0.9rem;
-					background: $bg;
-
-					&:hover {
-						border: 1px solid $accent;
-					}
+					background: $accent;
 
 					a {
 						&:hover {
-							color: $accent;
+							color: $bg;
 						}
 					}
 				}
@@ -72,6 +68,7 @@
 // This applies from 600px onwards
 @media (min-width: 900px) {
 	.container {
+		min-height: 70vh;
 		&__hero {
 			.container__left {
 				.hero_text {
@@ -87,11 +84,11 @@
 // This applies from 600px onwards
 @media (min-width: 1024px) {
 	.container {
+		min-height: 75vh;
 		&__hero {
 			max-width: 75rem;
 			display: grid;
 			grid-template-columns: 2fr 1fr;
-
 			.container__left {
 				.hero_text {
 					font-size: 3rem;

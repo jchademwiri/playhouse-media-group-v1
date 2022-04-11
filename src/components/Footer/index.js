@@ -27,9 +27,13 @@ const Footer = () => {
 						/>
 						<h3>{consulting.name}</h3>
 						<p>{consulting.description}</p>
-						<Link className={styles.project_link} href='#'>
+						<a
+							className={styles.project_link}
+							target='_blank'
+							href='https://wa.me/+27740491433'
+							rel='noopener noreferrer'>
 							Let&apos;s get started
-						</Link>
+						</a>
 					</div>
 				))}
 
@@ -62,27 +66,34 @@ const Footer = () => {
 					</h3>
 					<ul>
 						<li>
-							<Link href={'https://www.facebook.com/playhousemediagroup'}>
+							<a
+								target='_blank'
+								href={'https://www.facebook.com/playhousemediagroup'}>
 								Facebook
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link href={'https://www.instagram.com/playhousemediagroup'}>
+							<a
+								target='_blank'
+								href={'https://www.instagram.com/playhousemediagroup'}>
 								Instagram
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link href={'https://www.linkedin.com/in/jchademwiri/'}>
+							<a
+								target='_blank'
+								href={'https://www.linkedin.com/in/jchademwiri/'}>
 								Linkedin
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link
+							<a
+								target='_blank'
 								href={
 									'https://www.youtube.com/channel/UCgnCtM2Ih8L5xNXXpBREmEg'
 								}>
 								Youtube
-							</Link>
+							</a>
 						</li>
 					</ul>
 				</div>
