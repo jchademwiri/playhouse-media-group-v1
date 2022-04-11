@@ -48,16 +48,18 @@ const Navbar = () => {
 		<nav className={styles.nav}>
 			<div className={styles.container}>
 				<div onClick={() => setOpen(false)} className={styles.brand}>
-					<Link href='/' scroll className={styles.logo}>
+					<Link passHref href='/' scroll className={styles.logo}>
 						<span>
-							<Image
-								src={'/images/logo.svg'}
-								width={68}
-								height={54}
-								blurDataURL='/images/logo.svg'
-								placeholder='blur'
-								alt='logo'
-							/>
+							<a>
+								<Image
+									src={'/images/logo.svg'}
+									width={68}
+									height={54}
+									blurDataURL='/images/logo.svg'
+									placeholder='blur'
+									alt='logo'
+								/>
+							</a>
 						</span>
 					</Link>
 				</div>
@@ -94,28 +96,28 @@ const Navbar = () => {
 							style={{ right: open ? '0px' : '-100vw' }}>
 							<li className={styles.closebtn}>X</li>
 							<li className='menuItem'>
-								<Link href='/' scroll>
-									Home
+								<Link passHref href='/' scroll>
+									<a>Home</a>
 								</Link>
 							</li>
 
 							<li className='menuItem'>
-								<Link href='/services'>
+								<Link passHref href='/services'>
 									<a>Services</a>
 								</Link>
 							</li>
 							<li className='menuItem'>
-								<Link href='/projects'>
+								<Link passHref href='/projects'>
 									<a>Portfolio</a>
 								</Link>
 							</li>
 							<li className='menuItem'>
-								<Link href='/about'>
+								<Link passHref href='/about'>
 									<a>About</a>
 								</Link>
 							</li>
 							<li className='menuItem'>
-								<Link href='/contact'>
+								<Link passHref href='/contact'>
 									<a>Contact</a>
 								</Link>
 							</li>
