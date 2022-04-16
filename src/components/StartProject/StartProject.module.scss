@@ -15,7 +15,7 @@
 	&__content {
 		width: 90%;
 		margin: 0 auto;
-		padding: 1.25rem;
+		padding: 1.25rem 0;
 
 		&__text {
 			h2 {
@@ -36,10 +36,11 @@
 	}
 }
 
-// This applies from 600px onwards
-@media (min-width: 900px) {
+// This applies from 1024px onwards
+@media (min-width: 1200px) {
 	.container {
 		&__content {
+			max-width: $containerMaxWidth;
 			&__text {
 				width: 75%;
 				h2 {

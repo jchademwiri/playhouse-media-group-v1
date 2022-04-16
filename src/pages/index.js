@@ -1,8 +1,5 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import Hero from '../components/Hero';
 import OurServices from '../components/OurServices';
-import RecentProjects from '../components/RecentProjects';
 import StartProject from '../components/StartProject';
 import styles from '../styles/home.module.scss';
 import { NextSeo } from 'next-seo';
@@ -13,11 +10,11 @@ import Featured from '../components/Featured';
 
 const index = () => {
 	const SEO = {
-		title: 'Jacob Chademwiri | Web Developer',
+		title: 'Playhouse Media Group | Web Developer',
 		canonical: `${server}/`,
 		openGraph: {
 			url: `${server}/`,
-			title: 'Jacob Chademwiri | Web Developer',
+			title: 'Playhouse Media Group | Web Developer',
 		},
 	};
 	return (
@@ -28,8 +25,7 @@ const index = () => {
 				<Featured />
 				<OurServices />
 				<WhatWeDo />
-				<Clients />
-				<RecentProjects />
+				{/* <Clients /> */}
 				<StartProject />
 			</main>
 		</>

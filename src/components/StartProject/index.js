@@ -1,6 +1,4 @@
 import styles from './StartProject.module.scss';
-import Link from 'next/link';
-import Image from 'next/image';
 
 const StartProject = () => {
 	return (
@@ -14,9 +12,14 @@ const StartProject = () => {
 						team will collaborate with you to develop a strategic solution to
 						strengthen your brand.
 					</p>
-					<Link className={styles.project_link} href='#'>
+
+					<a
+						className={styles.project_link}
+						target='_blank'
+						href='https://wa.me/+27740491433'
+						rel='noopener noreferrer'>
 						Let&apos;s get started
-					</Link>
+					</a>
 				</div>
 			</div>
 		</section>

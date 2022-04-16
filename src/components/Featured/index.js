@@ -22,6 +22,7 @@ const Featured = () => {
 						<Loading />
 					</>
 				)}
+				
 			</div>
 		</>
 	);
