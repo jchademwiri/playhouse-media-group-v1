@@ -36,7 +36,7 @@ const services = ({ services }) => {
 						<p>
 							We provide website design and development, Internet strategy and
 							consulting, search engine optimization and marketing, and social
-							media management services.
+							media management services, Microsoft 365, and other IT solutions.
 						</p>
 					</div>
 
@@ -62,11 +62,11 @@ const services = ({ services }) => {
 									</h3>
 									<p> {service.description} </p>
 
-									<Link
+									{/* <Link
 										href={`/services/${service.slug}`}
 										className={styles.link}>
 										Learn More
-									</Link>
+									</Link> */}
 								</div>
 							))
 						) : (
@@ -76,7 +76,6 @@ const services = ({ services }) => {
 						)}
 					</div>
 				</section>
-				<OurServices />
 			</main>
 		</>
 	);
