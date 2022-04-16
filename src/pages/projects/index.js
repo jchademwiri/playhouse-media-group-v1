@@ -14,8 +14,8 @@ const projects = ({ projects }) => {
 		canonical: `${server}/projects`,
 		openGraph: {
 			url: `${server}/projects`,
-			title: 'Jacob Chademwiri | Portfolio'
-		}
+			title: 'Jacob Chademwiri | Portfolio',
+		},
 	};
 	return (
 		<>
@@ -46,7 +46,19 @@ const projects = ({ projects }) => {
 								<h3>{project.name}</h3>
 								<p> {project.description} </p>
 
-								<div className={styles.links}>
+								<p className={styles.technology}>
+									{project.technologies ? (
+										project.technologies
+											.toString()
+											.split(',')
+											.map((technology) => (
+												<span key={technology}>{technology}</span>
+											))
+									) : (
+										<span>No technologies found</span>
+									)}
+								</p>
+								{/* <div className={styles.links}>
 									<a
 										href={`${project.github}`}
 										target='_blank'
@@ -61,24 +73,12 @@ const projects = ({ projects }) => {
 										className={styles.link}>
 										View Live
 									</a>
-								</div>
-								<p className={styles.technology}>
-									{project.technology ? (
-										project.technologies
-											.toString()
-											.split(',')
-											.map((technology) => (
-												<span key={technology}>{technology}</span>
-											))
-									) : (
-										<span>No technologies</span>
-									)}
-								</p>
-								<Link
+								</div> */}
+								{/* <Link
 									href={`/projects/${project.slug}`}
 									className={styles.link}>
 									View Project
-								</Link>
+								</Link> */}
 							</div>
 						))
 					) : (
@@ -102,7 +102,7 @@ export async function getServerSideProps() {
 
 	return {
 		props: {
-			projects: data
-		}
+			projects: data,
+		},
 	};
 }

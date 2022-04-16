@@ -58,6 +58,8 @@
 	}
 	.container {
 		&__content {
+			width: 80%;
+			max-width: $containerMaxWidth;
 			&__title {
 				h2 {
 					font-size: 2rem;

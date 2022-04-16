@@ -55,11 +55,12 @@
 				flex-wrap: wrap;
 
 				span {
-					border: 1px solid $primary;
+					border: 1px solid $accent;
 					color: $primary;
 					padding: 0.3rem;
 					margin: 0.3rem;
 					border-radius: 5px;
+					// background: $accent;
 				}
 			}
 
@@ -87,14 +88,10 @@
 	}
 }
 
-@media (min-width: 800px) {
-	.container {
-		width: 90%;
-	}
-}
-
 @media (min-width: 1024px) {
 	.container {
+		max-width: $containerMaxWidth;
+		width: 80%;
 		.services {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
