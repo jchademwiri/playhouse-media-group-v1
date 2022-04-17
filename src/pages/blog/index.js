@@ -3,6 +3,7 @@ import { SanityClient, urlFor } from '../../../sanity';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/blog.module.scss';
+import Loading from '../../components/Loading';
 
 const Blog = ({ posts }) => {
 	return (
@@ -18,7 +19,7 @@ const Blog = ({ posts }) => {
 					<h2>Latest posts</h2>
 				</div>
 				<div className={styles.posts}>
-					{posts &&
+					{posts ? (
 						posts.map((post) => (
 							<div key={post.id} className={styles.post}>
 								{/* <div> */}
@@ -62,7 +63,12 @@ const Blog = ({ posts }) => {
 									</div>
 								</div>
 							</div>
-						))}
+						))
+					) : (
+						<>
+							<Loading />
+						</>
+					)}
 				</div>
 			</section>
 		</>
