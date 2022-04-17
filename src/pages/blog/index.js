@@ -14,23 +14,29 @@ const Blog = ({ posts }) => {
 				</div>
 			</header>
 			<section className={styles.container}>
+				<div>
+					<h2>Latest posts</h2>
+				</div>
 				<div className={styles.posts}>
 					{posts &&
 						posts.map((post) => (
 							<div key={post.id} className={styles.post}>
-								<div>
-									<Image
-										src={urlFor(post.mainImage).url()}
-										width={450}
-										height={300}
-										alt={post.title}
-									/>
-								</div>
-								<h3>
-									<Link href={`/blog/${post.slug.current}`}>
-										<a>{post.title}</a>
-									</Link>
-								</h3>
+								{/* <div> */}
+								<Link href={`/blog/${post.slug.current}`}>
+									<a>
+										<Image
+											src={urlFor(post.mainImage).url()}
+											width={1920}
+											height={1080}
+											alt={post.title}
+											placeholder='blur'
+											blurDataURL={urlFor(post.mainImage).url()}
+											objectFit='cover'
+										/>
+										<h3 className={styles.title}>{post.title}</h3>
+									</a>
+								</Link>
+								{/* </div> */}
 								<p>{post.exempt}</p>
 
 								<div className={styles.author}>
@@ -40,14 +46,18 @@ const Blog = ({ posts }) => {
 											src={urlFor(post.author.image).url()}
 											width={40}
 											height={40}
-											alt={post.author.image}
+											alt={post.author.name}
+											placeholder='blur'
+											blurDataURL={urlFor(post.author.image).url()}
+											objectFit='cover'
 										/>
 									</div>
 									<div className={styles.authorDetails}>
 										<small>{post.author.name}</small>
 
 										<small>
-											{moment(post.publishedAt).format('Do MMMM YYYY')}
+											Published:{' '}
+											{moment(post.publishedAt).format('DD MMMM YYYY')}
 										</small>
 									</div>
 								</div>
