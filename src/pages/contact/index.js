@@ -11,12 +11,12 @@ import Link from 'next/link';
 
 const contact = () => {
 	const SEO = {
-		title: `Jacob Chademwiri | Contact`,
+		title: `PMG | Contact`,
 		description: `A professional web developer and digital marketing specialist bassed in South Africa.`,
 		canonical: `${server}/contact`,
 		openGraph: {
 			url: `${server}/contact`,
-			title: `Jacob Chademwiri | Contact`,
+			title: `PMG | Contact`,
 			description: `A professional web developer and digital marketing specialist`,
 		},
 	};

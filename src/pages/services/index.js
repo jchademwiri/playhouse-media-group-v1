@@ -8,18 +8,14 @@ import { useSWR } from 'swr';
 import OurServices from '../../components/OurServices';
 
 const services = ({ services }) => {
-	// const services = () => {
 	const SEO = {
-		title: `Jacob Chademwiri | Services`,
+		title: `PMG | Our Services`,
 		canonical: `${server}/services`,
 		openGraph: {
 			url: `${server}/services`,
-			title: `Jacob Chademwiri | Services`,
+			title: `PMG | Our Services`,
 		},
 	};
-
-	// const { data: services, error } = useSWR(`${server}/api/services`);
-	// if (error) return <div>failed to load</div>;
 
 	return (
 		<>

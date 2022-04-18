@@ -125,7 +125,12 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							<li className='menuItem'>
+							<li>
+								<Link href='/blog'>
+									<a>Blog</a>
+								</Link>
+							</li>
+							{/* <li className='menuItem'>
 								<Link passHref href='/about'>
 									<a>About</a>
 								</Link>
@@ -134,7 +139,7 @@ const Navbar = () => {
 								<Link passHref href='/contact'>
 									<a>Contact</a>
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 					</nav>
 				</div>

@@ -4,10 +4,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/blog.module.scss';
 import Loading from '../../components/Loading';
+import { NextSeo } from 'next-seo';
+import { server } from '../../config';
 
 const Blog = ({ posts }) => {
+	const SEO = {
+		title: 'PMG | Blog',
+
+		canonical: `${server}/blog`,
+		openGraph: {
+			url: `${server}/blog`,
+			title: 'PMG | Blog',
+		},
+	};
 	return (
 		<>
+			<NextSeo {...SEO} />
 			<header className={styles.banner}>
 				<div className={styles.banner__content}>
 					<h1>Blog Page</h1>
@@ -23,9 +35,10 @@ const Blog = ({ posts }) => {
 						posts.map((post) => (
 							<div key={post.id} className={styles.post}>
 								{/* <div> */}
-								<Link href={`/blog/${post.slug.current}`}>
+								<Link href={`/${post.slug.current}`}>
 									<a>
 										<Image
+											className={styles.mainImage}
 											src={urlFor(post.mainImage).url()}
 											width={1920}
 											height={1080}

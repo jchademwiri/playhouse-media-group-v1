@@ -9,12 +9,12 @@ const projects = ({ projects }) => {
 	// console.log(projects);
 
 	const SEO = {
-		title: 'Jacob Chademwiri | Portfolio',
+		title: 'PMG | Portfolio',
 
 		canonical: `${server}/projects`,
 		openGraph: {
 			url: `${server}/projects`,
-			title: 'Jacob Chademwiri | Portfolio',
+			title: 'PMG | Portfolio',
 		},
 	};
 	return (
