@@ -83,7 +83,6 @@ const BlogPost = ({ post }) => {
 				</div>
 				<article className={styles.content}>
 					<h1 className={styles.title}>{post.title}</h1>
-					<p>{post.exempt}</p>
 					<div>
 						<PortableText
 							dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}

@@ -51,7 +51,7 @@ const Blog = ({ posts }) => {
 									</a>
 								</Link>
 								{/* </div> */}
-								<p>{post.exempt}</p>
+								<p>{post.exempt.slice(0, 150)}</p>
 
 								<div className={styles.author}>
 									<div className={styles.authorImage}>
@@ -99,6 +99,7 @@ export const getServerSideProps = async (pageContext) => {
 		image,
 	  },
 	  exempt,
+	  
 	  mainImage,
 	  slug,
 	  publishedAt
