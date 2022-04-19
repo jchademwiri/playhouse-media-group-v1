@@ -93,11 +93,11 @@ const Navbar = () => {
 								<a>About</a>
 								</Link>
 							</li> */}
-							{/* <li>
+							<li>
 								<Link href='/contact'>
-								<a>Contact</a>
+									<a>Contact</a>
 								</Link>
-							</li> */}
+							</li>
 						</ul>
 					</div>
 					<nav className={styles.mobileNav}>
@@ -134,12 +134,12 @@ const Navbar = () => {
 								<Link passHref href='/about'>
 									<a>About</a>
 								</Link>
-							</li>
+							</li> */}
 							<li className='menuItem'>
 								<Link passHref href='/contact'>
 									<a>Contact</a>
 								</Link>
-							</li> */}
+							</li>
 						</ul>
 					</nav>
 				</div>
