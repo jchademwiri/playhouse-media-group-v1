@@ -7,27 +7,27 @@ export const helps = [
 	},
 	{
 		id: '2',
-		name: 'Website Redesign',
-		description:
-			'We provide website redesigns to keep your website at the forefront of online marketing.',
-	},
-	{
-		id: '3',
 		name: 'Website Maintainance',
 		description:
 			'We provide website maintainance to keep your website at the forefront of online marketing.',
 	},
 	{
-		id: '4',
+		id: '3',
 		name: 'Web and Email Hosting',
 		description:
 			'We provide web hosting to keep your website at the forefront of online marketing.',
 	},
 	{
-		id: '5',
+		id: '4',
 		name: 'Search Engine Optimisation',
 		description:
 			'We provide SEO services to help your website rank high in search engines.',
+	},
+	{
+		id: '5',
+		name: 'Microsoft 365',
+		description:
+			'We provide Microsoft 365 licenses to help you manage your business.',
 	},
 	{
 		id: '6',
@@ -54,4 +54,3 @@ export const helps = [
 			'We are happy to give you any help and we will give you full support to solve the problem.',
 	},
 ];
-

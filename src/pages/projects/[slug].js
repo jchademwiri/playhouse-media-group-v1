@@ -3,17 +3,21 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { server } from '../../config';
 import styles from './project.module.scss';
+
 const project = ({ project }) => {
 	const SEO = {
-		title: `Jacob Chademwiri | ${project.name}`,
+		title: `PMG | ${project.name}`,
 		description: `${project.description}`,
 		canonical: `${server}/projects/${project.slug}`,
 		openGraph: {
 			url: `${server}/projects/${project.slug}`,
-			title: `Jacob Chademwiri | ${project.name}`,
-			description:
-				'A professional web developer and digital marketing specialist'
-		}
+			title: `PMG | ${project.name}`,
+			description: `${
+				project.description
+					? project.description
+					: 'A professional web developer and digital marketing specialist'
+			}`,
+		},
 	};
 	return (
 		<>
@@ -44,7 +48,7 @@ export async function getStaticPaths() {
 	const res = await fetch(`${server}/api/projects`);
 	const projects = await res.json();
 	const paths = projects.map((project) => ({
-		params: { slug: project.slug }
+		params: { slug: project.slug },
 	}));
 	return { paths, fallback: false };
 }
@@ -56,7 +60,7 @@ export async function getStaticProps(context) {
 
 	return {
 		props: {
-			project: data
-		}
+			project: data,
+		},
 	};
 }

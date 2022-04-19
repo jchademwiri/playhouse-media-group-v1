@@ -43,18 +43,18 @@ const Footer = () => {
 					</h3>
 					<ul>
 						<li>
-							<Link href={'/services/web-development'}>Web Development</Link>
+							<Link href={'#'}>Web Development</Link>
 						</li>
 						<li>
-							<Link href={'/services/search-engine-optimization'}>
-								Search Engine Optmization
-							</Link>
+							<Link href={'#'}>Search Engine Optmization</Link>
 						</li>
 						<li>
-							<Link href={'/services/digital-marketing'}>
-								Digital Marketing
-							</Link>
+							<Link href={'#'}>Digital Marketing</Link>
 						</li>
+						<li>
+							<Link href={'#'}>Microsoft 365</Link>
+						</li>
+
 						<li>
 							<Link href={'/projects'}>Portfolio</Link>
 						</li>

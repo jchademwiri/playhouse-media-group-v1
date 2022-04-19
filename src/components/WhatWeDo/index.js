@@ -8,7 +8,7 @@ const WhatWeDo = () => {
 			<div className={styles.content}>
 				<div className={styles.item}>
 					<h3 className={styles.titles}>
-						I help people to build their <br />
+						We help people to build their <br />
 						<span className={styles.digital}>
 							Digital products successfully
 						</span>

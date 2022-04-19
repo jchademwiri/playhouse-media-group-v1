@@ -68,22 +68,36 @@ const Navbar = () => {
 						<ul className={styles.navbar__links}>
 							<li>
 								<Link href='/' scroll>
-									Home
+									<a>Home</a>
 								</Link>
 							</li>
 
 							<li>
-								<Link href='/services'>Services</Link>
+								<Link href='/services'>
+									<a>Services</a>
+								</Link>
 							</li>
 							<li>
-								<Link href='/projects'>Portfolio</Link>
+								<Link href='/projects'>
+									<a>Portfolio</a>
+								</Link>
 							</li>
 							<li>
-								<Link href='/about'>About</Link>
+								<Link href='/blog'>
+									<a>Blog</a>
+								</Link>
 							</li>
-							<li>
-								<Link href='/contact'>Contact</Link>
-							</li>
+
+							{/* <li>
+								<Link href='/about'>
+								<a>About</a>
+								</Link>
+							</li> */}
+							{/* <li>
+								<Link href='/contact'>
+								<a>Contact</a>
+								</Link>
+							</li> */}
 						</ul>
 					</div>
 					<nav className={styles.mobileNav}>
@@ -111,7 +125,12 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							<li className='menuItem'>
+							<li>
+								<Link href='/blog'>
+									<a>Blog</a>
+								</Link>
+							</li>
+							{/* <li className='menuItem'>
 								<Link passHref href='/about'>
 									<a>About</a>
 								</Link>
@@ -120,7 +139,7 @@ const Navbar = () => {
 								<Link passHref href='/contact'>
 									<a>Contact</a>
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 					</nav>
 				</div>
