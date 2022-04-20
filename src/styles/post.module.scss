@@ -1,0 +1,68 @@
+@import './variables.scss';
+.container {
+	margin: 0 auto;
+	padding-bottom: 20px;
+	width: 80%;
+
+	.content {
+		.title {
+			// border: 1px solid #eaeaea;
+		}
+
+		.link {
+			color: $accent;
+		}
+		.code {
+			background: #eaeaea;
+			color: #000;
+		}
+		figure {
+			margin: 0;
+			padding: 0;
+			img {
+				border-radius: 10px;
+				width: 100%;
+			}
+		}
+	}
+	.meta {
+		display: flex;
+		justify-content: space-between;
+
+		.author {
+			display: flex;
+			padding: 0 10px 10px 0;
+			align-items: center;
+
+			&_image {
+				border-radius: 50%;
+			}
+
+			&_details {
+				display: flex;
+				flex-direction: column;
+				margin-left: 10px;
+			}
+		}
+		.categories {
+			display: flex;
+			padding: 5px;
+			span {
+				color: $accent;
+				padding-right: 10px;
+			}
+		}
+	}
+}
+
+// @media (min-width: 700px) {
+// 	.container {
+// 	}
+// }
+
+@media (min-width: 1024px) {
+	.container {
+		width: 60%;
+		max-width: 60vw;
+	}
+}

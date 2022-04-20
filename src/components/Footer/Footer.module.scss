@@ -31,6 +31,10 @@
 		&__item {
 			background: $bg-faint;
 
+			h3 {
+				font-size: 1.2rem;
+			}
+
 			a {
 				border-bottom: 2px solid $accent;
 

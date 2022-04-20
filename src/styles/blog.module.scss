@@ -1,0 +1,79 @@
+@import './variables.scss';
+.banner {
+	background: url('https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899580/portfolio/keyboard-with-flower_mik10s.webp')
+		center center/cover no-repeat;
+	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 20vh;
+
+	h1,
+	p {
+		margin: 0 2.5rem;
+		padding: 0;
+	}
+}
+.container {
+	// margin-top: 20px;
+	padding-bottom: 20px;
+	width: 90%;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	.posts {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin: auto;
+		gap: 20px;
+		width: 100%;
+
+		.post {
+			.title:hover {
+				color: $accent;
+				border-bottom: 2px solid $primary;
+			}
+			.mainImage {
+				border-radius: 5px 5px 0 0;
+			}
+		}
+
+		.author {
+			display: flex;
+			align-items: center;
+			padding: 10px 0;
+
+			.authorImage {
+				.image {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+				}
+			}
+			.authorDetails {
+				display: flex;
+				flex-direction: column;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+@media (min-width: 700px) {
+	.container {
+		.posts {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		width: 80%;
+		max-width: $containerMaxWidth;
+		.posts {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+}

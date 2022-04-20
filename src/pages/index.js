@@ -10,11 +10,11 @@ import Featured from '../components/Featured';
 
 const index = () => {
 	const SEO = {
-		title: 'Playhouse Media Group | Web Developer',
+		title: 'PMG | Web Developer Specialists',
 		canonical: `${server}/`,
 		openGraph: {
 			url: `${server}/`,
-			title: 'Playhouse Media Group | Web Developer',
+			title: 'PMG | Web Developer Specialists',
 		},
 	};
 	return (

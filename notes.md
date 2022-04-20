@@ -14,14 +14,14 @@
 ## Importent Notes
 
 1. Domain - www.jacdev.co.za
-2. Web Hosting - Versel
-3. Email Hosting - Axxess
-4. Tech Stack
+1. Web Hosting - Versel
+1. Email Hosting - Axxess
+1. Tech Stack
    1. Next JS
-   2. SCSS
-   3. MongoDB
-5. Version Control - Github
-6. # Media Storage - Cloudnary
+   1. SCSS
+   1. MongoDB
+1. Version Control - Github
+1. ## Media Storage - Cloudnary
 
 Have a Project on mind?
 Whether you have a small business that needs a web presence or a more customized ecommerce shopping cart solution, our specialized team will collaborate with you to develop a strategic solution to strengthen your brand.

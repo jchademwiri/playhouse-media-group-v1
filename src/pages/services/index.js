@@ -4,22 +4,18 @@ import Link from 'next/link';
 import { server } from '../../config';
 import { NextSeo } from 'next-seo';
 import Loading from '../../components/Loading';
-import { useSWR } from 'swr';
-import OurServices from '../../components/OurServices';
+// import { useSWR } from 'swr';
+// import OurServices from '../../components/OurServices';
 
 const services = ({ services }) => {
-	// const services = () => {
 	const SEO = {
-		title: `Jacob Chademwiri | Services`,
+		title: `PMG | Our Services`,
 		canonical: `${server}/services`,
 		openGraph: {
 			url: `${server}/services`,
-			title: `Jacob Chademwiri | Services`,
+			title: `PMG | Our Services`,
 		},
 	};
-
-	// const { data: services, error } = useSWR(`${server}/api/services`);
-	// if (error) return <div>failed to load</div>;
 
 	return (
 		<>
@@ -36,7 +32,7 @@ const services = ({ services }) => {
 						<p>
 							We provide website design and development, Internet strategy and
 							consulting, search engine optimization and marketing, and social
-							media management services.
+							media management services, Microsoft 365, and other IT solutions.
 						</p>
 					</div>
 
@@ -62,11 +58,11 @@ const services = ({ services }) => {
 									</h3>
 									<p> {service.description} </p>
 
-									<Link
+									{/* <Link
 										href={`/services/${service.slug}`}
 										className={styles.link}>
 										Learn More
-									</Link>
+									</Link> */}
 								</div>
 							))
 						) : (
@@ -76,7 +72,6 @@ const services = ({ services }) => {
 						)}
 					</div>
 				</section>
-				<OurServices />
 			</main>
 		</>
 	);

@@ -5,14 +5,14 @@ import { server } from '../../config';
 import styles from './service.module.scss';
 const service = ({ service }) => {
 	const SEO = {
-		title: `Jacob Chademwiri | ${service.name}`,
+		title: `PMG | ${service.name}`,
 		description: `${service.description}`,
 		canonical: `${server}/services/${service.slug}`,
 		openGraph: {
 			url: `${server}/services/${service.slug}`,
-			title: `Jacob Chademwiri | ${service.name}`,
-			description: `${service.description}`
-		}
+			title: `PMG | ${service.name}`,
+			description: `${service.description}`,
+		},
 	};
 
 	return (
@@ -45,7 +45,7 @@ export async function getStaticPaths() {
 	const res = await fetch(`${server}/api/services`);
 	const services = await res.json();
 	const paths = services.map((service) => ({
-		params: { slug: service.slug }
+		params: { slug: service.slug },
 	}));
 	return { paths, fallback: false };
 }
@@ -58,7 +58,7 @@ export async function getStaticProps(context) {
 
 	return {
 		props: {
-			service: data
-		}
+			service: data,
+		},
 	};
 }

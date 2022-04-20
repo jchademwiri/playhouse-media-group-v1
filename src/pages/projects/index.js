@@ -6,16 +6,16 @@ import { server } from '../../config';
 import { NextSeo } from 'next-seo';
 import Loading from '../../components/Loading';
 const projects = ({ projects }) => {
-	// console.log(projects);
+	// console.log(projects.slice(0, 10));
 
 	const SEO = {
-		title: 'Jacob Chademwiri | Portfolio',
+		title: 'PMG | Portfolio',
 
 		canonical: `${server}/projects`,
 		openGraph: {
 			url: `${server}/projects`,
-			title: 'Jacob Chademwiri | Portfolio'
-		}
+			title: 'PMG | Portfolio',
+		},
 	};
 	return (
 		<>
@@ -30,10 +30,10 @@ const projects = ({ projects }) => {
 			</header>
 			<main className={styles.container}>
 				{/* <h1>Completed Projects</h1> */}
-				<div className={styles.services}>
+				<div className={styles.projects}>
 					{projects ? (
-						projects.map((project) => (
-							<div key={project.id} className={styles.service}>
+						projects.slice(0, 10).map((project) => (
+							<div key={project.id} className={styles.project}>
 								<Image
 									placeholder='blur'
 									src={project.image}
@@ -46,7 +46,19 @@ const projects = ({ projects }) => {
 								<h3>{project.name}</h3>
 								<p> {project.description} </p>
 
-								<div className={styles.links}>
+								<p className={styles.technology}>
+									{project.technologies ? (
+										project.technologies
+											.toString()
+											.split(',')
+											.map((technology) => (
+												<span key={technology}>{technology}</span>
+											))
+									) : (
+										<span>No technologies found</span>
+									)}
+								</p>
+								{/* <div className={styles.links}>
 									<a
 										href={`${project.github}`}
 										target='_blank'
@@ -61,24 +73,12 @@ const projects = ({ projects }) => {
 										className={styles.link}>
 										View Live
 									</a>
-								</div>
-								<p className={styles.technology}>
-									{project.technology ? (
-										project.technologies
-											.toString()
-											.split(',')
-											.map((technology) => (
-												<span key={technology}>{technology}</span>
-											))
-									) : (
-										<span>No technologies</span>
-									)}
-								</p>
-								<Link
+								</div> */}
+								{/* <Link
 									href={`/projects/${project.slug}`}
 									className={styles.link}>
 									View Project
-								</Link>
+								</Link> */}
 							</div>
 						))
 					) : (
@@ -97,12 +97,12 @@ export default projects;
 // export async function getStaticProps() {
 export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/projects`);
-	const data = await response.json();
-	// console.log(data);
+	const projects = await response.json();
+	// console.log(projects);
 
 	return {
 		props: {
-			projects: data
-		}
+			projects,
+		},
 	};
 }
