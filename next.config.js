@@ -1,6 +1,6 @@
 module.exports = {
 	reactStrictMode: true,
-	swcMinify: false,
+	swcMinify: true,
 
 	images: {
 		domains: ['res.cloudinary.com', 'cdn.sanity.io'],
