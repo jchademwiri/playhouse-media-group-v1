@@ -23,10 +23,10 @@
 	margin: 0 auto;
 	margin-top: 20px;
 	padding-bottom: 20px;
-	.services {
+	.projects {
 		display: flex;
 		flex-direction: column;
-		.service {
+		.project {
 			padding: 10px;
 			margin: 5px auto;
 			border-radius: 5px;
@@ -80,7 +80,7 @@
 		}
 	}
 	.container {
-		.services {
+		.projects {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 5px;
@@ -92,7 +92,7 @@
 	.container {
 		max-width: $containerMaxWidth;
 		width: 80%;
-		.services {
+		.projects {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}

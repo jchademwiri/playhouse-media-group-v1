@@ -1,0 +1,86 @@
+@import '../../styles/variables.scss';
+.container {
+	background: url('/images/bg.jpg') no-repeat center center fixed;
+	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
+	height: 75vh;
+	.content {
+		display: grid;
+		height: 100%;
+		align-content: center;
+		justify-content: center;
+		text-align: center;
+		width: 90%;
+		margin: 0 auto;
+		// border: 1px solid $accent;
+
+		h1 {
+			font-size: 5rem;
+			color: hsl(0, 0%, 70%);
+			margin: 0;
+		}
+		h3 {
+			font-size: 2rem;
+			margin: 0;
+		}
+		.nav {
+			// border: 1px solid $accent;
+			display: flex;
+			flex-direction: column;
+
+			padding: 2px;
+			ul {
+				display: flex;
+				height: 100%;
+				padding: 0;
+				margin: auto;
+
+				li {
+					padding: 5px 5px;
+
+					list-style: none;
+					a {
+						border-bottom: 2px solid $accent;
+						// color: $accent;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 700px) {
+	.container {
+		.content {
+			width: 80%;
+
+			h1 {
+				font-size: 6.5rem;
+			}
+			h3 {
+				font-size: 2.5rem;
+			}
+			.nav {
+				ul {
+					li {
+						padding: 10px 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		.content {
+			max-width: $containerMaxWidth;
+
+			h1 {
+				font-size: 8rem;
+			}
+			h3 {
+				font-size: 3rem;
+			}
+		}
+	}
+}

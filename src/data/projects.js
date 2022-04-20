@@ -7,7 +7,7 @@ export const projects = [
 		slug: 'crypro-price-tracker',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		technologies: ['Node', 'Express', 'MongoDB', 'React', 'Next Js'],
+		technologies: ['Coin Gecko API', 'Express', 'MongoDB', 'React', 'Next Js'],
 	},
 	{
 		id: '2',
@@ -37,7 +37,7 @@ export const projects = [
 		slug: 'playhouse-media-group',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		technologies: ['Node', 'Express', 'MongoDB', 'React', 'Next Js'],
+		technologies: ['Sanity io', 'Next API', 'MongoDB', 'React', 'Next Js'],
 		website: 'https://www.seaharvest.co.zw',
 		github: 'https://github.com/jchademwiri/micro-finance',
 	},
@@ -53,17 +53,5 @@ export const projects = [
 		website: 'https://www.seaharvest.co.zw',
 		github: 'https://github.com/jchademwiri/micro-finance',
 		technologies: 'React, Node, Express, MongoDB',
-	},
-	{
-		id: '6',
-		image:
-			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/responsive-web-design_volv9z.webp',
-		name: 'Micro Finance',
-		slug: 'micro-finance',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
-		technologies: ['Node', 'Express', 'MongoDB', 'React', 'Next Js'],
-		website: 'https://mycrofinance.netlify.app',
-		github: 'https://github.com/jchademwiri/micro-finance',
 	},
 ];

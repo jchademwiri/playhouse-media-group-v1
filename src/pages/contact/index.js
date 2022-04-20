@@ -44,7 +44,7 @@ const contact = () => {
 					<>
 						{/* <h1 className={styles.title}>Web Developer Specialist</h1> */}
 						<h1 className={styles.title}>
-							Full Stack Web & Digital Specialist
+							Full Stack Web &amp; Digital Specialists
 						</h1>
 						<h2 className={styles.subTitle}>
 							{/* Hi, I am <br /> */}
@@ -69,7 +69,14 @@ const contact = () => {
 								width='31'
 								height='31'
 							/>
-							<address className={styles.address}>061 691 1656</address>
+							<address className={styles.address}>
+								<a
+									href='tel:+27616911656'
+									target='_blank'
+									rel='noopener noreferrer'>
+									061 691 1656
+								</a>
+							</address>
 						</div>
 						<div className={styles.contact_email}>
 							<Image
@@ -80,7 +87,12 @@ const contact = () => {
 								height='31'
 							/>
 							<address className={styles.address}>
-								info@playhousemedia.net
+								<a
+									href='mailto:info@playhousemedia.net'
+									target='_blank'
+									rel='noopener noreferrer'>
+									info@playhousemedia.net
+								</a>
 							</address>
 						</div>
 					</div>

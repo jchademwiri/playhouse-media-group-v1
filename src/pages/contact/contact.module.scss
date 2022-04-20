@@ -14,10 +14,11 @@
 
 		.title {
 			text-transform: uppercase;
-			font-size: 1.2rem;
+			font-size: 1rem;
 			padding: 0;
 			margin: 10px;
 			font-weight: 400;
+			// color: $accent;
 		}
 		.subTitle {
 			font-size: 1.5rem;
@@ -27,7 +28,7 @@
 		}
 
 		.name {
-			border-bottom: 3px solid $accent;
+			border-bottom: 2px solid $accent;
 			font-weight: 500;
 		}
 
@@ -37,12 +38,27 @@
 			// align-items: center;
 			// border: 1px solid $accent;
 
+			&_email {
+				a {
+					padding: 10px 0;
+					border-bottom: 2px solid $accent;
+				}
+				&:hover {
+					a {
+						color: $accent;
+						border-bottom: 2px solid $primary;
+						transition: all 1s ease-in-out;
+					}
+				}
+			}
+
 			&_phone,
 			&_email {
 				display: flex;
 				padding: 10px 0;
-				padding-right: 50px;
+				padding-right: 20px;
 				align-items: center;
+				margin-right: 50px;
 
 				.address {
 					padding-left: 20px;
@@ -57,6 +73,16 @@
 		.about {
 			.contact {
 				flex-direction: row;
+			}
+			.title {
+				font-size: 1.2rem;
+			}
+
+			.subTitle {
+				font-size: 2rem;
+			}
+			.text {
+				width: 80%;
 			}
 		}
 	}
@@ -75,10 +101,8 @@
 				font-size: 2.5rem;
 			}
 			.text {
-				width: 60%;
-			}
-			.contact {
-				flex-direction: row;
+				width: 70%;
+				max-width: 800px;
 			}
 		}
 	}
