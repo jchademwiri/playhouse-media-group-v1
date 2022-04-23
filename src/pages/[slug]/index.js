@@ -92,10 +92,10 @@ const BlogPost = ({ post }) => {
 								h1: (props) => <h1 className={styles.h1} {...props} />,
 								h2: (props) => <h2 className={styles.h2} {...props} />,
 								h3: (props) => <h3 className={styles.h3} {...props} />,
-								code: (props) => <code className={styles.code} {...props} />,
+								pre: (props) => <pre className={styles.pre} {...props} />,
 								li: ({ children }) => <li>{children}</li>,
 								link: ({ href, children }) => (
-									<a href={href} className={styles.link}>
+									<a target='_blank' href={href} className={styles.link}>
 										{children}
 									</a>
 								),

@@ -12,9 +12,11 @@
 		.link {
 			color: $accent;
 		}
-		.code {
+		.pre {
 			background: #eaeaea;
 			color: #000;
+			padding: 10px;
+			border-radius: 2px;
 		}
 		figure {
 			margin: 0;
