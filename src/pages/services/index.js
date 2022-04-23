@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { server } from '../../config';
 import { NextSeo } from 'next-seo';
 import Loading from '../../components/Loading';
-import { useSWR } from 'swr';
-import OurServices from '../../components/OurServices';
+// import { useSWR } from 'swr';
+// import OurServices from '../../components/OurServices';
 
 const services = ({ services }) => {
 	const SEO = {

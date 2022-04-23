@@ -17,6 +17,7 @@ const Blog = ({ posts }) => {
 			title: 'PMG | Blog',
 		},
 	};
+
 	return (
 		<>
 			<NextSeo {...SEO} />
@@ -80,6 +81,7 @@ const Blog = ({ posts }) => {
 					) : (
 						<>
 							<Loading />
+							{/* <span>No Categories found</span> */}
 						</>
 					)}
 				</div>

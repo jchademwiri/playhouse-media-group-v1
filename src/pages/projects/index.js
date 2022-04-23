@@ -6,7 +6,7 @@ import { server } from '../../config';
 import { NextSeo } from 'next-seo';
 import Loading from '../../components/Loading';
 const projects = ({ projects }) => {
-	// console.log(projects);
+	// console.log(projects.slice(0, 10));
 
 	const SEO = {
 		title: 'PMG | Portfolio',
@@ -30,10 +30,10 @@ const projects = ({ projects }) => {
 			</header>
 			<main className={styles.container}>
 				{/* <h1>Completed Projects</h1> */}
-				<div className={styles.services}>
+				<div className={styles.projects}>
 					{projects ? (
-						projects.map((project) => (
-							<div key={project.id} className={styles.service}>
+						projects.slice(0, 10).map((project) => (
+							<div key={project.id} className={styles.project}>
 								<Image
 									placeholder='blur'
 									src={project.image}
@@ -97,12 +97,12 @@ export default projects;
 // export async function getStaticProps() {
 export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/projects`);
-	const data = await response.json();
-	// console.log(data);
+	const projects = await response.json();
+	// console.log(projects);
 
 	return {
 		props: {
-			projects: data,
+			projects,
 		},
 	};
 }

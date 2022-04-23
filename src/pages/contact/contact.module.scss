@@ -1,21 +1,110 @@
 @import '../../styles/variables.scss';
 .container {
 	display: grid;
-	grid-template-columns: 1fr;
-	width: 90%;
-	margin: 0 auto;
-	margin-top: 20px;
-	padding-bottom: 20px;
+	background: url('/images/bg.jpg') no-repeat center center fixed;
+	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
+	align-items: center;
+	height: 55vh;
+
+	.about {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 90%;
+		margin: 0 auto;
+
+		.title {
+			text-transform: uppercase;
+			font-size: 1rem;
+			padding: 0;
+			margin: 10px;
+			font-weight: 400;
+			// color: $accent;
+		}
+		.subTitle {
+			font-size: 1.5rem;
+			padding: 0;
+			margin: 10px;
+			font-weight: 300;
+		}
+
+		.name {
+			border-bottom: 2px solid $accent;
+			font-weight: 500;
+		}
+
+		.contact {
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			// border: 1px solid $accent;
+
+			&_email {
+				a {
+					padding: 10px 0;
+					border-bottom: 2px solid $accent;
+				}
+				&:hover {
+					a {
+						color: $accent;
+						border-bottom: 2px solid $primary;
+						transition: all 1s ease-in-out;
+					}
+				}
+			}
+
+			&_phone,
+			&_email {
+				display: flex;
+				padding: 10px 0;
+				padding-right: 20px;
+				align-items: center;
+				margin-right: 50px;
+
+				.address {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 700px) {
-}
-
-@media (min-width: 800px) {
 	.container {
-		width: 90%;
+		height: 75vh;
+		.about {
+			.contact {
+				flex-direction: row;
+			}
+			.title {
+				font-size: 1.2rem;
+			}
+
+			.subTitle {
+				font-size: 2rem;
+			}
+			.text {
+				width: 80%;
+			}
+		}
 	}
 }
 
 @media (min-width: 1024px) {
+	.container {
+		.about {
+			width: 80%;
+			max-width: $containerMaxWidth;
+			.title {
+				font-size: 1.5rem;
+			}
+
+			.subTitle {
+				font-size: 2.5rem;
+			}
+			.text {
+				width: 70%;
+				max-width: 800px;
+			}
+		}
+	}
 }

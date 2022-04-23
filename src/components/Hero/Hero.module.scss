@@ -13,7 +13,7 @@
 	margin: 0 auto;
 
 	&__hero {
-		max-width: 90%;
+		width: 90%;
 		margin: 0 auto;
 		padding: 10px;
 		margin-top: 20px;
@@ -22,12 +22,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
 		.container__left {
 			width: 100%;
 
 			.hero_text {
 				font-size: 1.8rem;
 				line-height: 1.2;
+				width: 100%;
 			}
 			.title {
 				text-transform: uppercase;
@@ -50,7 +52,7 @@
 					border: 1px solid $accent;
 					border-radius: 0.2rem;
 					font-size: 0.9rem;
-					background: $accent;
+					border: 2px solid $accent;
 
 					a {
 						&:hover {

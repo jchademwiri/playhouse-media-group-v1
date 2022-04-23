@@ -82,22 +82,22 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link href='/blog'>
 									<a>Blog</a>
 								</Link>
-							</li>
+							</li> */}
 
 							{/* <li>
 								<Link href='/about'>
 								<a>About</a>
 								</Link>
 							</li> */}
-							{/* <li>
+							<li>
 								<Link href='/contact'>
-								<a>Contact</a>
+									<a>Contact</a>
 								</Link>
-							</li> */}
+							</li>
 						</ul>
 					</div>
 					<nav className={styles.mobileNav}>
@@ -108,7 +108,7 @@ const Navbar = () => {
 							onClick={() => setOpen(false)}
 							className={styles.menu}
 							style={{ right: open ? '0px' : '-100vw' }}>
-							<li className={styles.closebtn}>X</li>
+							{/* <li className={styles.closebtn}>X</li> */}
 							<li className='menuItem'>
 								<Link passHref href='/' scroll>
 									<a>Home</a>
@@ -125,21 +125,21 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link href='/blog'>
 									<a>Blog</a>
 								</Link>
-							</li>
+							</li> */}
 							{/* <li className='menuItem'>
 								<Link passHref href='/about'>
 									<a>About</a>
 								</Link>
-							</li>
+							</li> */}
 							<li className='menuItem'>
 								<Link passHref href='/contact'>
 									<a>Contact</a>
 								</Link>
-							</li> */}
+							</li>
 						</ul>
 					</nav>
 				</div>

@@ -30,9 +30,9 @@ const Footer = () => {
 						<a
 							className={styles.project_link}
 							target='_blank'
-							href='https://wa.me/+27740491433'
-							rel='noopener noreferrer'>
-							Let&apos;s get started
+							rel='noopener noreferrer'
+							href={consulting.href}>
+							{consulting.link}
 						</a>
 					</div>
 				))}
