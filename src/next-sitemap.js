@@ -1,8 +1,8 @@
-const siteUrl = 'https://www.playhousemedia.net';
-import { server } from './src/config';
+// const siteUrl = 'https://www.playhousemedia.net';
+import { server } from './config';
 
 module.exports = {
-	siteUrl,
+	server,
 	generateRobotsTxt: true,
 	robotsTxtOptions: {
 		policies: [{ userAgent: '*', allow: '/' }],
