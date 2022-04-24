@@ -6,6 +6,7 @@ import PortableText from 'react-portable-text';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
+import { serializers } from '../../../serializers';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
@@ -48,20 +49,6 @@ const BlogPost = ({ post }) => {
 					</div>
 
 					<div className={styles.categories}>
-						{/* <div>
-						{post.categories ? (
-							post.categories.map((category) => (
-								<span key={category.slug} className={styles.category}>
-									<Link href={`/blog/category/${category.title}`}>
-										{category.title}
-									</Link>
-								</span>
-							))
-						) : (
-							<span>No Categories found</span>
-						)}
-					</div> */}
-
 						<div>
 							{post.categories &&
 								post.categories.map((category) => (
@@ -88,32 +75,35 @@ const BlogPost = ({ post }) => {
 							dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
 							projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
 							content={post.body}
+							// serializers={serializers}
+							{...serializers}
 							serializers={{
+								code: (props) => (
+									<pre data-language={props.node.language}>
+										<code>{props.node.code}</code>
+									</pre>
+								),
 								h1: (props) => <h1 className={styles.h1} {...props} />,
 								h2: (props) => <h2 className={styles.h2} {...props} />,
 								h3: (props) => <h3 className={styles.h3} {...props} />,
-								pre: (props) => <pre className={styles.pre} {...props} />,
 								li: ({ children }) => <li>{children}</li>,
+								pre: (props) => <pre className={styles.pre} {...props} />,
+								code: (props) => <pre>{JSON.stringify(props, null, 2)}</pre>,
 								link: ({ href, children }) => (
-									<a target='_blank' href={href} className={styles.link}>
+									<a
+										href={href}
+										target='_blank'
+										rel='noopener noreferrer'
+										className={styles.link}>
 										{children}
 									</a>
-								),
-								img: ({ src, alt, ...props }) => (
-									<Image
-										src={src}
-										alt={alt}
-										{...props}
-										width={1920}
-										height={1080}
-										placeholder='blur'
-										blurDataURL={urlFor(post.mainImage).url()}
-										objectFit='cover'
-									/>
 								),
 							}}
 						/>
 					</div>
+					<code>
+						<pre>{JSON.stringify(post.title, null, 2)}</pre>
+					</code>
 				</article>
 			</section>
 		</>

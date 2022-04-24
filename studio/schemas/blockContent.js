@@ -26,9 +26,10 @@ export default {
 				{ title: 'H2', value: 'h2' },
 				{ title: 'H3', value: 'h3' },
 				{ title: 'H4', value: 'h4' },
-				{ title: 'p', value: 'p' },
-				{ title: 'Pre', value: 'pre' },
+				// { title: 'p', value: 'p' },
+				// { title: 'pre', value: 'pre' },
 				{ title: 'Quote', value: 'blockquote' },
+				// { title: 'Code', value: 'code' },
 			],
 			lists: [{ title: 'Bullet', value: 'bullet' }],
 			// Marks let you mark up inline text in the block editor.
@@ -51,6 +52,11 @@ export default {
 								name: 'href',
 								type: 'url',
 							},
+							{
+								title: 'Open in new tab',
+								name: 'blank',
+								type: 'boolean',
+							},
 						],
 					},
 				],
@@ -62,6 +68,11 @@ export default {
 		{
 			type: 'image',
 			options: { hotspot: true },
+		},
+		{
+			name: 'code',
+			title: 'Code',
+			type: 'code',
 		},
 	],
 };
