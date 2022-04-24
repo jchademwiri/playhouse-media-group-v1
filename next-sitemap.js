@@ -1,5 +1,5 @@
 const siteUrl = 'https://www.playhousemedia.net';
-// import { server } from '../../config';
+import { server } from './src/config';
 
 module.exports = {
 	siteUrl,
@@ -7,8 +7,8 @@ module.exports = {
 	robotsTxtOptions: {
 		policies: [{ userAgent: '*', allow: '/' }],
 		additionalSitemaps: [
-			`${siteUrl}/sitemap.xml`,
-			`${siteUrl}/server-sitemap.xml`,
+			`${server}/sitemap.xml`,
+			`${server}/server-sitemap.xml`,
 		],
 	},
 };
