@@ -1,6 +1,6 @@
 import Link from 'next/link';
 // import { getSanityContent } from '../utils/sanity';
-import { SanityClient } from '../../sanity';
+import { SanityClient } from '../../../sanity';
 
 
 export default function Index({ blogs }) {

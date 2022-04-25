@@ -98,6 +98,11 @@ const Navbar = () => {
 									<a>Contact</a>
 								</Link>
 							</li>
+							<li>
+								<Link href='learn'>
+									<a>Learn</a>
+								</Link>
+							</li>
 						</ul>
 					</div>
 					<nav className={styles.mobileNav}>

@@ -11,6 +11,7 @@
 	"dependencies": {
 		"@sanity/image-url": "^1.0.1",
 		"cloudinary-build-url": "^0.2.1",
+		"framer-motion": "^6.3.0",
 		"moment": "^2.29.2",
 		"next": "^12.1.5",
 		"next-pwa": "^5.5.2",
