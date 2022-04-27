@@ -59,7 +59,7 @@
 			&__details {
 				display: grid;
 				gap: 10px;
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: repeat(1, 1fr);
 			}
 		}
 	}
@@ -69,7 +69,7 @@
 		.about {
 			&__skills__details {
 				&__skills {
-					grid-template-columns: repeat(2, 1fr);
+					grid-template-columns: repeat(3, 1fr);
 				}
 			}
 		}
@@ -83,6 +83,11 @@
 			&__content {
 				&__skills {
 					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+			&__contact {
+				&__details {
+					grid-template-columns: repeat(2, 1fr);
 				}
 			}
 		}
@@ -109,6 +114,11 @@
 			&__skills__details {
 				&__skills {
 					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+			&__contact {
+				&__details {
+					grid-template-columns: repeat(3, 1fr);
 				}
 			}
 		}
