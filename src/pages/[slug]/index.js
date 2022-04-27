@@ -20,6 +20,12 @@ const BlogPost = ({ post }) => {
 		},
 	};
 
+	const serializers = {
+		marks: {
+			link: (props) => <pre>{JSON.stringify(props, null, 2)}</pre>,
+		},
+	};
+
 	return (
 		<>
 			<NextSeo {...SEO} />
@@ -76,13 +82,7 @@ const BlogPost = ({ post }) => {
 							projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
 							content={post.body}
 							// serializers={serializers}
-							{...serializers}
 							serializers={{
-								code: (props) => (
-									<pre data-language={props.node.language}>
-										<code>{props.node.code}</code>
-									</pre>
-								),
 								h1: (props) => <h1 className={styles.h1} {...props} />,
 								h2: (props) => <h2 className={styles.h2} {...props} />,
 								h3: (props) => <h3 className={styles.h3} {...props} />,
@@ -101,9 +101,8 @@ const BlogPost = ({ post }) => {
 							}}
 						/>
 					</div>
-					<code>
-						<pre>{JSON.stringify(post.title, null, 2)}</pre>
-					</code>
+
+					<pre>{JSON.stringify(post.title, null, 2)}</pre>
 				</article>
 			</section>
 		</>
