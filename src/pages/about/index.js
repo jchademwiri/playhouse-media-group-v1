@@ -33,7 +33,7 @@ const about = ({ details }) => {
 				<section className={styles.content}>
 					{details &&
 						details.map((detail) => (
-							<div>
+							<div key={detail.id}>
 								<h1>{detail.name}</h1>
 								{/* <small> {detail.profession} </small> */}
 								<p>{detail.description}</p>
@@ -110,7 +110,10 @@ const about = ({ details }) => {
 												<div>
 													<p>{contact.name}</p>
 													<small>
-														<a href={`${contact.urlto}`} target='_blank'>
+														<a
+															href={`${contact.urlto}`}
+															target='_blank'
+															rel='noreferrer'>
 															{contact.url}
 														</a>
 													</small>
