@@ -10,12 +10,12 @@ import { serializers } from '../../../serializers';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
-		title: `PMG | ${post.title ? post.title : post.slug}`,
+		title: `${post.title ? post.title : post.slug} | Playhouse Media Group`,
 		description: `${post.exempt ? post.excerpt : post.excerpt}`,
 		canonical: `${server}/${post.slug}`,
 		openGraph: {
 			url: `${server}/${post.slug}`,
-			title: `PMG | ${post.title}`,
+			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt ? post.excerpt : post.excerpt}`,
 		},
 	};

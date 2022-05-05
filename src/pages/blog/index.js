@@ -9,12 +9,12 @@ import { server } from '../../config';
 
 const Blog = ({ posts }) => {
 	const SEO = {
-		title: 'PMG | Blog',
+		title: `Blog | Playhouse Media Group`,
 
 		canonical: `${server}/blog`,
 		openGraph: {
 			url: `${server}/blog`,
-			title: 'PMG | Blog',
+			title: `Blog | Playhouse Media Group`,
 		},
 	};
 
@@ -101,7 +101,6 @@ export const getServerSideProps = async (pageContext) => {
 		image,
 	  },
 	  exempt,
-	  
 	  mainImage,
 	  slug,
 	  publishedAt
