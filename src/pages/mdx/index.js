@@ -1,11 +1,6 @@
 import Link from 'next/link';
-<<<<<<< HEAD:src/pages/mdx/index.js
-import { SanityClient } from '../../../sanity';
-=======
 // import { getSanityContent } from '../utils/sanity';
 import { SanityClient } from '../../../sanity';
-
->>>>>>> ab8d8792796ad4622e0c29bca7576e97cfca2dc0:src/pages/learn/mdx.js
 
 export default function Index({ blogs }) {
 	return (
