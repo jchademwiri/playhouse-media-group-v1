@@ -10,13 +10,19 @@ import { serializers } from '../../../serializers';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
-		title: `PMG | ${post.title ? post.title : post.slug}`,
+		title: `${post.title ? post.title : post.slug} | Playhouse Media Group`,
 		description: `${post.exempt ? post.excerpt : post.excerpt}`,
 		canonical: `${server}/${post.slug}`,
 		openGraph: {
 			url: `${server}/${post.slug}`,
-			title: `PMG | ${post.title}`,
+			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt ? post.excerpt : post.excerpt}`,
+		},
+	};
+
+	const serializers = {
+		marks: {
+			link: (props) => <pre>{JSON.stringify(props, null, 2)}</pre>,
 		},
 	};
 
@@ -76,13 +82,7 @@ const BlogPost = ({ post }) => {
 							projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
 							content={post.body}
 							// serializers={serializers}
-							{...serializers}
 							serializers={{
-								code: (props) => (
-									<pre data-language={props.node.language}>
-										<code>{props.node.code}</code>
-									</pre>
-								),
 								h1: (props) => <h1 className={styles.h1} {...props} />,
 								h2: (props) => <h2 className={styles.h2} {...props} />,
 								h3: (props) => <h3 className={styles.h3} {...props} />,
@@ -101,9 +101,8 @@ const BlogPost = ({ post }) => {
 							}}
 						/>
 					</div>
-					<code>
-						<pre>{JSON.stringify(post.title, null, 2)}</pre>
-					</code>
+
+					<pre>{JSON.stringify(post.title, null, 2)}</pre>
 				</article>
 			</section>
 		</>

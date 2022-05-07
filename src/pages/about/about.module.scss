@@ -1,21 +1,149 @@
 @import '../../styles/variables.scss';
+.header {
+	background: url('/images/bg.jpg') no-repeat center center fixed;
+	box-shadow: inset 0 0 0 1000px rgb(27, 25, 52, 0.8);
+	height: 70vh;
+	.content {
+		display: grid;
+		height: 100%;
+		align-content: center;
+		justify-content: center;
+		width: 90%;
+		margin: 0 auto;
+	}
+}
 .container {
-	display: grid;
-	grid-template-columns: 1fr;
-	width: 90%;
-	margin: 0 auto;
-	margin-top: 20px;
-	padding-bottom: 20px;
+	.about {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 20px;
+		padding-bottom: 20px;
+		&__social {
+			&__links {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				justify-items: center;
+				gap: 10px;
+				&__link {
+					background: $bg-faint;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+
+		&__mission {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 10px;
+		}
+
+		&__skills__details {
+			h3 {
+				color: $accent;
+			}
+			&__skills {
+				display: grid;
+
+				&__skill {
+					width: 100%;
+				}
+			}
+		}
+		&__contact {
+			&__details {
+				display: grid;
+				gap: 10px;
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+	}
+}
+@media (min-width: 480px) {
+	.container {
+		.about {
+			&__skills__details {
+				&__skills {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		}
+	}
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
+	.container {
+		.about {
+			&__skills__details,
+			&__content {
+				&__skills {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+			&__contact {
+				&__details {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 800px) {
+	.header {
+		.content {
+			text-align: center;
+			width: 80%;
+		}
+	}
 	.container {
-		width: 90%;
+		.about {
+			&__social {
+				&__links {
+					grid-template-columns: repeat(6, 1fr);
+				}
+			}
+			&__mission {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			&__skills__details {
+				&__skills {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+			&__contact {
+				&__details {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		}
 	}
 }
 
 @media (min-width: 1024px) {
+	.header {
+		// height: 70vh;
+		.content {
+			max-width: $containerMaxWidth;
+		}
+	}
+	.container {
+		.about {
+			width: 80%;
+			max-width: 75rem;
+			&__mission {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			&__skills__details {
+				&__skills {
+					grid-template-columns: repeat(6, 1fr);
+				}
+			}
+		}
+	}
 }

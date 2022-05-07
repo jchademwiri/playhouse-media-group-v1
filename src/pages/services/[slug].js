@@ -5,12 +5,12 @@ import { server } from '../../config';
 import styles from './service.module.scss';
 const service = ({ service }) => {
 	const SEO = {
-		title: `PMG | ${service.name}`,
+		title: ` ${service.name} | Playhouse Media Group`,
 		description: `${service.description}`,
 		canonical: `${server}/services/${service.slug}`,
 		openGraph: {
 			url: `${server}/services/${service.slug}`,
-			title: `PMG | ${service.name}`,
+			title: `${service.name} | Playhouse Media Group`,
 			description: `${service.description}`,
 		},
 	};
