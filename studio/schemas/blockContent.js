@@ -74,5 +74,10 @@ export default {
 			title: 'Code',
 			type: 'code',
 		},
+		{
+			name: 'youtube',
+			title: 'Youtube',
+			type: 'youtube',
+		},
 	],
 };
