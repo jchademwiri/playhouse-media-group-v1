@@ -107,11 +107,25 @@ const BlogPost = ({ post }) => {
 						/>
 					</div>
 
-					<hr />
 					<small>
 						Latst Updated: {moment(post._updatedAt).format('DD MMMM YYYY')}
 					</small>
 				</article>
+				<hr />
+
+				<div className={styles.postLinks}>
+					<div>
+						<Link href={`/#`}>
+							<a className={styles.postLink}>Previous Post</a>
+						</Link>
+					</div>
+
+					<div>
+						<Link href={`/#`}>
+							<a className={styles.postLink}>Next Post</a>
+						</Link>
+					</div>
+				</div>
 			</section>
 		</>
 	);

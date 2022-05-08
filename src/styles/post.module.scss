@@ -64,6 +64,13 @@
 			}
 		}
 	}
+	.postLinks {
+		display: flex;
+		justify-content: space-between;
+		.postLink {
+			color: $accent;
+		}
+	}
 }
 
 @media (min-width: 700px) {
