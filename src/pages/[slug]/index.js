@@ -89,6 +89,7 @@ const BlogPost = ({ post }) => {
 								li: ({ children }) => <li>{children}</li>,
 								pre: (props) => <pre className={styles.pre} {...props} />,
 								code: (props) => <pre>{JSON.stringify(props, null, 2)}</pre>,
+
 								link: ({ href, children }) => (
 									<a
 										href={href}
@@ -97,6 +98,19 @@ const BlogPost = ({ post }) => {
 										className={styles.link}>
 										{children}
 									</a>
+								),
+								youtube: ({ url }) => (
+									<div className={styles.youtube}>
+										<iframe
+											width='100%'
+											height='480'
+											src={url}
+											frameBorder='0'
+											allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+											allowFullScreen
+											title='Embedded youtube'
+										/>
+									</div>
 								),
 							}}
 						/>
@@ -126,7 +140,7 @@ export const getStaticPaths = async () => {
 			slug: post.slug.current,
 		},
 	}));
-	
+
 	return {
 		paths,
 		fallback: 'blocking',

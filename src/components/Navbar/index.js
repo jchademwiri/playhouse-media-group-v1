@@ -84,11 +84,11 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							{/* <li>
+							<li>
 								<Link href='/blog'>
 									<a>Blog</a>
 								</Link>
-							</li> */}
+							</li>
 
 							<li>
 								<Link href='/about'>
@@ -132,11 +132,11 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							{/* <li>
+							<li>
 								<Link href='/blog'>
 									<a>Blog</a>
 								</Link>
-							</li> */}
+							</li>
 							<li className='menuItem'>
 								<Link passHref href='/about'>
 									<a>About</a>
