@@ -1,8 +1,9 @@
 @import './variables.scss';
+
 .container {
 	margin: 0 auto;
 	padding-bottom: 20px;
-	width: 80%;
+	width: 90%;
 
 	.content {
 		// .title {
@@ -30,6 +31,9 @@
 		.youtube {
 			width: 100%;
 			height: auto;
+		}
+		.code {
+			background: grey;
 		}
 	}
 	.meta {
@@ -62,10 +66,11 @@
 	}
 }
 
-// @media (min-width: 700px) {
-// 	.container {
-// 	}
-// }
+@media (min-width: 700px) {
+	.container {
+		width: 80%;
+	}
+}
 
 @media (min-width: 1024px) {
 	.container {
