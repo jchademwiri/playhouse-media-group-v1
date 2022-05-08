@@ -11,11 +11,11 @@ import { motion } from 'framer-motion';
 
 const index = () => {
 	const SEO = {
-		title: 'PMG | Web Developer Specialists',
+		title: 'Web Developer Specialists | Playhouse Media Group',
 		canonical: `${server}/`,
 		openGraph: {
 			url: `${server}/`,
-			title: 'PMG | Web Developer Specialists',
+			title: 'Web Developer Specialists | Playhouse Media Group',
 		},
 	};
 	return (
