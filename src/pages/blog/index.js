@@ -93,7 +93,7 @@ const Blog = ({ posts }) => {
 export default Blog;
 
 export const getServerSideProps = async (pageContext) => {
-	const query = `*[_type == "post"]{
+	const query = `*[_type == "post"] | order(publishedAt desc){
 		_id,
 		title,
 		author -> {

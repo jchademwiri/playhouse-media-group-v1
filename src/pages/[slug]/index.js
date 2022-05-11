@@ -20,15 +20,10 @@ const BlogPost = ({ post }) => {
 		},
 	};
 
-	const serializers = {
-		marks: {
-			link: (props) => <pre>{JSON.stringify(props, null, 2)}</pre>,
-		},
-	};
-
 	return (
 		<>
 			<NextSeo {...SEO} />
+
 			<section className={styles.container}>
 				<h1 className={styles.title}>{post.title}</h1>
 				<div className={styles.meta}>
@@ -48,9 +43,6 @@ const BlogPost = ({ post }) => {
 							<small>
 								Published: {moment(post.publishedAt).format('DD MMMM YYYY')}
 							</small>
-							{/* <small>
-						Latst Updated: {moment(post._updatedAt).format('DD MMMM YYYY')}
-					</small> */}
 						</div>
 					</div>
 
@@ -87,8 +79,8 @@ const BlogPost = ({ post }) => {
 								h2: (props) => <h2 className={styles.h2} {...props} />,
 								h3: (props) => <h3 className={styles.h3} {...props} />,
 								li: ({ children }) => <li>{children}</li>,
-								pre: (props) => <pre className={styles.pre} {...props} />,
-								code: (props) => <pre>{JSON.stringify(props, null, 2)}</pre>,
+								code: (props) => <code className={styles.code} {...props} />,
+
 								link: ({ href, children }) => (
 									<a
 										href={href}
@@ -98,12 +90,42 @@ const BlogPost = ({ post }) => {
 										{children}
 									</a>
 								),
+								youtube: ({ url }) => (
+									<div className={styles.youtube}>
+										<iframe
+											width='100%'
+											Height='480'
+											src={url}
+											frameBorder='0'
+											allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+											allowFullScreen
+											title='Embedded youtube'
+										/>
+									</div>
+								),
 							}}
 						/>
 					</div>
 
-					<pre>{JSON.stringify(post.title, null, 2)}</pre>
+					<small>
+						Latst Updated: {moment(post._updatedAt).format('DD MMMM YYYY')}
+					</small>
 				</article>
+				<hr />
+
+				<div className={styles.postLinks}>
+					<div>
+						<Link href={`/#`}>
+							<a className={styles.postLink}>Previous Post</a>
+						</Link>
+					</div>
+
+					<div>
+						<Link href={`/#`}>
+							<a className={styles.postLink}>Next Post</a>
+						</Link>
+					</div>
+				</div>
 			</section>
 		</>
 	);
@@ -126,6 +148,7 @@ export const getStaticPaths = async () => {
 			slug: post.slug.current,
 		},
 	}));
+
 	return {
 		paths,
 		fallback: 'blocking',
