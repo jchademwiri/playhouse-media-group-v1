@@ -2,9 +2,16 @@ import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import Layout from '../components/Layout';
 import '../styles/globals.scss';
+import '../styles/nprogress.scss';
 import * as ga from '../lib/ga';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import Router from 'next/router';
+import nProgress from 'nprogress';
+
+Router.events.on('routeChangeStart', nProgress.start);
+Router.events.on('routeChangeError', nProgress.done);
+Router.events.on('routeChangeComplete', nProgress.done);
 
 function MyApp({ Component, pageProps }) {
 	const router = useRouter();
