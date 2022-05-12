@@ -9,12 +9,12 @@ const projects = ({ projects }) => {
 	// console.log(projects.slice(0, 10));
 
 	const SEO = {
-		title: 'PMG | Portfolio',
+		title: 'Portfolio | Playhouse Media Group',
 
 		canonical: `${server}/projects`,
 		openGraph: {
 			url: `${server}/projects`,
-			title: 'PMG | Portfolio',
+			title: 'Portfolio | Playhouse Media Group',
 		},
 	};
 	return (

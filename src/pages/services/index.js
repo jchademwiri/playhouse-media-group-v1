@@ -10,11 +10,11 @@ import Loading from '../../components/Loading';
 
 const services = ({ services }) => {
 	const SEO = {
-		title: `PMG | Our Services`,
+		title: `Our Services | Playhouse Media Group`,
 		canonical: `${server}/services`,
 		openGraph: {
 			url: `${server}/services`,
-			title: `PMG | Our Services`,
+			title: `Our Services | Playhouse Media Group`,
 		},
 	};
 
@@ -73,7 +73,6 @@ const services = ({ services }) => {
 						)}
 					</div>
 				</section>
-				
 			</main>
 		</>
 	);

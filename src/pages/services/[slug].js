@@ -50,15 +50,21 @@ export async function getStaticPaths() {
 	return { paths, fallback: false };
 }
 
-export async function getStaticProps(context) {
-	// export async function getServerSideProps(context) {
+
+export const getStaticProps = async (context) => {
 	const { params } = context;
 	const res = await fetch(`${server}/api/services/${params.slug}`);
-	const data = await res.json();
+	const service = await res.json();
 
+	if (!service) {
+		return {
+			notFound: true,
+		};
+	}
 	return {
 		props: {
-			service: data,
+			service,
 		},
+		revalidate: 60,
 	};
-}
+};

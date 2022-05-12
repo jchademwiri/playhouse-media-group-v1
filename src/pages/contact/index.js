@@ -6,50 +6,37 @@ import useSWR from 'swr';
 import { server } from '../../config';
 import Link from 'next/link';
 import Image from 'next/image';
+import ContactUs from '../../components/ContactUs';
 
 //  fetch data using swr hook and mutate data
 // const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const contact = () => {
 	const SEO = {
-		title: `PMG | Contact`,
+		title: `Contact | Playhouse Media Group`,
 		description: `A professional web developer and digital marketing specialist bassed in South Africa.`,
 		canonical: `${server}/contact`,
 		openGraph: {
 			url: `${server}/contact`,
-			title: `PMG | Contact`,
+			title: `Contact | Playhouse Media Group`,
 			description: `A professional web developer and digital marketing specialist`,
 		},
 	};
 
-	// fetch data using swr hook
-	// const { data, error } = useSWR(
-	// 	`${server}/api/projects`,
-	// 	{
-	// 		initialData: details,
-	// 		revalidateOnFocus: false,
-	// 		revalidateOnReconnect: false,
-	// 	},
-	// 	fetcher
-	// );
-
-	// if (error) return <div>failed to load</div>;
-	// if (!data) return <div>loading...</div>;
-
 	return (
 		<>
 			<NextSeo {...SEO} />
-			<section className={styles.container}>
+			{/* <section className={styles.container}>
 				<div className={styles.about}>
-					<>
-						{/* <h1 className={styles.title}>Web Developer Specialist</h1> */}
-						<h1 className={styles.title}>
+					<> */}
+			{/* <h1 className={styles.title}>Web Developer Specialist</h1> */}
+			{/* <h1 className={styles.title}>
 							Full Stack Web &amp; Digital Specialists
 						</h1>
-						<h2 className={styles.subTitle}>
-							{/* Hi, I am <br /> */}
-							{/* <span className={styles.name}>Jacob</span> Chademwiri */}
-							<span className={styles.name}>Plahouse</span> Media Group
+						<h2 className={styles.subTitle}> */}
+			{/* Hi, I am <br /> */}
+			{/* <span className={styles.name}>Jacob</span> Chademwiri */}
+			{/* <span className={styles.name}>Plahouse</span> Media Group
 						</h2>
 					</>
 					<div className={styles.text}>
@@ -96,10 +83,10 @@ const contact = () => {
 							</address>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
-				{/* <h3>{data.name}</h3> */}
-				{/* {data ? (
+			{/* <h3>{data.name}</h3> */}
+			{/* {data ? (
 					data.map((detail) => (
 						<div key={detail.id}>
 							<h2>{detail.name}</h2>
@@ -109,7 +96,9 @@ const contact = () => {
 				) : (
 					<div>loading...</div>
 				)} */}
-			</section>
+			{/* </section> */}
+
+			<ContactUs />
 		</>
 	);
 };

@@ -6,12 +6,12 @@ import styles from './project.module.scss';
 
 const project = ({ project }) => {
 	const SEO = {
-		title: `PMG | ${project.name}`,
+		title: `${project.name} | Playhouse Media Group`,
 		description: `${project.description}`,
 		canonical: `${server}/projects/${project.slug}`,
 		openGraph: {
 			url: `${server}/projects/${project.slug}`,
-			title: `PMG | ${project.name}`,
+			title: `${project.name} | Playhouse Media Group`,
 			description: `${
 				project.description
 					? project.description
