@@ -45,13 +45,12 @@
 				.input,
 				.textarea {
 					padding-left: 10px;
-					// border-radius: 5px;
 					margin: 10px 0;
 					outline: none;
 					font-family: poppins;
 					background: transparent;
 					border: none;
-					border-bottom: 1px #fff solid;
+					border-bottom: 1px $accent solid;
 					color: #fff;
 				}
 				.input {
@@ -60,9 +59,20 @@
 				.textarea {
 					height: 100px;
 				}
-				.btn {
-					height: 40px;
-					text-transform: uppercase;
+			}
+			.btn {
+				padding: 15px 40px;
+				text-transform: uppercase;
+				border: none;
+				background: $accent;
+				color: #fff;
+				cursor: pointer;
+				border-radius: 5px;
+				transition: all 1s ease-in;
+				&:hover {
+					background: $primary;
+					color: $bg;
+					transition: all 1s ease-out;
 				}
 			}
 		}
