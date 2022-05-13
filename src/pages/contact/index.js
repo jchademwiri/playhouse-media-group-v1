@@ -1,15 +1,6 @@
 import styles from './contact.module.scss';
-import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-// import useSWR, { mutate } from 'swr';
-import useSWR from 'swr';
 import { server } from '../../config';
-import Link from 'next/link';
-import Image from 'next/image';
-import ContactUs from '../../components/ContactUs';
-
-//  fetch data using swr hook and mutate data
-// const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const contact = () => {
 	const SEO = {
@@ -26,79 +17,68 @@ const contact = () => {
 	return (
 		<>
 			<NextSeo {...SEO} />
-			{/* <section className={styles.container}>
-				<div className={styles.about}>
-					<> */}
-			{/* <h1 className={styles.title}>Web Developer Specialist</h1> */}
-			{/* <h1 className={styles.title}>
-							Full Stack Web &amp; Digital Specialists
-						</h1>
-						<h2 className={styles.subTitle}> */}
-			{/* Hi, I am <br /> */}
-			{/* <span className={styles.name}>Jacob</span> Chademwiri */}
-			{/* <span className={styles.name}>Plahouse</span> Media Group
-						</h2>
-					</>
-					<div className={styles.text}>
-						<p>
-							We are a group of professionals specialized in web development,
-							SEO optimization and digital marketing and other business
-							solutions to help you run your business smoothly. We also provide
-							you with office solutions which includes Microsoft 365 licensing.
-						</p>
-					</div>
-					<div className={styles.contact}>
-						<div className={styles.contact_phone}>
-							<Image
-								className={styles.icon}
-								src='/images/phone.png'
-								alt='phone'
-								width='31'
-								height='31'
-							/>
-							<address className={styles.address}>
-								<a
-									href='tel:+27616911656'
-									target='_blank'
-									rel='noopener noreferrer'>
-									061 691 1656
-								</a>
-							</address>
-						</div>
-						<div className={styles.contact_email}>
-							<Image
-								className={styles.icon}
-								src='/images/email.png'
-								alt='phone'
-								width='31'
-								height='31'
-							/>
-							<address className={styles.address}>
-								<a
-									href='mailto:info@playhousemedia.net'
-									target='_blank'
-									rel='noopener noreferrer'>
+			<div className={styles.contact}>
+				<div className={styles.contact__container}>
+					<section className={styles.contact__container__left}>
+						<h1 className={styles.title}>Say Hello</h1>
+						<div className={styles.contactLinks}>
+							<p>
+								Mobile :<a href='tel:++27740491433'> +27 74 049 1433</a>
+							</p>
+							<p>
+								Email :
+								<a href='mailto:info@playhousemedia.net'>
+									{' '}
 									info@playhousemedia.net
 								</a>
-							</address>
+							</p>
+							<p>
+								Website :
+								<a
+									href='http://www.playhousemedia.net'
+									target='_blank'
+									rel='noopener noreferrer'>
+									{' '}
+									www.playhousemedia.net
+								</a>
+							</p>
 						</div>
-					</div>
-				</div> */}
-
-			{/* <h3>{data.name}</h3> */}
-			{/* {data ? (
-					data.map((detail) => (
-						<div key={detail.id}>
-							<h2>{detail.name}</h2>
-							<p>{detail.description}</p>
+						<div className={styles.socialLinks}>
+							<span className={styles.link}>1</span>
+							<span className={styles.link}>2</span>
+							<span className={styles.link}>3</span>
+							<span className={styles.link}>4</span>
+							<span className={styles.link}>5</span>
 						</div>
-					))
-				) : (
-					<div>loading...</div>
-				)} */}
-			{/* </section> */}
-
-			<ContactUs />
+					</section>
+					<section className={styles.contact__container__right}>
+						<h2>Ask Your Queries</h2>
+						<form className={styles.form}>
+							<input
+								className={styles.input}
+								type='text'
+								name='name'
+								id=''
+								placeholder='Your Name'
+							/>
+							<input
+								className={styles.input}
+								type='email'
+								name='email'
+								id=''
+								placeholder='Your Email'
+							/>
+							<textarea
+								className={styles.textarea}
+								name='message'
+								placeholder='Message'></textarea>
+						</form>
+						<button className={styles.btn} type='submit'>
+							Send Message
+						</button>
+					</section>
+				</div>
+			</div>
 		</>
 	);
 };

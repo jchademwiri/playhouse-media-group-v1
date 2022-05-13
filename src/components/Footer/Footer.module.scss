@@ -2,18 +2,7 @@
 
 .container {
 	width: 90%;
-	margin: 0 auto;
-
-	&__title {
-		display: flex;
-		margin: 20px 0;
-		align-items: center;
-		width: 100%;
-		h2 {
-			font-size: 1.5rem;
-			margin: 20px;
-		}
-	}
+	margin: 50px auto;
 
 	&__content {
 		display: grid;
