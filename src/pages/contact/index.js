@@ -25,6 +25,8 @@ const contact = () => {
 			method: 'post',
 			body: JSON.stringify(formData),
 		});
+		console.log('Email Sent...');
+		alert('Your email has been sent');
 	}
 
 	return (
@@ -73,6 +75,7 @@ const contact = () => {
 							<p className={styles.formInput}>
 								<label htmlFor='name'>Name</label>
 								<input
+									required
 									className={styles.input}
 									type='text'
 									name='name'
@@ -83,6 +86,7 @@ const contact = () => {
 							<p className={styles.formInput}>
 								<label htmlFor='email'>Email</label>
 								<input
+									required
 									className={styles.input}
 									type='email'
 									name='email'
@@ -93,6 +97,7 @@ const contact = () => {
 							<p className={styles.formInput}>
 								<label htmlFor='message'>Message</label>
 								<textarea
+									required
 									className={styles.textarea}
 									name='message'
 									placeholder='Message'></textarea>
