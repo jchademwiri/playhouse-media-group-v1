@@ -25,8 +25,13 @@ const contact = () => {
 			method: 'post',
 			body: JSON.stringify(formData),
 		});
-		console.log('Email Sent...');
-		alert('Your email has been sent');
+
+		try {
+			console.log('Email Sent...');
+			alert('Your email has been sent');
+		} catch (error) {
+			console.error(error);
+		}
 	}
 
 	return (
