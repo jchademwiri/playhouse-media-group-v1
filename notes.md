@@ -10,6 +10,8 @@
     https://www.searchberg.com/
     https://www.softsource.co.za/development/  -- Our Development Process
     https://www.toucan-creative.co.uk/
+    https://www.smudge.co.za/service/professional-web-design-and-development/
+    https://infinitycds.co.za/web-design-bundles/
 
 ## Importent Notes
 
