@@ -1,8 +1,10 @@
 import styles from './contact.module.scss';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
+import { useRouter } from 'next/router';
 
 const contact = () => {
+	const router = useRouter();
 	const SEO = {
 		title: `Contact | Playhouse Media Group`,
 		description: `A professional web developer and digital marketing specialist bassed in South Africa.`,
@@ -21,16 +23,19 @@ const contact = () => {
 			if (!field.name) return;
 			formData[field.name] = field.value;
 		});
-		fetch('/api/mail', {
+
+		await fetch('/api/mail', {
 			method: 'post',
 			body: JSON.stringify(formData),
 		});
 
 		try {
-			console.log('Email Sent...');
-			alert('Your email has been sent');
+			alert('Message sent successfully');
+			console.log('sucsess');
+			router.push('/');
 		} catch (error) {
 			console.error(error);
+			console.log('failed');
 		}
 	}
 
