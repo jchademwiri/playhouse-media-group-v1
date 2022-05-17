@@ -43,42 +43,12 @@ const projects = ({ projects }) => {
 									height={1024}
 									objectFit='cover'
 								/>
-								<h3>{project.name}</h3>
+								<h3>
+									<Link href={`/projects/${project.slug}`}>
+										<a>{project.name}</a>
+									</Link>
+								</h3>
 								<p> {project.description} </p>
-
-								<p className={styles.technology}>
-									{project.technologies ? (
-										project.technologies
-											.toString()
-											.split(',')
-											.map((technology) => (
-												<span key={technology}>{technology}</span>
-											))
-									) : (
-										<span>No technologies found</span>
-									)}
-								</p>
-								{/* <div className={styles.links}>
-									<a
-										href={`${project.github}`}
-										target='_blank'
-										rel='noreferrer'
-										className={styles.link}>
-										View on Github
-									</a>
-									<a
-										href={`${project.website}`}
-										target='_blank'
-										rel='noreferrer'
-										className={styles.link}>
-										View Live
-									</a>
-								</div> */}
-								{/* <Link
-									href={`/projects/${project.slug}`}
-									className={styles.link}>
-									View Project
-								</Link> */}
 							</div>
 						))
 					) : (
@@ -98,7 +68,6 @@ export default projects;
 export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/projects`);
 	const projects = await response.json();
-	// console.log(projects);
 
 	return {
 		props: {

@@ -8,6 +8,8 @@ export const projects = [
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
 		technologies: ['Coin Gecko API', 'Express', 'MongoDB', 'React', 'Next Js'],
+		website: 'https://www.seaharvest.co.zw',
+		github: 'https://github.com/jchademwiri/micro-finance',
 	},
 	{
 		id: '2',
@@ -18,6 +20,8 @@ export const projects = [
 		description:
 			'Lorem ipsum dolor sit amet consectetur anatus! Omnis, architecto.',
 		technologies: ['Wordpress', 'WooCommerce', 'Elementor'],
+		website: 'https://www.seaharvest.co.zw',
+		github: 'https://github.com/jchademwiri/micro-finance',
 	},
 	{
 		id: '3',
@@ -28,6 +32,8 @@ export const projects = [
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet dicta quo aperiam debitis dolores quasi, enim natus! Omnis, architecto.',
 		technologies: ['React', 'Styled Components'],
+		website: 'https://www.seaharvest.co.zw',
+		github: 'https://github.com/jchademwiri/micro-finance',
 	},
 	{
 		id: '4',
