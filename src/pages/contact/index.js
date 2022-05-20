@@ -32,7 +32,7 @@ const contact = () => {
 
 			alert('Message sent successfully');
 			console.log('sucsess');
-			return router.push('/');
+			// return router.push('/');
 		} catch (error) {
 			console.error(error);
 			console.log('failed');
