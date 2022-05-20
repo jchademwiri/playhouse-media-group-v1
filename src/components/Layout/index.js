@@ -2,12 +2,12 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
 
 const Layout = ({ children }) => {
 	return (
 		<>
 			<Navbar />
+
 			<motion.main
 				initial='pageInitial'
 				animate='pageAnimate'

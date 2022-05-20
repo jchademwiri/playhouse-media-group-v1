@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 import { serializers } from '../../../serializers';
+import ScrollIndicator from '../../components/ScrollIndicator';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
@@ -23,7 +24,7 @@ const BlogPost = ({ post }) => {
 	return (
 		<>
 			<NextSeo {...SEO} />
-
+			<ScrollIndicator />
 			<section className={styles.container}>
 				<h1 className={styles.title}>{post.title}</h1>
 				<div className={styles.meta}>
@@ -148,7 +149,6 @@ export const getStaticPaths = async () => {
 			slug: post.slug.current,
 		},
 	}));
-	
 
 	return {
 		paths,

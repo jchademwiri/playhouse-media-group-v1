@@ -21,6 +21,7 @@ const index = () => {
 	return (
 		<>
 			<NextSeo {...SEO} />
+
 			<main className={styles.container}>
 				<Hero />
 				<Featured />
