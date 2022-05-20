@@ -1,10 +1,10 @@
 import styles from './contact.module.scss';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
 const contact = () => {
-	const router = useRouter();
+	// const router = useRouter();
 	const SEO = {
 		title: `Contact | Playhouse Media Group`,
 		description: `A professional web developer and digital marketing specialist bassed in South Africa.`,
