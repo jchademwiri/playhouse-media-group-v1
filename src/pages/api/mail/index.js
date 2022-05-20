@@ -19,6 +19,4 @@ export default function handler(req, res) {
 		html: message.replace(/\n/g, '<br />'),
 	};
 	mail.send(msg);
-
-	res.status(200).json({ name: 'ok' });
 }

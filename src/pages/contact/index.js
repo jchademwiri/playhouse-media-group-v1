@@ -25,7 +25,7 @@ const contact = () => {
 				formData[field.name] = field.value;
 			});
 
-			await fetch('/api/mail', {
+			fetch('/api/mail', {
 				method: 'post',
 				body: JSON.stringify(formData),
 			});
