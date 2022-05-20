@@ -1,7 +1,7 @@
 import styles from './contact.module.scss';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
-// import { useRouter } from 'next/router';
+import Router from 'next/router';
 
 const contact = () => {
 	// const router = useRouter();
@@ -32,7 +32,7 @@ const contact = () => {
 
 			alert('Message sent successfully');
 			console.log('sucsess');
-			// return router.push('/');
+			return Router.push('/');
 		} catch (error) {
 			console.error(error);
 			console.log('failed');
