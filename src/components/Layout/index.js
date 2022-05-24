@@ -1,17 +1,27 @@
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { SWRConfig } from 'swr';
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import { motion } from 'framer-motion';
 
 const Layout = ({ children }) => {
 	return (
 		<>
-			<SWRConfig value={{ fetcher }}>
-				<Navbar />
-				<main>{children}</main>
-				<Footer />
-			</SWRConfig>
+			<Navbar />
+
+			<motion.main
+				initial='pageInitial'
+				animate='pageAnimate'
+				variants={{
+					pageInitial: {
+						opacity: 0,
+					},
+					pageAnimate: {
+						opacity: 1,
+					},
+				}}>
+				{children}
+			</motion.main>
+			<Footer />
 		</>
 	);
 };

@@ -1,21 +1,25 @@
 @import './variables.scss';
+
 .container {
 	margin: 0 auto;
 	padding-bottom: 20px;
-	width: 80%;
+	width: 90%;
 
 	.content {
-		.title {
-			// border: 1px solid #eaeaea;
-		}
+		// .title {
+		// 	// border: 1px solid #eaeaea;
+		// }
 
 		.link {
 			color: $accent;
 		}
-		.code {
+		.pre {
 			background: #eaeaea;
 			color: #000;
+			padding: 10px;
+			border-radius: 2px;
 		}
+
 		figure {
 			margin: 0;
 			padding: 0;
@@ -23,6 +27,13 @@
 				border-radius: 10px;
 				width: 100%;
 			}
+		}
+		.youtube {
+			width: 100%;
+			height: auto;
+		}
+		.code {
+			background: grey;
 		}
 	}
 	.meta {
@@ -53,12 +64,20 @@
 			}
 		}
 	}
+	.postLinks {
+		display: flex;
+		justify-content: space-between;
+		.postLink {
+			color: $accent;
+		}
+	}
 }
 
-// @media (min-width: 700px) {
-// 	.container {
-// 	}
-// }
+@media (min-width: 700px) {
+	.container {
+		width: 80%;
+	}
+}
 
 @media (min-width: 1024px) {
 	.container {

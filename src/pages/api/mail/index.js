@@ -1,5 +1,22 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const mail = require('@sendgrid/mail');
+
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default function handler(req, res) {
-	res.status(200).json({ name: 'mail server' });
+	const body = JSON.parse(req.body);
+
+	const message = `
+	Name: ${body.name}\r\n
+	Email: ${body.email}\r\n
+	Message: ${body.message}
+`;
+
+	const msg = {
+		to: 'info@playhousemedia.net',
+		from: 'hello@playhousemedia.net',
+		subject: 'New Message from Playhouse Media Group',
+		text: message,
+		html: message.replace(/\n/g, '<br />'),
+	};
+	mail.send(msg);
 }

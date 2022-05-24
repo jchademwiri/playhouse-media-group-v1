@@ -5,12 +5,12 @@ import { server } from '../../config';
 import styles from './service.module.scss';
 const service = ({ service }) => {
 	const SEO = {
-		title: `PMG | ${service.name}`,
+		title: ` ${service.name} | Playhouse Media Group`,
 		description: `${service.description}`,
 		canonical: `${server}/services/${service.slug}`,
 		openGraph: {
 			url: `${server}/services/${service.slug}`,
-			title: `PMG | ${service.name}`,
+			title: `${service.name} | Playhouse Media Group`,
 			description: `${service.description}`,
 		},
 	};
@@ -50,15 +50,21 @@ export async function getStaticPaths() {
 	return { paths, fallback: false };
 }
 
-export async function getStaticProps(context) {
-	// export async function getServerSideProps(context) {
+
+export const getStaticProps = async (context) => {
 	const { params } = context;
 	const res = await fetch(`${server}/api/services/${params.slug}`);
-	const data = await res.json();
+	const service = await res.json();
 
+	if (!service) {
+		return {
+			notFound: true,
+		};
+	}
 	return {
 		props: {
-			service: data,
+			service,
 		},
+		revalidate: 60,
 	};
-}
+};

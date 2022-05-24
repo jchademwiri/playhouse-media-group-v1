@@ -8,13 +8,14 @@ import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 
 const Blog = ({ posts }) => {
+	console.log(posts);
 	const SEO = {
-		title: 'PMG | Blog',
+		title: `Blog | Playhouse Media Group`,
 
 		canonical: `${server}/blog`,
 		openGraph: {
 			url: `${server}/blog`,
-			title: 'PMG | Blog',
+			title: `Blog | Playhouse Media Group`,
 		},
 	};
 
@@ -93,7 +94,7 @@ const Blog = ({ posts }) => {
 export default Blog;
 
 export const getServerSideProps = async (pageContext) => {
-	const query = `*[_type == "post"]{
+	const query = `*[_type == "post"] | order(publishedAt desc){
 		_id,
 		title,
 		author -> {
@@ -101,7 +102,6 @@ export const getServerSideProps = async (pageContext) => {
 		image,
 	  },
 	  exempt,
-	  
 	  mainImage,
 	  slug,
 	  publishedAt

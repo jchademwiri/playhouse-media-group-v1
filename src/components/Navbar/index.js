@@ -2,6 +2,8 @@ import styles from './navbar.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
@@ -45,7 +47,7 @@ const Navbar = () => {
 	);
 
 	return (
-		<nav className={styles.nav}>
+		<motion.nav className={styles.nav} initial={{ y: -250 }} animate={{ y: 0 }}>
 			<div className={styles.container}>
 				<div onClick={() => setOpen(false)} className={styles.brand}>
 					<Link passHref href='/' scroll className={styles.logo}>
@@ -82,22 +84,27 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							{/* <li>
+							<li>
 								<Link href='/blog'>
 									<a>Blog</a>
 								</Link>
-							</li> */}
+							</li>
 
-							{/* <li>
+							<li>
 								<Link href='/about'>
-								<a>About</a>
+									<a>About</a>
 								</Link>
-							</li> */}
+							</li>
 							<li>
 								<Link href='/contact'>
 									<a>Contact</a>
 								</Link>
 							</li>
+							{/* <li>
+								<Link href='learn'>
+									<a>Learn</a>
+								</Link>
+							</li> */}
 						</ul>
 					</div>
 					<nav className={styles.mobileNav}>
@@ -125,16 +132,16 @@ const Navbar = () => {
 									<a>Portfolio</a>
 								</Link>
 							</li>
-							{/* <li>
+							<li>
 								<Link href='/blog'>
 									<a>Blog</a>
 								</Link>
-							</li> */}
-							{/* <li className='menuItem'>
+							</li>
+							<li className='menuItem'>
 								<Link passHref href='/about'>
 									<a>About</a>
 								</Link>
-							</li> */}
+							</li>
 							<li className='menuItem'>
 								<Link passHref href='/contact'>
 									<a>Contact</a>
@@ -144,7 +151,7 @@ const Navbar = () => {
 					</nav>
 				</div>
 			</div>
-		</nav>
+		</motion.nav>
 	);
 };
 

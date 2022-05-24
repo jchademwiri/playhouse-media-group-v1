@@ -6,15 +6,17 @@ import PortableText from 'react-portable-text';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
+import { serializers } from '../../../serializers';
+import ScrollIndicator from '../../components/ScrollIndicator';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
-		title: `PMG | ${post.title ? post.title : post.slug}`,
+		title: `${post.title ? post.title : post.slug} | Playhouse Media Group`,
 		description: `${post.exempt ? post.excerpt : post.excerpt}`,
 		canonical: `${server}/${post.slug}`,
 		openGraph: {
 			url: `${server}/${post.slug}`,
-			title: `PMG | ${post.title}`,
+			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt ? post.excerpt : post.excerpt}`,
 		},
 	};
@@ -22,6 +24,7 @@ const BlogPost = ({ post }) => {
 	return (
 		<>
 			<NextSeo {...SEO} />
+			<ScrollIndicator />
 			<section className={styles.container}>
 				<h1 className={styles.title}>{post.title}</h1>
 				<div className={styles.meta}>
@@ -41,27 +44,10 @@ const BlogPost = ({ post }) => {
 							<small>
 								Published: {moment(post.publishedAt).format('DD MMMM YYYY')}
 							</small>
-							{/* <small>
-						Latst Updated: {moment(post._updatedAt).format('DD MMMM YYYY')}
-					</small> */}
 						</div>
 					</div>
 
 					<div className={styles.categories}>
-						{/* <div>
-						{post.categories ? (
-							post.categories.map((category) => (
-								<span key={category.slug} className={styles.category}>
-									<Link href={`/blog/category/${category.title}`}>
-										{category.title}
-									</Link>
-								</span>
-							))
-						) : (
-							<span>No Categories found</span>
-						)}
-					</div> */}
-
 						<div>
 							{post.categories &&
 								post.categories.map((category) => (
@@ -88,33 +74,59 @@ const BlogPost = ({ post }) => {
 							dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
 							projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
 							content={post.body}
+							// serializers={serializers}
 							serializers={{
 								h1: (props) => <h1 className={styles.h1} {...props} />,
 								h2: (props) => <h2 className={styles.h2} {...props} />,
 								h3: (props) => <h3 className={styles.h3} {...props} />,
-								code: (props) => <code className={styles.code} {...props} />,
 								li: ({ children }) => <li>{children}</li>,
+								code: (props) => <code className={styles.code} {...props} />,
+
 								link: ({ href, children }) => (
-									<a href={href} className={styles.link}>
+									<a
+										href={href}
+										target='_blank'
+										rel='noopener noreferrer'
+										className={styles.link}>
 										{children}
 									</a>
 								),
-								img: ({ src, alt, ...props }) => (
-									<Image
-										src={src}
-										alt={alt}
-										{...props}
-										width={1920}
-										height={1080}
-										placeholder='blur'
-										blurDataURL={urlFor(post.mainImage).url()}
-										objectFit='cover'
-									/>
+								youtube: ({ url }) => (
+									<div className={styles.youtube}>
+										<iframe
+											width='100%'
+											Height='480'
+											src={url}
+											frameBorder='0'
+											allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+											allowFullScreen
+											title='Embedded youtube'
+										/>
+									</div>
 								),
 							}}
 						/>
 					</div>
+
+					<small>
+						Latst Updated: {moment(post._updatedAt).format('DD MMMM YYYY')}
+					</small>
 				</article>
+				<hr />
+
+				<div className={styles.postLinks}>
+					<div>
+						<Link href={`/#`}>
+							<a className={styles.postLink}>Previous Post</a>
+						</Link>
+					</div>
+
+					<div>
+						<Link href={`/#`}>
+							<a className={styles.postLink}>Next Post</a>
+						</Link>
+					</div>
+				</div>
 			</section>
 		</>
 	);
@@ -137,6 +149,7 @@ export const getStaticPaths = async () => {
 			slug: post.slug.current,
 		},
 	}));
+
 	return {
 		paths,
 		fallback: 'blocking',

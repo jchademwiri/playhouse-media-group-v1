@@ -56,7 +56,7 @@
 
 					a {
 						&:hover {
-							color: $bg;
+							color: $accent;
 						}
 					}
 				}
@@ -88,7 +88,9 @@
 	.container {
 		min-height: 75vh;
 		&__hero {
+			width: 80%;
 			max-width: 75rem;
+
 			display: grid;
 			grid-template-columns: 2fr 1fr;
 			.container__left {

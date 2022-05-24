@@ -4,16 +4,17 @@ import Link from 'next/link';
 import { server } from '../../config';
 import { NextSeo } from 'next-seo';
 import Loading from '../../components/Loading';
+
 // import { useSWR } from 'swr';
 // import OurServices from '../../components/OurServices';
 
 const services = ({ services }) => {
 	const SEO = {
-		title: `PMG | Our Services`,
+		title: `Our Services | Playhouse Media Group`,
 		canonical: `${server}/services`,
 		openGraph: {
 			url: `${server}/services`,
-			title: `PMG | Our Services`,
+			title: `Our Services | Playhouse Media Group`,
 		},
 	};
 

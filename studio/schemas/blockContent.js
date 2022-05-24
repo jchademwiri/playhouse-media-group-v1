@@ -26,7 +26,6 @@ export default {
 				{ title: 'H2', value: 'h2' },
 				{ title: 'H3', value: 'h3' },
 				{ title: 'H4', value: 'h4' },
-				{ title: 'Pre', value: 'pre' },
 				{ title: 'Quote', value: 'blockquote' },
 			],
 			lists: [{ title: 'Bullet', value: 'bullet' }],
@@ -37,6 +36,7 @@ export default {
 				decorators: [
 					{ title: 'Strong', value: 'strong' },
 					{ title: 'Emphasis', value: 'em' },
+					{ title: 'Code', value: 'code' },
 				],
 				// Annotations can be any object structure – e.g. a link or a footnote.
 				annotations: [
@@ -50,6 +50,11 @@ export default {
 								name: 'href',
 								type: 'url',
 							},
+							{
+								title: 'Open in new tab',
+								name: 'blank',
+								type: 'boolean',
+							},
 						],
 					},
 				],
@@ -61,6 +66,14 @@ export default {
 		{
 			type: 'image',
 			options: { hotspot: true },
+		},
+		{
+			type: 'code',
+		},
+		{
+			name: 'youtube',
+			title: 'Youtube',
+			type: 'youtube',
 		},
 	],
 };

@@ -1,27 +1,21 @@
 import Link from 'next/link';
 // import { getSanityContent } from '../utils/sanity';
-import { SanityClient } from '../../sanity';
-
+import { SanityClient } from '../../../sanity';
 
 export default function Index({ blogs }) {
-	console.log(blogs);
 	return (
 		<div>
 			<h1>This Site Loads MDX From Sanity.io</h1>
-			<div>
-				
-			</div>
 
-			{/* <ul>
+			<ul>
 				{blogs.map(({ title, slug, content }) => (
 					<div key={slug}>
-						<Link href={`/${slug}`}>
+						<Link href={`/mdx/${slug.current}`}>
 							<a>{title}</a>
 						</Link>
-						<p> {content} </p>
 					</div>
 				))}
-			</ul> */}
+			</ul>
 		</div>
 	);
 }

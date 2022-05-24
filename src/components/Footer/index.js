@@ -5,17 +5,6 @@ import Link from 'next/link';
 const Footer = () => {
 	return (
 		<footer className={styles.container}>
-			<div className={styles.container__title}>
-				<Image
-					src='/images/logo.svg'
-					alt='logo'
-					width={60}
-					height={60}
-					placeholder='blur'
-					blurDataURL='/images/logo.svg'
-				/>
-				<h2>Web Solutions</h2>
-			</div>
 			<div className={styles.container__content}>
 				{consulting.map((consulting) => (
 					<div key={consulting.id} className={styles.container__content__item}>
