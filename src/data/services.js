@@ -93,41 +93,41 @@ export const services = [
 			},
 		],
 	},
-	// {
-	// 	id: '3',
-	// 	image:
-	// 		'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/digital_vx03l2.webp',
-	// 	name: 'Digital Marketing',
-	// 	slug: 'digital-marketing',
-	// 	description:
-	// 		'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
-	// 	details: [
-	// 		{
-	// 			id: '1',
-	// 			title: 'Google Ads Marketing',
-	// 			description:
-	// 				'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
-	// 		},
-	// 		{
-	// 			id: '2',
-	// 			title: 'Linkedin Ads Marketing',
-	// 			description:
-	// 				'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
-	// 		},
-	// 		{
-	// 			id: '3',
-	// 			title: 'Facebook Ads Marketing',
-	// 			description:
-	// 				'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
-	// 		},
-	// 		{
-	// 			id: '4',
-	// 			title: 'Instagram Ads Marketing',
-	// 			description:
-	// 				'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
-	// 		},
-	// 	],
-	// },
+	{
+		id: '3',
+		image:
+			'https://res.cloudinary.com/playhouse-media-group/image/upload/v1641899581/portfolio/digital_vx03l2.webp',
+		name: 'Digital Marketing',
+		slug: 'digital-marketing',
+		description:
+			'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
+		details: [
+			{
+				id: '1',
+				title: 'Google Ads Marketing',
+				description:
+					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
+			},
+			{
+				id: '2',
+				title: 'Linkedin Ads Marketing',
+				description:
+					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
+			},
+			{
+				id: '3',
+				title: 'Facebook Ads Marketing',
+				description:
+					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
+			},
+			{
+				id: '4',
+				title: 'Instagram Ads Marketing',
+				description:
+					'We offer Digital Marketing services to market your business and increase traffic and engagement. We will help you to increase your website traffic and increase your website visitors and convert them into leads.',
+			},
+		],
+	},
 	{
 		id: '4',
 		image:

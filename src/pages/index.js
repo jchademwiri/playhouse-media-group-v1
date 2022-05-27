@@ -8,6 +8,7 @@ import Clients from '../components/Clients';
 import Featured from '../components/Featured';
 import StartProject from '../components/StartProject';
 import { motion } from 'framer-motion';
+import Button from '../components/UI/Button';
 
 const index = () => {
 	const SEO = {
@@ -24,6 +25,7 @@ const index = () => {
 
 			<main className={styles.container}>
 				<Hero />
+				{/* <Button type='button'>SIGN UP</Button> */}
 				<Featured />
 				<OurServices />
 				<WhatWeDo />
