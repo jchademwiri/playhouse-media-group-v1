@@ -83,34 +83,34 @@ const contact = () => {
 							className={styles.form}
 							onSubmit={handleOnSubmit}>
 							<p className={styles.formInput}>
-								<label htmlFor='name'>Name</label>
+								{/* <label htmlFor='name'>Name</label> */}
 								<input
 									required
 									className={styles.input}
 									type='text'
 									name='name'
 									id=''
-									placeholder='Your Full Name'
+									placeholder='Enter Your Fullname'
 								/>
 							</p>
 							<p className={styles.formInput}>
-								<label htmlFor='email'>Email</label>
+								{/* <label htmlFor='email'>Email</label> */}
 								<input
 									required
 									className={styles.input}
 									type='email'
 									name='email'
 									id=''
-									placeholder='Your Email Address'
+									placeholder='Enter Your Email Address'
 								/>
 							</p>
 							<p className={styles.formInput}>
-								<label htmlFor='message'>Message</label>
+								{/* <label htmlFor='message'>Message</label> */}
 								<textarea
 									required
 									className={styles.textarea}
 									name='message'
-									placeholder='Message'></textarea>
+									placeholder='Enter Your Message'></textarea>
 							</p>
 							<p>
 								<button className={styles.btn} type='submit'>
