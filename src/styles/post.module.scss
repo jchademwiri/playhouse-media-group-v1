@@ -1,5 +1,11 @@
 @import './variables.scss';
 
+.banner {
+	display: grid;
+	height: 40vh;
+	margin: 0 auto;
+}
+
 .container {
 	margin: 0 auto;
 	padding-bottom: 20px;

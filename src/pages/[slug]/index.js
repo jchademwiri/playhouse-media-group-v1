@@ -25,6 +25,19 @@ const BlogPost = ({ post }) => {
 		<>
 			<NextSeo {...SEO} />
 			<ScrollIndicator />
+
+			<div className={styles.banner}>
+				<Image
+					src={urlFor(post.mainImage).url()}
+					width={1920}
+					height={1080}
+					alt={post.title}
+					placeholder='blur'
+					blurDataURL={urlFor(post.mainImage).url()}
+					objectFit='cover'
+				/>
+			</div>
+
 			<section className={styles.container}>
 				<h1 className={styles.title}>{post.title}</h1>
 				<div className={styles.meta}>
@@ -56,7 +69,7 @@ const BlogPost = ({ post }) => {
 						</div>
 					</div>
 				</div>
-				<div className={styles.content}>
+				{/* <div className={styles.content}>
 					<Image
 						src={urlFor(post.mainImage).url()}
 						width={1920}
@@ -66,7 +79,7 @@ const BlogPost = ({ post }) => {
 						blurDataURL={urlFor(post.mainImage).url()}
 						objectFit='cover'
 					/>
-				</div>
+				</div> */}
 				<article className={styles.content}>
 					<h1 className={styles.title}>{post.title}</h1>
 					<div>
