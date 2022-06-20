@@ -19,7 +19,8 @@ const Hero = () => {
 						{/* Home Of Creative Designs */}
 					</small>
 					<div className={styles.buttons}>
-						<div className={styles.btn}>
+						{/* <div className={styles.btn}> */}
+						<div className='px-6 py-4 my-3 mr-2 rounded bg-primary'>
 							<a
 								target='_blank'
 								href='https://wa.me/+27740491433'
@@ -27,8 +28,11 @@ const Hero = () => {
 								Request A Quote
 							</a>
 						</div>
-						<div className={styles.btn}>
-							<Link href='/projects'>View My Works</Link>
+						{/* <div className={styles.btn}> */}
+						<div className='px-6 py-4 my-3 ml-2 rounded bg-accent'>
+							<Link href='/projects'>
+								<a>View Prohects</a>
+							</Link>
 						</div>
 					</div>
 				</div>

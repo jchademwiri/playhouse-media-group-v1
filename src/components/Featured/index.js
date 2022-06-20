@@ -22,7 +22,6 @@ const Featured = () => {
 						<Loading />
 					</>
 				)}
-				
 			</div>
 		</>
 	);

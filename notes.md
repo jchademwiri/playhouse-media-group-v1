@@ -13,6 +13,9 @@
     https://www.smudge.co.za/service/professional-web-design-and-development/
     https://infinitycds.co.za/web-design-bundles/
 
+    *** new sites
+    https://summertime.co.za/
+
 ## Importent Notes
 
 1. Domain - www.jacdev.co.za
