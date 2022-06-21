@@ -32,7 +32,7 @@ const Hero = () => {
 						{/* <div className={styles.btn}> */}
 						<div className='my-3 ml-2 '>
 							<Link href='/projects'>
-								<a className='p-3 rounded bg-accent'>View Prohects</a>
+								<a className='p-3 rounded bg-accent'>View Projects</a>
 							</Link>
 						</div>
 					</div>
