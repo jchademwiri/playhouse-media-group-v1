@@ -11,7 +11,7 @@ const Button = ({ children, onClick, type, buttonStyle, buttonSize }) => {
 	const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
 	return (
-		<Link href='/' className={styles.btnMobile}>
+		<Link href='/' passHref className={styles.btnMobile}>
 			<button
 				className={`${styles.btnOutline} ${checkButtonStyle} ${checkButtonSize}`}
 				onClick={onClick}
