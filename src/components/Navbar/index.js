@@ -99,7 +99,7 @@ const Navbar = () => {
 							</div>
 							<div className='my-4 border-b border-accent'>
 								<p className='py-4 '>
-									Building beautiful web experiences for the world.
+									Building beautiful web experiences for your web business.
 								</p>
 							</div>
 						</div>

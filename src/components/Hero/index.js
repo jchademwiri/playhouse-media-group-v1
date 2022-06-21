@@ -9,10 +9,10 @@ const Hero = () => {
 						Welcome To the Home of Creative Design
 					</h3> */}
 					<h1 className={styles.hero_text}>
-						Welcome To <br />
-						<span className={styles.custom_web}>Playhouse Media Group</span>
+						Building beautiful <br />
+						<span className='text-primary'>Web experiences</span>
 						<br />
-						Your Digital Agency.
+						For your web business.
 					</h1>
 					<small className={styles.quote}>
 						{/* We love to visualise ideas and make them come alive in a website. */}
@@ -20,8 +20,9 @@ const Hero = () => {
 					</small>
 					<div className={styles.buttons}>
 						{/* <div className={styles.btn}> */}
-						<div className='px-6 py-4 my-3 mr-2 rounded bg-primary'>
+						<div className='my-3 mr-2 '>
 							<a
+								className='p-3 rounded bg-primary'
 								target='_blank'
 								href='https://wa.me/+27740491433'
 								rel='noopener noreferrer'>
@@ -29,9 +30,9 @@ const Hero = () => {
 							</a>
 						</div>
 						{/* <div className={styles.btn}> */}
-						<div className='px-6 py-4 my-3 ml-2 rounded bg-accent'>
+						<div className='my-3 ml-2 '>
 							<Link href='/projects'>
-								<a>View Prohects</a>
+								<a className='p-3 rounded bg-accent'>View Prohects</a>
 							</Link>
 						</div>
 					</div>
