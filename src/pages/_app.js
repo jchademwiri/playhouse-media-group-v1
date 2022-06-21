@@ -1,8 +1,9 @@
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import Layout from '../components/Layout';
-import '../styles/globals.scss';
 import '../styles/nprogress.scss';
+import '../styles/globals.scss';
+// import '../styles/tailwind.css';
 import * as ga from '../lib/ga';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';

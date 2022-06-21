@@ -52,9 +52,9 @@ const services = ({ services }) => {
 										height={1024}
 										objectFit='cover'
 									/>
-									<h3>
+									<h3 className='py-2 text-xl'>
 										<Link href={`/services/${service.slug}`}>
-											{service.name}
+											<a>{service.name}</a>
 										</Link>
 									</h3>
 									<p> {service.description} </p>

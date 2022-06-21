@@ -1,7 +1,7 @@
-import Navbar from '../Navbar';
 import Footer from '../Footer';
 
 import { motion } from 'framer-motion';
+import Navbar from '../Navbar';
 
 const Layout = ({ children }) => {
 	return (

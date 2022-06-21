@@ -2,6 +2,7 @@ import styles from './contact.module.scss';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 import Router from 'next/router';
+import { icons } from '../../components/Navbar/data';
 
 const contact = () => {
 	// const router = useRouter();
@@ -47,37 +48,48 @@ const contact = () => {
 					<section className={styles.contact__container__left}>
 						<h1 className={styles.title}>Say Hello</h1>
 						<div className={styles.contactLinks}>
-							<p>
-								Mobile :<a href='tel:++27740491433'> +27 74 049 1433</a>
-							</p>
-							<p>
-								Email :
-								<a href='mailto:info@playhousemedia.net'>
-									{' '}
-									info@playhousemedia.net
-								</a>
-							</p>
-							<p>
-								Website :
-								<a
-									href='http://www.playhousemedia.net'
-									target='_blank'
-									rel='noopener noreferrer'>
-									{' '}
-									www.playhousemedia.net
-								</a>
-							</p>
+							<div className='py-1 mt-2'>
+								<p>
+									Mobile :<a href='tel:++27740491433'> +27 74 049 1433</a>
+								</p>
+							</div>
+							<div className='py-1'>
+								<p>
+									Email :{' '}
+									<a href='mailto:info@playhousemedia.net'>
+										info@playhousemedia.net
+									</a>
+								</p>
+							</div>
+							<div className='py-1'>
+								<p>
+									Website :{' '}
+									<a
+										href='http://www.playhousemedia.net'
+										target='_blank'
+										rel='noopener noreferrer'>
+										www.playhousemedia.net
+									</a>
+								</p>
+							</div>
 						</div>
-						<div className={styles.socialLinks}>
-							<span className={styles.link}>1</span>
-							<span className={styles.link}>2</span>
-							<span className={styles.link}>3</span>
-							<span className={styles.link}>4</span>
-							<span className={styles.link}>5</span>
+						<div className='py-4'>
+							<div className={styles.socialLinks}>
+								{icons.map((icon) => (
+									<a
+										className={styles.link}
+										key={icon.name}
+										href={icon.link}
+										target='_blank'
+										rel='noopener noreferrer'>
+										{icon.icon}
+									</a>
+								))}
+							</div>
 						</div>
 					</section>
 					<section className={styles.contact__container__right}>
-						<h2>Ask Your Queries</h2>
+						<h2 className='my-2 text-2xl'>Ask Your Queries</h2>
 						<form
 							method='post'
 							className={styles.form}
@@ -104,6 +116,7 @@ const contact = () => {
 									placeholder='Enter Your Email Address'
 								/>
 							</p>
+
 							<p className={styles.formInput}>
 								{/* <label htmlFor='message'>Message</label> */}
 								<textarea
