@@ -70,7 +70,6 @@ const Blog = ({ posts }) => {
 									</div>
 									<div className={styles.authorDetails}>
 										<small>{post.author.name}</small>
-
 										<small>
 											Published:{' '}
 											{moment(post.publishedAt).format('DD MMMM YYYY')}

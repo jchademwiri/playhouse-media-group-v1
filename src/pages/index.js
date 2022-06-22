@@ -8,9 +8,10 @@ import Clients from '../components/Clients';
 import Featured from '../components/Featured';
 import StartProject from '../components/StartProject';
 import { motion } from 'framer-motion';
-import Button from '../components/UI/Button';
 
-const index = () => {
+import RecentProjects from '../components/RecentProjects';
+
+const index = ({ projects }) => {
 	const SEO = {
 		title: 'Web Developer Specialists | Playhouse Media Group',
 		canonical: `${server}/`,
@@ -22,11 +23,13 @@ const index = () => {
 	return (
 		<>
 			<NextSeo {...SEO} />
-
 			<main className={styles.container}>
 				<Hero />
+
 				{/* <Button type='button'>SIGN UP</Button> */}
 				<Featured />
+				<RecentProjects />
+
 				<OurServices />
 				<WhatWeDo />
 				{/* <Clients /> */}

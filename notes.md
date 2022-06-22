@@ -16,6 +16,8 @@
     *** new sites
     https://summertime.co.za/
 
+<!-- Booking Link https://calendly.com/jchademwiri/30min -->
+
 ## Importent Notes
 
 1. Domain - www.jacdev.co.za
