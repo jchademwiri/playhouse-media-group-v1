@@ -33,7 +33,7 @@ const Blog = ({ posts }) => {
 					<h2>Latest posts</h2>
 				</div>
 				<div className={styles.posts}>
-					{posts ? (
+					{posts.length > 0 ? (
 						posts.map((post) => (
 							<div key={post.id} className={styles.post}>
 								{/* <div> */}
@@ -81,7 +81,6 @@ const Blog = ({ posts }) => {
 					) : (
 						<>
 							<Loading />
-							{/* <span>No Categories found</span> */}
 						</>
 					)}
 				</div>

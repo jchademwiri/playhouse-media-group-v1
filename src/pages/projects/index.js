@@ -31,48 +31,82 @@ const projects = ({ projects }) => {
 			</header>
 			<main className={styles.container}>
 				<div className={styles.projects}>
-					{projects ? (
-						projects.slice(0, 10).map((project) => (
-							<div key={project.id} className={styles.project}>
-								<Image
-									className={styles.mainImage}
-									src={urlFor(project.mainImage).url()}
-									width={1920}
-									height={1080}
-									alt={project.title}
-									placeholder='blur'
-									blurDataURL={urlFor(project.mainImage).url()}
-									objectFit='cover'
-								/>
-								<h3>{project.title}</h3>
-								<p> {project.description} </p>
-								<p>{project.projectUrl}</p>
-								<div>
-									{project.projectTypes &&
-										project.projectTypes.map((projectType) => (
-											<>
-												<p>{projectType.title}</p>
-												<p>{projectType.description}</p>
-												<div className='w-10 h-10'>
-													<Image
-														className='rounded-full '
-														src={urlFor(projectType.image).url()}
-														width={250}
-														height={250}
-														alt={projectType.title}
-														placeholder='blur'
-														blurDataURL={urlFor(projectType.image).url()}
-														objectFit='cover'
-													/>
+					{projects.length > 0 ? (
+						projects.map((project) => (
+							<>
+								<div key={project.id} className={styles.project}>
+									<Image
+										className={styles.mainImage}
+										src={urlFor(project.mainImage).url()}
+										width={1920}
+										height={1080}
+										alt={project.title}
+										placeholder='blur'
+										blurDataURL={urlFor(project.mainImage).url()}
+										objectFit='cover'
+									/>
+									<h3>{project.title}</h3>
+									<p> {project.description} </p>
+
+									<p className='text-xl text-secondary my-2'>
+										Services Rendered
+									</p>
+									<div>
+										{project.projectTypes &&
+											project.projectTypes.map((projectType, index) => (
+												<div key={index} className='flex py-1 my-1 '>
+													{project.mainImage && (
+														<div className='h-auto w-6 '>
+															<div className='p-1  rounded-full grid place-content-center bg-secondary'>
+																<Image
+																	className='rounded-full '
+																	src={urlFor(projectType.image).url()}
+																	width={1080}
+																	height={1080}
+																	alt={projectType.title}
+																	placeholder='blur'
+																	blurDataURL={urlFor(projectType.image).url()}
+																	objectFit='cover'
+																/>
+															</div>
+														</div>
+													)}
+													<p className='pl-2'>{projectType.title}</p>
 												</div>
-											</>
-										))}
+											))}
+										<div className='flex'>
+											{project.tags &&
+												project.tags.map((tag, index) => (
+													<div key={index} className='my-2 mr-2 '>
+														<span className='text-sm p-2 bg-accent/80'>
+															{tag}
+														</span>
+													</div>
+												))}
+										</div>
+									</div>
+									{project.projectUrl && (
+										<div className='my-2 py-3'>
+											<a
+												href={project.projectUrl}
+												target='_blank'
+												rel='noopener noreferrer'
+												className='bg-primary/50  p-3  hover:bg-primary'>
+												View Project
+											</a>
+										</div>
+									)}
 								</div>
-							</div>
+							</>
 						))
 					) : (
 						<>
-							<Loading />
+							<p className='text-center text-3xl font-semibold col-span-full'>
+								Projects{' '}
+								<span className='text-secondary font-medium '>
+									Coming Soon!
+								</span>
+							</p>
 						</>
 					)}
 				</div>
@@ -83,25 +117,21 @@ const projects = ({ projects }) => {
 
 export default projects;
 
-// export async function getStaticProps() {
 export async function getServerSideProps() {
-	// const response = await fetch(`${server}/api/projects`);
-	// const projects = await response.json();
-
 	const query = `
-	*[_type == "projects"] {
-				_id,
-				title,
-		projectUrl,
-		projectTypes[]->{
-						_id,
-						title,
-						description,
-				image,
-						},
-  description,
-  mainImage,
-}		
+	*[_type == "projects"] | order(publishedAt desc) {
+		_id,
+		title,
+	projectUrl,
+	projectTypes[]->{
+			_id,
+			title,
+			image,
+		},
+	tags,
+	description,
+	mainImage,
+	}		
 	`;
 
 	const projects = await SanityClient.fetch(query);

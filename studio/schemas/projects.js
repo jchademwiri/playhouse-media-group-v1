@@ -22,9 +22,18 @@ export default {
 			of: [{ type: 'reference', to: { type: 'projectType' } }],
 		},
 		{
+			name: 'tags',
+			title: 'Tags',
+			type: 'array',
+			of: [{ type: 'string' }],
+			options: {
+				layout: 'tags',
+			},
+		},
+		{
 			name: 'description',
 			title: 'Description',
-			type: 'string',
+			type: 'text',
 		},
 
 		{
