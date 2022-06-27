@@ -39,7 +39,7 @@ const services = ({ services }) => {
 
 					<div className={styles.container__content__services}>
 						{services ? (
-							services.map((service) => (
+							services.slice(0, 3).map((service) => (
 								<div
 									key={service.id}
 									className={styles.container__content__services__service}>

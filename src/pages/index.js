@@ -4,12 +4,13 @@ import styles from '../styles/home.module.scss';
 import { NextSeo } from 'next-seo';
 import { server } from '../config';
 import WhatWeDo from '../components/WhatWeDo';
-import Clients from '../components/Clients';
 import Featured from '../components/Featured';
 import StartProject from '../components/StartProject';
+
 import { motion } from 'framer-motion';
 
 import RecentProjects from '../components/RecentProjects';
+import { SanityClient } from '../../sanity';
 
 const index = ({ projects }) => {
 	const SEO = {
@@ -25,12 +26,11 @@ const index = ({ projects }) => {
 			<NextSeo {...SEO} />
 			<main className={styles.container}>
 				<Hero />
-
 				{/* <Button type='button'>SIGN UP</Button> */}
 				<Featured />
-				<RecentProjects />
-
+				{projects.length > 0 && <RecentProjects projects={projects} />}
 				<OurServices />
+
 				<WhatWeDo />
 				{/* <Clients /> */}
 				<motion.div initial={{ x: -250 }} animate={{ x: 0 }}>
@@ -40,4 +40,31 @@ const index = ({ projects }) => {
 		</>
 	);
 };
+
+export async function getServerSideProps() {
+	const query = `
+	*[_type == "projects"] | order(publishedAt desc) {
+		_id,
+		title,
+	projectUrl,
+	projectTypes[]->{
+			_id,
+			title,
+			image,
+		},
+	tags,
+	description,
+	mainImage,
+	}		
+	`;
+
+	const projects = await SanityClient.fetch(query);
+
+	return {
+		props: {
+			projects,
+		},
+	};
+}
+
 export default index;

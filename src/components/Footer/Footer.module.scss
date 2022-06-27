@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .container {
-	width: 90%;
+	width: 91.6%;
 	margin: 50px auto;
 
 	&__content {
@@ -67,7 +67,7 @@
 @media (min-width: 1200px) {
 	.container {
 		max-width: $containerMaxWidth;
-		width: 80%;
+
 		&__title {
 			h2 {
 				font-size: 2rem;

@@ -2,6 +2,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { FaFacebookF, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillTelephoneFill, BsGithub } from 'react-icons/bs';
 import { VscGithubAlt } from 'react-icons/vsc';
+import { ImWhatsapp } from 'react-icons/im';
 export const links = [
 	{
 		name: 'Home',
@@ -27,6 +28,11 @@ export const icons = [
 		name: 'Phone',
 		link: 'tel:+27740491433',
 		icon: <BsFillTelephoneFill />,
+	},
+	{
+		name: 'WhatsApp',
+		link: 'https://wa.me/+27740491433',
+		icon: <ImWhatsapp />,
 	},
 	{
 		name: 'Email',

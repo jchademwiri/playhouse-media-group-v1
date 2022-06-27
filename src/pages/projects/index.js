@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { server } from '../../config';
 import { NextSeo } from 'next-seo';
-import Loading from '../../components/Loading';
 import { SanityClient, urlFor } from '../../../sanity';
 const projects = ({ projects }) => {
 	// console.log(projects.slice(0, 10));
@@ -35,20 +34,23 @@ const projects = ({ projects }) => {
 						projects.map((project) => (
 							<>
 								<div key={project.id} className={styles.project}>
-									<Image
-										className={styles.mainImage}
-										src={urlFor(project.mainImage).url()}
-										width={1920}
-										height={1080}
-										alt={project.title}
-										placeholder='blur'
-										blurDataURL={urlFor(project.mainImage).url()}
-										objectFit='cover'
-									/>
+									<div className=''>
+										<Image
+											// className={styles.mainImage}
+											className='rounded-t-lg'
+											src={urlFor(project.mainImage).url()}
+											width={1920}
+											height={1080}
+											alt={project.title}
+											placeholder='blur'
+											blurDataURL={urlFor(project.mainImage).url()}
+											objectFit='cover'
+										/>
+									</div>
 									<h3>{project.title}</h3>
 									<p> {project.description} </p>
 
-									<p className='text-xl text-secondary my-2'>
+									<p className='my-2 text-xl text-secondary'>
 										Services Rendered
 									</p>
 									<div>
@@ -56,8 +58,8 @@ const projects = ({ projects }) => {
 											project.projectTypes.map((projectType, index) => (
 												<div key={index} className='flex py-1 my-1 '>
 													{project.mainImage && (
-														<div className='h-auto w-6 '>
-															<div className='p-1  rounded-full grid place-content-center bg-secondary'>
+														<div className='w-6 h-auto '>
+															<div className='grid rounded-full p-[2px] place-content-center bg-secondary'>
 																<Image
 																	className='rounded-full '
 																	src={urlFor(projectType.image).url()}
@@ -78,7 +80,7 @@ const projects = ({ projects }) => {
 											{project.tags &&
 												project.tags.map((tag, index) => (
 													<div key={index} className='my-2 mr-2 '>
-														<span className='text-sm p-2 bg-accent/80'>
+														<span className='p-2 text-sm rounded bg-accent/80'>
 															{tag}
 														</span>
 													</div>
@@ -86,12 +88,12 @@ const projects = ({ projects }) => {
 										</div>
 									</div>
 									{project.projectUrl && (
-										<div className='my-2 py-3'>
+										<div className='py-3 my-2'>
 											<a
 												href={project.projectUrl}
 												target='_blank'
 												rel='noopener noreferrer'
-												className='bg-primary/50  p-3  hover:bg-primary'>
+												className='p-3 bg-primary/50 hover:bg-primary'>
 												View Project
 											</a>
 										</div>
@@ -101,9 +103,9 @@ const projects = ({ projects }) => {
 						))
 					) : (
 						<>
-							<p className='text-center text-3xl font-semibold col-span-full'>
+							<p className='text-3xl font-semibold text-center col-span-full'>
 								Projects{' '}
-								<span className='text-secondary font-medium '>
+								<span className='font-medium text-secondary '>
 									Coming Soon!
 								</span>
 							</p>
