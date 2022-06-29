@@ -26,7 +26,7 @@ export default {
 		},
 
 		{
-			name: 'mainImage',
+			name: 'coverImage',
 			title: 'Project Image',
 			type: 'image',
 			options: {
@@ -38,7 +38,7 @@ export default {
 	preview: {
 		select: {
 			title: 'title',
-			media: 'mainImage',
+			media: 'coverImage',
 		},
 	},
 };
