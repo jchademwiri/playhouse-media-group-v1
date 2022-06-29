@@ -32,7 +32,7 @@ const Navbar = () => {
 				style={{ backgroundColor: `${navBg}` }}
 				className={
 					shadow
-						? 'fixed top-0 z-[100] h-20 w-full	shadow-sm shadow-primary/80'
+						? 'fixed top-0 z-[100] h-20 w-full	shadow-sm shadow-primary/80 '
 						: 'fixed top-0 z-[100] h-20 w-full bg-transparent'
 				}>
 				<div className='mx-auto flex h-full w-11/12 items-center justify-between px-2 lg:max-w-[75rem] '>
@@ -55,7 +55,7 @@ const Navbar = () => {
 								</li>
 							))}
 						</ul>
-						<div onClick={handleNav} className='md:hidden'>
+						<div onClick={handleNav} className='cursor-pointer md:hidden'>
 							<svg
 								width='26'
 								height='18'

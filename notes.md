@@ -13,6 +13,8 @@
     https://www.smudge.co.za/service/professional-web-design-and-development/
     https://infinitycds.co.za/web-design-bundles/
 
+    https://bejamas.io/
+
     *** new sites
     https://summertime.co.za/
 

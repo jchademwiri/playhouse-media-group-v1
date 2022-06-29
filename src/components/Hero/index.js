@@ -12,11 +12,11 @@ const Hero = () => {
 						For your web business.
 					</h1>
 
-					<div className={styles.buttons}>
+					<div className='flex my-10'>
 						{/* <div className={styles.btn}> */}
 						<div className='my-3 mr-2 '>
 							<a
-								className='p-4 rounded bg-primary'
+								className='px-5 py-5 rounded md:font-semibold md:px-10 bg-primary'
 								target='_blank'
 								href='https://wa.me/+27740491433'
 								rel='noopener noreferrer'>
@@ -26,7 +26,9 @@ const Hero = () => {
 						{/* <div className={styles.btn}> */}
 						<div className='my-3 ml-2 '>
 							<Link href='/projects'>
-								<a className='p-4 rounded bg-accent'>See our work</a>
+								<a className='px-5 py-5 rounded md:font-semibold md:px-10 bg-accent'>
+									See our work
+								</a>
 							</Link>
 						</div>
 					</div>

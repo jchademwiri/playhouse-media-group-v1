@@ -45,9 +45,9 @@ const services = ({ services }) => {
 									className={styles.container__content__services__service}>
 									<Image
 										placeholder='blur'
+										blurDataURL={service.image}
 										src={service.image}
 										alt={service.name}
-										blurDataURL={service.image}
 										width={1440}
 										height={1024}
 										objectFit='cover'
