@@ -17,7 +17,7 @@ const RecentProjects = ({ projects }) => {
 					<>
 						<h2 className='my-4 text-xl font-semibold md:text-2xl lg:text-4xl lg:font-bold'>
 							Recent Websites We&apos;ve{' '}
-							<Link href='/projects'>
+							<Link href='/projects' passHref>
 								<span>
 									<a className='cursor-pointer text-accent'>Launched.</a>
 								</span>
@@ -28,8 +28,8 @@ const RecentProjects = ({ projects }) => {
 							specializing in web design and development, custom branding, logo
 							design, and online reputation management. We can also help with
 							social media marketing, email marketing, print ads, or social
-							media ads – whatever your business’s goals need. we've got you
-							covered.
+							media ads - whatever your business&apos;s goals need. we&apos;ve
+							got you covered.
 						</p>
 						<div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
 							{projects.length > 0 ? (

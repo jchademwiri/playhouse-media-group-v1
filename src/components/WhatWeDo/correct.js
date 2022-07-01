@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 import { serializers } from '../../../serializers';
-import ScrollIndicator from '../../components/ScrollIndicator';
+import ScrollIndicator from '../ScrollIndicator';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
