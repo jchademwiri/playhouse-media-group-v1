@@ -8,7 +8,6 @@ import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 
 const Blog = ({ posts }) => {
-	console.log(posts);
 	const SEO = {
 		title: `Blog | Playhouse Media Group`,
 

@@ -14,6 +14,8 @@
     https://infinitycds.co.za/web-design-bundles/
 
     https://bejamas.io/
+    https://blaksheepcreative.com/
+    https://blaksheepcreative.com/portfolio/ez-solar-electrical-solar-website-design/
 
     *** new sites
     https://summertime.co.za/
