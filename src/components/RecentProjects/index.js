@@ -16,7 +16,7 @@ const RecentProjects = ({ projects }) => {
 				{projects.length > 0 ? (
 					<>
 						<h2 className='my-4 text-xl font-semibold md:text-2xl lg:text-4xl lg:font-bold'>
-							Recent Websites We've{' '}
+							Recent Websites We&apos;ve{' '}
 							<Link href='/projects'>
 								<span>
 									<a className='cursor-pointer text-accent'>Launched.</a>
@@ -46,49 +46,6 @@ const RecentProjects = ({ projects }) => {
 												blurDataURL={urlFor(project.mainImage).url()}
 												objectFit='cover'
 											/>
-											{/* <h3>{project.title}</h3>
-										<p> {project.description} </p>
-										<div>
-											<p className='my-2 text-xl text-secondary'>
-												Services Rendered
-											</p>
-											{project.projectTypes &&
-												project.projectTypes.map((projectType, index) => (
-													<div key={index} className='flex py-1 my-1 '>
-														{project.mainImage && (
-															<div className='w-6 h-auto '>
-															<div className='grid rounded-full p-[2px] place-content-center bg-secondary'>
-																	<Image
-																	className='rounded-full '
-																	src={urlFor(projectType.image).url()}
-																		width={1080}
-																		height={1080}
-																		alt={projectType.title}
-																		placeholder='blur'
-																		blurDataURL={urlFor(
-																			projectType.image
-																		).url()}
-																		objectFit='cover'
-																	/>
-																</div>
-																</div>
-																)}
-																<p className='pl-2'>{projectType.title}</p>
-													</div>
-												))}
-										</div>
-										{project.projectUrl && (
-											<div className='py-3 my-2'>
-											<a
-													href={project.projectUrl}
-													target='_blank'
-													rel='noopener noreferrer'
-													className='p-3 bg-primary/50 hover:bg-primary'>
-													View Project
-													</a>
-											</div>
-										)}
-									*/}
 										</div>
 									</>
 								))
