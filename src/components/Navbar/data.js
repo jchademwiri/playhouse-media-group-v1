@@ -17,6 +17,10 @@ export const links = [
 		link: '/services',
 	},
 	{
+		name: 'Blog',
+		link: '/blog',
+	},
+	{
 		name: 'About',
 		link: '/about',
 	},

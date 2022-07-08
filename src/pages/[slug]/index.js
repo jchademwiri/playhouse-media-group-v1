@@ -33,7 +33,6 @@ const BlogPost = ({ post }) => {
 					</SyntaxHighlighter>
 				);
 			},
-			
 		},
 	};
 
@@ -42,11 +41,19 @@ const BlogPost = ({ post }) => {
 			<NextSeo {...SEO} />
 			<ScrollIndicator />
 
-			<div className={styles.banner}>
+			<div className='relative w-full h-screen '>
+				<div className='absolute top-0 left-0 z-10 w-full h-full bg-body opacity-60'></div>
+				<div className='grid'>
+					<div className='absolute z-30 flex flex-col items-center justify-center w-full h-full text-center '>
+						<h1 className='text-5xl font-bold'>{post.title}</h1>
+						<h2 className='text-xl '>{post.exempt}</h2>
+					</div>
+				</div>
 				<Image
+					className=''
 					src={urlFor(post.mainImage).url()}
 					width={1920}
-					height={1080}
+					height={700}
 					alt={post.title}
 					placeholder='blur'
 					blurDataURL={urlFor(post.mainImage).url()}
@@ -54,7 +61,7 @@ const BlogPost = ({ post }) => {
 				/>
 			</div>
 
-			<section className={styles.container}>
+			{/* <section className={styles.container}>
 				<h1 className={styles.title}>{post.title}</h1>
 				<div className={styles.meta}>
 					<div className={styles.author}>
@@ -110,7 +117,7 @@ const BlogPost = ({ post }) => {
 						</Link>
 					</div>
 				</div>
-			</section>
+			</section> */}
 		</>
 	);
 };

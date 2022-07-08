@@ -1,5 +1,4 @@
 import styles from './scroll.module.scss';
-
 import { useState, useEffect } from 'react';
 const ScrollIndicator = () => {
 	const [scrollTop, setScrollTop] = useState(0);
@@ -9,7 +8,6 @@ const ScrollIndicator = () => {
 		const height =
 			document.documentElement.scrollHeight -
 			document.documentElement.clientHeight;
-
 		const scrolled = (winScroll / height) * 100;
 
 		setScrollTop(scrolled);
