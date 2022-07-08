@@ -1,7 +1,10 @@
 export default {
 	name: 'post',
-	title: 'Post',
+	title: 'Posts',
 	type: 'document',
+	initialValue: {
+		publishedAt: new Date().toISOString(),
+	},
 	fields: [
 		{
 			name: 'title',
@@ -42,6 +45,15 @@ export default {
 			title: 'Categories',
 			type: 'array',
 			of: [{ type: 'reference', to: { type: 'category' } }],
+		},
+		{
+			name: 'tags',
+			title: 'Tags',
+			type: 'array',
+			of: [{ type: 'string' }],
+			options: {
+				layout: 'tags',
+			},
 		},
 		{
 			name: 'publishedAt',

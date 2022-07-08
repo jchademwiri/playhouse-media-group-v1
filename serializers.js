@@ -16,7 +16,6 @@ export const serializers = {
 			link: (props) => <pre> {JSON.stringify(props, null, 2)}</pre>,
 		},
 
-		
 		img: ({ src, alt, ...props }) => (
 			<Image
 				src={src}

@@ -39,15 +39,15 @@ const services = ({ services }) => {
 
 					<div className={styles.container__content__services}>
 						{services ? (
-							services.map((service) => (
+							services.slice(0, 3).map((service) => (
 								<div
 									key={service.id}
 									className={styles.container__content__services__service}>
 									<Image
 										placeholder='blur'
+										blurDataURL={service.image}
 										src={service.image}
 										alt={service.name}
-										blurDataURL={service.image}
 										width={1440}
 										height={1024}
 										objectFit='cover'

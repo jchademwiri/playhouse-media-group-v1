@@ -2,12 +2,12 @@ import { SanityClient, urlFor } from '../../../sanity';
 import Image from 'next/image';
 import styles from '../../styles/post.module.scss';
 import moment from 'moment';
+import PortableText from 'react-portable-text';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
-import ScrollIndicator from '../../components/ScrollIndicator';
-import BlockContent from '@sanity/block-content-to-react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import { serializers } from '../../../serializers';
+import ScrollIndicator from '../ScrollIndicator';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
@@ -20,40 +20,17 @@ const BlogPost = ({ post }) => {
 			description: `${post.exempt ? post.excerpt : post.excerpt}`,
 		},
 	};
-	const serializers = {
-		types: {
-			code: ({ node = {} }) => {
-				const { code, language } = node;
-				if (!code) {
-					return null;
-				}
-				return (
-					<SyntaxHighlighter language={language || 'text'}>
-						{code}
-					</SyntaxHighlighter>
-				);
-			},
-		},
-	};
 
 	return (
 		<>
 			<NextSeo {...SEO} />
 			<ScrollIndicator />
 
-			<div className='relative w-full h-screen '>
-				<div className='absolute top-0 left-0 z-10 w-full h-full bg-body opacity-60'></div>
-				<div className='grid'>
-					<div className='absolute z-30 flex flex-col items-center justify-center w-full h-full text-center '>
-						<h1 className='text-5xl font-bold'>{post.title}</h1>
-						<h2 className='text-xl '>{post.exempt}</h2>
-					</div>
-				</div>
+			<div className={styles.banner}>
 				<Image
-					className=''
 					src={urlFor(post.mainImage).url()}
 					width={1920}
-					height={700}
+					height={1080}
 					alt={post.title}
 					placeholder='blur'
 					blurDataURL={urlFor(post.mainImage).url()}
@@ -61,7 +38,7 @@ const BlogPost = ({ post }) => {
 				/>
 			</div>
 
-			{/* <section className={styles.container}>
+			<section className={styles.container}>
 				<h1 className={styles.title}>{post.title}</h1>
 				<div className={styles.meta}>
 					<div className={styles.author}>
@@ -92,12 +69,58 @@ const BlogPost = ({ post }) => {
 						</div>
 					</div>
 				</div>
-
+				{/* <div className={styles.content}>
+					<Image
+						src={urlFor(post.mainImage).url()}
+						width={1920}
+						height={1080}
+						alt={post.title}
+						placeholder='blur'
+						blurDataURL={urlFor(post.mainImage).url()}
+						objectFit='cover'
+					/>
+				</div> */}
 				<article className={styles.content}>
 					<h1 className={styles.title}>{post.title}</h1>
 					<div>
-						<BlockContent blocks={post.body} serializers={serializers} />
+						<PortableText
+							dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+							projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+							content={post.body}
+							// serializers={serializers}
+							serializers={{
+								h1: (props) => <h1 className={styles.h1} {...props} />,
+								h2: (props) => <h2 className={styles.h2} {...props} />,
+								h3: (props) => <h3 className={styles.h3} {...props} />,
+								li: ({ children }) => <li>{children}</li>,
+								code: (props) => <code className={styles.code} {...props} />,
+
+								link: ({ href, children }) => (
+									<a
+										href={href}
+										target='_blank'
+										rel='noopener noreferrer'
+										className={styles.link}>
+										{children}
+									</a>
+								),
+								youtube: ({ url }) => (
+									<div className={styles.youtube}>
+										<iframe
+											width='100%'
+											Height='480'
+											src={url}
+											frameBorder='0'
+											allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+											allowFullScreen
+											title='Embedded youtube'
+										/>
+									</div>
+								),
+							}}
+						/>
 					</div>
+
 					<small>
 						Latst Updated: {moment(post._updatedAt).format('DD MMMM YYYY')}
 					</small>
@@ -117,7 +140,7 @@ const BlogPost = ({ post }) => {
 						</Link>
 					</div>
 				</div>
-			</section> */}
+			</section>
 		</>
 	);
 };

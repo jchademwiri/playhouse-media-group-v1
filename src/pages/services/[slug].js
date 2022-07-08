@@ -29,7 +29,9 @@ const service = ({ service }) => {
 				{/* <section className={styles.container__content}> */}
 				{service.details.map((detail) => (
 					<div key={detail.id} className={styles.container__content}>
-						<h3>{detail.title}</h3>
+						<h3 className='text-xl xl:text-2xl text-accent/80'>
+							{detail.title}
+						</h3>
 						<p>{detail.description}</p>
 					</div>
 				))}
@@ -49,7 +51,6 @@ export async function getStaticPaths() {
 	}));
 	return { paths, fallback: false };
 }
-
 
 export const getStaticProps = async (context) => {
 	const { params } = context;

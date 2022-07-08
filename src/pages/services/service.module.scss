@@ -28,7 +28,7 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 10px;
-	width: 90%;
+	width: 91.6%;
 	margin: 0 auto;
 	margin-top: 20px;
 	padding-bottom: 20px;
@@ -61,4 +61,7 @@
 }
 
 @media (min-width: 1024px) {
+	.container {
+		max-width: $containerMaxWidth;
+	}
 }

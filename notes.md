@@ -13,8 +13,14 @@
     https://www.smudge.co.za/service/professional-web-design-and-development/
     https://infinitycds.co.za/web-design-bundles/
 
+    https://bejamas.io/
+    https://blaksheepcreative.com/
+    https://blaksheepcreative.com/portfolio/ez-solar-electrical-solar-website-design/
+
     *** new sites
     https://summertime.co.za/
+
+<!-- Booking Link https://calendly.com/jchademwiri/30min -->
 
 ## Importent Notes
 

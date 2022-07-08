@@ -17,13 +17,13 @@
 	}
 }
 .container {
-	width: 100%;
+	width: 91.6%;
+	margin: 0 auto;
 
 	&__content {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 1.25rem;
-		width: 90%;
 		margin: 3.125rem auto;
 
 		&__services {
@@ -58,7 +58,6 @@
 	}
 	.container {
 		&__content {
-			width: 80%;
 			max-width: $containerMaxWidth;
 			&__title {
 				h2 {

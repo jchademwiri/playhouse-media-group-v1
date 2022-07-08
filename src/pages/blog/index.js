@@ -8,7 +8,6 @@ import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 
 const Blog = ({ posts }) => {
-	console.log(posts);
 	const SEO = {
 		title: `Blog | Playhouse Media Group`,
 
@@ -33,7 +32,7 @@ const Blog = ({ posts }) => {
 					<h2>Latest posts</h2>
 				</div>
 				<div className={styles.posts}>
-					{posts ? (
+					{posts.length > 0 ? (
 						posts.map((post) => (
 							<div key={post.id} className={styles.post}>
 								{/* <div> */}
@@ -70,7 +69,6 @@ const Blog = ({ posts }) => {
 									</div>
 									<div className={styles.authorDetails}>
 										<small>{post.author.name}</small>
-
 										<small>
 											Published:{' '}
 											{moment(post.publishedAt).format('DD MMMM YYYY')}
@@ -82,7 +80,6 @@ const Blog = ({ posts }) => {
 					) : (
 						<>
 							<Loading />
-							{/* <span>No Categories found</span> */}
 						</>
 					)}
 				</div>
