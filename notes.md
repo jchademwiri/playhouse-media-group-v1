@@ -20,6 +20,34 @@
     *** new sites
     https://summertime.co.za/
 
+<!-- next Config  -->
+
+    const withMDX = require('@next/mdx')({
+    extension: /\.mdx?$/,
+    options: {
+    	remarkPlugins: [],
+    	rehypePlugins: [],
+    	// If you use `MDXProvider`, uncomment the following line.
+    	providerImportSource: '@mdx-js/react',
+    },
+
+});
+module.exports = withMDX({
+// Append the default value with md extensions
+pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+});
+
+<!-- Next Config  -->
+
+<!-- packet json  -->
+
+yarn add @next/mdx @mdx-js/loader
+
+    	"@mdx-js/loader": "^2.1.1",
+    	"@mdx-js/react": "^2.1.1",
+
+ <!-- end of json  -->
+
 <!-- Booking Link https://calendly.com/jchademwiri/30min -->
 
 ## Importent Notes
