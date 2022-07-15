@@ -19,74 +19,83 @@ const about = ({ details }) => {
 		},
 	};
 
-	// fetch data using swr hook
-	// const { data, error } = useSWR(`${server}/api/projects`, {
-	// 	initialData: details,
-	// 	revalidateOnFocus: false,
-	// 	revalidateOnReconnect: false
-	// });
-
 	return (
 		<>
 			<NextSeo {...SEO} />
+
 			<header className={styles.header}>
-				<section className={styles.content}>
+				<section className='grid w-11/12 max-w-[1200px] content-center h-full mx-auto justify-content'>
 					{details &&
 						details.map((detail) => (
 							<div key={detail.id}>
-								<h1>{detail.name}</h1>
-								{/* <small> {detail.profession} </small> */}
-								<p>{detail.description}</p>
+								<h1 className='text-4xl font-bold sm:text-6xl'>
+									{detail.name}
+								</h1>
+								<p className='my-4 text-2xl'>{detail.profession}</p>
 							</div>
 						))}
 				</section>
 			</header>
+			<section className='grid w-11/12 max-w-[1200px] gap-4 my-4 grid-cols-3 content-center h-full mx-auto justify-content'>
+				<div>
+					<Image
+						className='rounded'
+						src={'/images/bg.jpg'}
+						alt='Jacob Chademwiri'
+						width={1920}
+						height={1080}
+						objectFit='cover'
+					/>
+				</div>
+				<div className='col-span-2 '>
+					<h3 className='my-4 text-4xl font-semibold'>
+						Building Awesome Websites
+					</h3>
+					<p>
+						I am a Front-End Developer and an online marketing professional with
+						3 years of experience in the field of web development and digital
+						marketing. I specialize in building websites and digital marketing
+						campaigns to increase sales and conversions for your business. I
+						have a strong passion for creating clean and elegant designs. I am a
+						self-motivated individual who is always looking for new challenges
+						and opportunities to grow as a developer.
+					</p>
+				</div>
+			</section>
 			<section className={styles.container}>
 				{details &&
-					details.map((detail) => (
-						<div key={detail.id} className={styles.about}>
-							{/* <h1>{detail.name}</h1>
-							<small> {detail.profession} </small>
-							<p>{detail.description}</p> */}
-							<div className={styles.about__mission}>
+					details.map((detail, index) => (
+						<div
+							key={index}
+							className='grid w-11/12 mx-auto my-4 max-w-[1200px] '>
+							<div className='grid gap-4 py-4 sm:grid-cols-2 md:grid-cols-3 '>
 								<div>
-									<h3>Mission Statement</h3>
+									<h3 className='my-2 text-2xl font-semibold'>
+										Mission Statement
+									</h3>
 									<p>{detail.mission}</p>
 								</div>
 								<div>
-									<h3>Our Core Values</h3>
+									<h3 className='my-2 text-2xl font-semibold'>
+										Our Core Values
+									</h3>
 									<p>{detail.values}</p>
 								</div>
 								<div>
-									<h3>Our Goals</h3>
+									<h3 className='my-2 text-2xl font-semibold'>Our Goals</h3>
 									<p>{detail.goals}</p>
 								</div>
 							</div>
 
-							{/* <div className={styles.about__skills__details}>
-								<h3>We have Professionals To Help You Grow Your Business</h3>
-								<div className={styles.about__skills__details__skills}>
-									{detail.skills
-										.toString()
-										.split(',')
-										.map((skill) => (
-											<p
-												key={skill}
-												className={styles.about__skills__details__skill}>
-												{skill}
-											</p>
-										))}
-								</div>
-							</div> */}
 							<div className={styles.contact}>
 								<h3>Contact Us Anytime</h3>
 								<div className={styles.about__social}>
 									<h4>Flollow us on social networks</h4>
 									<div className={styles.about__social__links}>
-										{detail.links.map((link) => (
+										{detail.links.map((link, index) => (
 											<a
 												className={styles.about__social__links__link}
-												key={link.id}
+												key={index}
 												href={link.url}
 												target='_blank'
 												rel='noopener noreferrer'>
@@ -136,10 +145,8 @@ const about = ({ details }) => {
 export default about;
 
 export async function getStaticProps() {
-	// export async function getServerSideProps() {
 	const response = await fetch(`${server}/api/about`);
 	const data = await response.json();
-	// console.log(data);
 
 	return {
 		props: {

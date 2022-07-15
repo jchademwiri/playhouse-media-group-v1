@@ -37,7 +37,7 @@ module.exports = withMDX({
 pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 });
 
-<!-- Next Config  -->
+<!-- End Next Config  -->
 
 <!-- packet json  -->
 
