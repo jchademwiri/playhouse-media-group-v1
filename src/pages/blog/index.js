@@ -23,18 +23,18 @@ const Blog = ({ posts }) => {
 			<NextSeo {...SEO} />
 			<header className={styles.banner}>
 				<div className={styles.banner__content}>
-					<h1>Blog Page</h1>
-					<p> A custom solution for your business </p>
+					<h1 className='text-4xl font-bold mx-9'>Blog Page</h1>
+					<p className='font-semibold'> A custom solution for your business </p>
 				</div>
 			</header>
 			<section className={styles.container}>
 				<div>
-					<h2>Latest posts</h2>
+					<h2 className='my-4 text-2xl font-semibold'>Latest posts</h2>
 				</div>
 				<div className={styles.posts}>
 					{posts.length > 0 ? (
 						posts.map((post) => (
-							<div key={post.id} className={styles.post}>
+							<div key={post._id} className={styles.post}>
 								{/* <div> */}
 								<Link href={`/${post.slug.current}`}>
 									<a>
@@ -48,16 +48,21 @@ const Blog = ({ posts }) => {
 											blurDataURL={urlFor(post.mainImage).url()}
 											objectFit='cover'
 										/>
-										<h3 className={styles.title}>{post.title}</h3>
+										<h3 className='text-xl font-semibold hover:text-secondary'>
+											{post.title}
+										</h3>
+										<small className='text-secondary'>
+											{moment(post.publishedAt).format('DD MMMM YYYY')}
+										</small>
 									</a>
 								</Link>
 								{/* </div> */}
 								<p>{post.exempt.slice(0, 150)}</p>
 
 								<div className={styles.author}>
-									<div className={styles.authorImage}>
+									<div className='grid place-items-center bg-gradient-to-r p-[2px] rounded-full from-primary to-secondary'>
 										<Image
-											className={styles.image}
+											className='rounded-full'
 											src={urlFor(post.author.image).url()}
 											width={40}
 											height={40}
@@ -69,10 +74,6 @@ const Blog = ({ posts }) => {
 									</div>
 									<div className={styles.authorDetails}>
 										<small>{post.author.name}</small>
-										<small>
-											Published:{' '}
-											{moment(post.publishedAt).format('DD MMMM YYYY')}
-										</small>
 									</div>
 								</div>
 							</div>

@@ -1,6 +1,6 @@
 import { AiOutlineMail } from 'react-icons/ai';
-import { FaFacebookF, FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillTelephoneFill, BsGithub } from 'react-icons/bs';
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { BsFillTelephoneFill } from 'react-icons/bs';
 import { VscGithubAlt } from 'react-icons/vsc';
 import { ImWhatsapp } from 'react-icons/im';
 export const links = [
@@ -16,10 +16,10 @@ export const links = [
 		name: 'Services',
 		link: '/services',
 	},
-	{
-		name: 'Blog',
-		link: '/blog',
-	},
+	// {
+	// 	name: 'Blog',
+	// 	link: '/blog',
+	// },
 	{
 		name: 'About',
 		link: '/about',

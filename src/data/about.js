@@ -2,7 +2,7 @@ export const about = [
 	{
 		id: '1',
 		image: '/images/bg.jpg',
-		name: 'About Playhouse Media Group',
+		name: 'Digital Story Tellers',
 		profession: 'Professional Digital Specialists',
 		description:
 			'I am a Front-End Developer and an online marketing professional with 3 years of experience in the field of web development and digital marketing. I specialize in building websites and digital marketing campaigns to increase sales and conversions for your business. I have a strong passion for creating clean and elegant designs. I am a self-motivated individual who is always looking for new challenges and opportunities to grow as a developer. ',

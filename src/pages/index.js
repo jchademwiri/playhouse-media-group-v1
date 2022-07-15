@@ -26,7 +26,7 @@ const index = ({ projects }) => {
 			<NextSeo {...SEO} />
 			<main className={styles.container}>
 				<Hero />
-				{/* <Button type='button'>SIGN UP</Button> */}
+
 				<Featured />
 				{projects.length > 0 && <RecentProjects projects={projects} />}
 				<OurServices />

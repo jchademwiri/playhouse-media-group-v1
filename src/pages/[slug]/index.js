@@ -52,8 +52,8 @@ const BlogPost = ({ post }) => {
 				<Image
 					className=''
 					src={urlFor(post.mainImage).url()}
-					width={1920}
-					height={700}
+					width={960}
+					height={540}
 					alt={post.title}
 					placeholder='blur'
 					blurDataURL={urlFor(post.mainImage).url()}
