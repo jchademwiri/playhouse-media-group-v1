@@ -12,6 +12,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 const BlogPost = ({ post }) => {
 	// console.log(`post Image: $${urlFor(post.mainImage).url()}`);
 	const SEO = {
+		url: `${server}/blog/${post.slug}`,
 		title: `${post.title} | Playhouse Media Group`,
 		description: `${post.exempt}`,
 		canonical: `${server}/${post.slug}`,
@@ -19,7 +20,10 @@ const BlogPost = ({ post }) => {
 			url: `${server}/${post.slug}`,
 			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt}`,
-			images: [`${urlFor(post.mainImage).url()}`],
+			images: [
+				`${urlFor(post.mainImage).url()}`,
+				`${server}/images/pmg-social.jpg`,
+			],
 		},
 	};
 	const serializers = {
