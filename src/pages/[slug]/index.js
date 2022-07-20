@@ -26,9 +26,6 @@ const BlogPost = ({ post }) => {
 					alt: 'Playhouse Media Group',
 					type: 'image/jpeg',
 				},
-				{
-					url: `${urlFor(post.mainImage).url()}`,
-				},
 			],
 		},
 	};
