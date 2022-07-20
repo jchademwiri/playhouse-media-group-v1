@@ -1,7 +1,7 @@
 import Hero from '../components/Hero';
 import OurServices from '../components/OurServices';
 import styles from '../styles/home.module.scss';
-import { NextSeo } from 'next-seo';
+
 import { server } from '../config';
 import WhatWeDo from '../components/WhatWeDo';
 import Featured from '../components/Featured';
@@ -35,7 +35,7 @@ const index = ({ projects }) => {
 				<meta property='og:image' content={previewImage} key='ogimage' />
 				<meta property='og:site_name' content={title} key='ogsitename' />
 			</Head>
-			<NextSeo {...SEO} />
+
 			<main className={styles.container}>
 				<Hero />
 
