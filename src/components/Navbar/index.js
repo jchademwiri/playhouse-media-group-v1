@@ -36,11 +36,11 @@ const Navbar = () => {
 						: 'fixed top-0 z-[100] h-20 w-full bg-transparent'
 				}>
 				<div className='mx-auto flex h-full w-11/12 items-center justify-between px-2 lg:max-w-[75rem] '>
-					<h1 className='text-xl lg:text-2xl'>
+					<div className='text-xl lg:text-2xl'>
 						<Link href='/'>
 							<a className='font-bold uppercase'>Playhouse Media Group</a>
 						</Link>
-					</h1>
+					</div>
 					<div>
 						<ul className='hidden md:flex'>
 							{links.map((link, index) => (
@@ -84,13 +84,13 @@ const Navbar = () => {
 						}>
 						<div>
 							<div className='flex items-center justify-between w-full'>
-								<h1 className='text-base lg:text-2xl'>
+								<div className='text-base lg:text-2xl'>
 									<Link href='/'>
 										<a className='font-semibold uppercase'>
 											Playhouse Media Group
 										</a>
 									</Link>
-								</h1>
+								</div>
 								<div
 									onClick={handleNav}
 									className='p-3 m-3 rounded-full shadow-md cursor-pointer bg-primary/50 '>
