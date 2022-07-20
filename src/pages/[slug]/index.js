@@ -10,23 +10,16 @@ import ScrollIndicator from '../../components/ScrollIndicator';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
 const BlogPost = ({ post }) => {
+	// console.log(`post Image: $${urlFor(post.mainImage).url()}`);
 	const SEO = {
-		title: `${post.title ? post.title : post.slug} | Playhouse Media Group`,
+		title: `${post.title} | Playhouse Media Group`,
 		description: `${post.exempt}`,
 		canonical: `${server}/${post.slug}`,
 		openGraph: {
 			url: `${server}/${post.slug}`,
 			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt}`,
-			images: [
-				{
-					url: `${urlFor(post.mainImage).url()}`,
-					width: 800,
-					height: 600,
-					alt: 'Playhouse Media Group',
-					type: 'image/jpeg',
-				},
-			],
+			images: [`${urlFor(post.mainImage).url()}`],
 		},
 	};
 	const serializers = {
