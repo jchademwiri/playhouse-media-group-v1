@@ -11,18 +11,21 @@ import { motion } from 'framer-motion';
 
 import RecentProjects from '../components/RecentProjects';
 import { SanityClient } from '../../sanity';
+import Head from 'next/head';
 
 const index = ({ projects }) => {
-	const SEO = {
-		title: 'Web Developer Specialists | Playhouse Media Group',
-		canonical: `${server}/`,
-		openGraph: {
-			url: `${server}/`,
-			title: 'Web Developer Specialists | Playhouse Media Group',
-		},
-	};
+	const description =
+		'We takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, & Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.';
+	const title = 'Playhouse Media Group| Web Developer';
+
 	return (
 		<>
+			<Head>
+				<og:title>{title}</og:title>
+				<og:description>{description}</og:description>
+				<og:url>`${server}`</og:url>
+				<og:image>`${server}/images/pmg-social.jpg`</og:image>
+			</Head>
 			<NextSeo {...SEO} />
 			<main className={styles.container}>
 				<Hero />
