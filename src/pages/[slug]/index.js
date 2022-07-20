@@ -12,12 +12,12 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 const BlogPost = ({ post }) => {
 	// console.log(`${urlFor(post.mainImage).url()}`);
 	const SEO = {
-		url: `${server}/${post.slug.current}`,
+		url: `${server}/${post.slug.current}/`,
 		title: `${post.title} | Playhouse Media Group`,
 		description: `${post.exempt}`,
-		canonical: `${server}/${post.slug.current}`,
+		canonical: `${server}/${post.slug.current}/`,
 		openGraph: {
-			url: `${server}/${post.slug.current}`,
+			url: `${server}/${post.slug.current}/`,
 			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt}`,
 			type: 'article',
