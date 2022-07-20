@@ -4,9 +4,9 @@ export default {
 	title: `Playhouse Media Group | Web Developer`,
 	description:
 		'We takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, & Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.',
-	canonical: `${server}/`,
+	canonical: `${server}`,
 	openGraph: {
-		url: `${server}/`,
+		url: `${server}`,
 		title: `Playhouse Media Group | Web Developer`,
 		description:
 			'We takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, & Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.',
