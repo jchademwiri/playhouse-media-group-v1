@@ -20,24 +20,24 @@ const BlogPost = ({ post }) => {
 			url: `${server}/${post.slug}`,
 			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt}`,
-			// images: [
-			// 	`${urlFor(post.mainImage).url()}`,
-			// 	`${server}/images/pmg-social.jpg`,
-			// ],
 			images: [
-				{
-					url: `${urlFor(post.mainImage).url()}`,
-					width: 800,
-					height: 600,
-					alt: 'Og Image Alt',
-				},
-				{
-					url: `${server}/images/pmg-social.jpg`,
-					width: 800,
-					height: 600,
-					alt: 'Og Image Alt 2',
-				},
+				`${urlFor(post.mainImage).url()}`,
+				`${server}/images/pmg-social.jpg`,
 			],
+			// images: [
+			// 	{
+			// 		url: `${urlFor(post.mainImage).url()}`,
+			// 		width: 800,
+			// 		height: 600,
+			// 		alt: 'Og Image Alt',
+			// 	},
+			// 	{
+			// 		url: `${server}/images/pmg-social.jpg`,
+			// 		width: 800,
+			// 		height: 600,
+			// 		alt: 'Og Image Alt 2',
+			// 	},
+			// ],
 		},
 	};
 	const serializers = {
