@@ -6,18 +6,38 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 import ScrollIndicator from '../../components/ScrollIndicator';
-import BlockContent from '@sanity/block-content-to-react';
+// import BlockContent from '@sanity/block-content-to-react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
 const BlogPost = ({ post }) => {
 	const SEO = {
 		title: `${post.title ? post.title : post.slug} | Playhouse Media Group`,
-		description: `${post.exempt ? post.excerpt : post.excerpt}`,
+		description: `${
+			post.exempt
+				? post.excerpt
+				: 'Playhouse Media Group takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, and Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.'
+		}`,
 		canonical: `${server}/${post.slug}`,
 		openGraph: {
 			url: `${server}/${post.slug}`,
 			title: `${post.title} | Playhouse Media Group`,
-			description: `${post.exempt ? post.excerpt : post.excerpt}`,
+			description: `${
+				post.exempt
+					? post.excerpt
+					: 'Playhouse Media Group takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, and Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.'
+			}`,
+			images: [
+				{
+					url: `${server}/${post.mainImage} ? ${server}/${post.mainImage} : ${server}/images/pmg-social.jpg`,
+					width: 800,
+					height: 600,
+					alt: 'Playhouse Media Group',
+					type: 'image/jpeg',
+				},
+				{
+					url: `${server}/${post.mainImage} ? ${server}/${post.mainImage} : ${server}/images/pmg-social.jpg`,
+				},
+			],
 		},
 	};
 	const serializers = {
