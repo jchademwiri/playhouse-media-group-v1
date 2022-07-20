@@ -12,34 +12,22 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 const BlogPost = ({ post }) => {
 	const SEO = {
 		title: `${post.title ? post.title : post.slug} | Playhouse Media Group`,
-		description: `${
-			post.exempt
-				? post.excerpt
-				: 'Playhouse Media Group takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, and Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.'
-		}`,
+		description: `${post.exempt}`,
 		canonical: `${server}/${post.slug}`,
 		openGraph: {
 			url: `${server}/${post.slug}`,
 			title: `${post.title} | Playhouse Media Group`,
-			description: `${
-				post.exempt
-					? post.excerpt
-					: 'Playhouse Media Group takes pride in having worked with and advised many Business Start-Ups, Entrepreneurs, and Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.'
-			}`,
+			description: `${post.exempt}`,
 			images: [
 				{
-					url: `${urlFor(post.mainImage).url()} ? ${urlFor(
-						post.mainImage
-					).url()} : ${server}/images/pmg-social.jpg`,
+					url: `${urlFor(post.mainImage).url()}`,
 					width: 800,
 					height: 600,
 					alt: 'Playhouse Media Group',
 					type: 'image/jpeg',
 				},
 				{
-					url: `${urlFor(post.mainImage).url()} ? ${urlFor(
-						post.mainImage
-					).url()} : ${server}/images/pmg-social.jpg`,
+					url: `${urlFor(post.mainImage).url()}`,
 				},
 			],
 		},
