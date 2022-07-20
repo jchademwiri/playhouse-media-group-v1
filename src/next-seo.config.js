@@ -22,8 +22,8 @@ export default {
 		site_name: `Playhouse Media Group| Web Developer`,
 	},
 	twitter: {
-		handle: '@jchademwiri',
-		site: '@jchademwiri',
+		handle: '@JChademwiri',
+		site: '@JChademwiri',
 		cardType: 'summary_large_image',
 	},
 };
