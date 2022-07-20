@@ -21,10 +21,18 @@ const index = ({ projects }) => {
 	return (
 		<>
 			<Head>
-				<og:title>{title}</og:title>
-				<og:description>{description}</og:description>
-				<og:url>`${server}`</og:url>
-				<og:image>`${server}/images/pmg-social.jpg`</og:image>
+				<og:title>Playhouse Media Group| Web Developer</og:title>
+				<og:description>
+					We takes pride in having worked with and advised many Business
+					Start-Ups, Entrepreneurs, & Established Businesses Globally on their
+					Strategic Marketing Initiatives. We welcome the opportunity to offer
+					your Business the chance to build a successful Marketing Strategy to
+					better dominate your market segment quickly and effectively.
+				</og:description>
+				<og:url>https://www.playhousemedia.net/</og:url>
+				<og:image>
+					https://www.playhousemedia.net/images/pmg-social.jpg
+				</og:image>
 			</Head>
 			<NextSeo {...SEO} />
 			<main className={styles.container}>
