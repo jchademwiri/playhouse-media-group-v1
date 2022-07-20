@@ -8,29 +8,34 @@ import { server } from '../../config';
 import ScrollIndicator from '../../components/ScrollIndicator';
 // import BlockContent from '@sanity/block-content-to-react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import Head from 'next/head';
 
 const BlogPost = ({ post }) => {
-	// console.log(`post Image: $${urlFor(post.mainImage).url()}`);
-	const SEO = {
-		url: `${server}/blog/${post.slug}`,
-		title: `${post.title} | Playhouse Media Group`,
-		description: `${post.exempt}`,
-		canonical: `${server}/${post.slug}`,
-		openGraph: {
-			url: `${server}/${post.slug}`,
-			title: `${post.title} | Playhouse Media Group`,
-			description: `${post.exempt}`,
-			images: [
-				`${urlFor(post.mainImage).url()}`,
-				`${server}/images/pmg-social.jpg`,
-			],
-		},
-		twitter: {
-			handle: '@jchademwiri',
-			site: '@jchademwiri',
-			cardType: 'summary_large_image',
-		},
-	};
+	// console.log(`post Image: ${urlFor(post.mainImage).url()}`);
+	const title = `${post.title} | Playhouse Media Group`;
+	const description = `${post.exempt}`;
+	const previewImage = `${urlFor(post.mainImage).url()}`;
+	const twitterHandle = '@JChademwiri';
+	// const SEO = {
+	// 	url: `${server}/${post.slug}`,
+	// 	title: `${post.title} | Playhouse Media Group`,
+	// 	description: `${post.exempt}`,
+	// 	canonical: `${server}/${post.slug}`,
+	// 	openGraph: {
+	// 		url: `${server}/${post.slug}`,
+	// 		title: `${post.title} | Playhouse Media Group`,
+	// 		description: `${post.exempt}`,
+	// 		images: [
+	// 			`${urlFor(post.mainImage).url()}`,
+	// 			`${server}/images/pmg-social.jpg`,
+	// 		],
+	// 	},
+	// 	twitter: {
+	// 		handle: '@jchademwiri',
+	// 		site: '@jchademwiri',
+	// 		cardType: 'summary_large_image',
+	// 	},
+	// };
 	const serializers = {
 		types: {
 			code: ({ node = {} }) => {
@@ -49,7 +54,20 @@ const BlogPost = ({ post }) => {
 
 	return (
 		<>
-			<NextSeo {...SEO} />
+			<Head>
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+				<meta charSet='utf-8' />
+				<meta property='og:title' content={title} key='ogtitle' />
+				<meta property='og:description' content={description} key='ogdesc' />
+				{/* Twitter */}
+				<meta name='twitter:card' content='summary' key='twcard' />
+				<meta name='twitter:creator' content={twitterHandle} key='twhandle' />
+				{/* Open Graph */}
+				<meta property='og:url' content={server} key='ogurl' />
+				<meta property='og:image' content={previewImage} key='ogimage' />
+				<meta property='og:site_name' content={title} key='ogsitename' />
+			</Head>
+			{/* <NextSeo {...SEO} /> */}
 			<ScrollIndicator />
 
 			<div className='relative w-full h-screen '>
