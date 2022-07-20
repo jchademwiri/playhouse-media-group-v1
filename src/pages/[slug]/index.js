@@ -24,20 +24,11 @@ const BlogPost = ({ post }) => {
 				`${urlFor(post.mainImage).url()}`,
 				`${server}/images/pmg-social.jpg`,
 			],
-			// images: [
-			// 	{
-			// 		url: `${urlFor(post.mainImage).url()}`,
-			// 		width: 800,
-			// 		height: 600,
-			// 		alt: 'Og Image Alt',
-			// 	},
-			// 	{
-			// 		url: `${server}/images/pmg-social.jpg`,
-			// 		width: 800,
-			// 		height: 600,
-			// 		alt: 'Og Image Alt 2',
-			// 	},
-			// ],
+		},
+		twitter: {
+			handle: '@jchademwiri',
+			site: '@jchademwiri',
+			cardType: 'summary_large_image',
 		},
 	};
 	const serializers = {
