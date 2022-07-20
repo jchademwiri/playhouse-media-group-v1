@@ -17,7 +17,7 @@ const index = ({ projects }) => {
 	const title = 'Playhouse Media Group | Web Developer';
 	const description =
 		'We takes pride in having worked with and advised many Business	Start-Ups, Entrepreneurs, & Established Businesses Globally on their Strategic Marketing Initiatives. We welcome the opportunity to offer your Business the chance to build a successful Marketing Strategy to better dominate your market segment quickly and effectively.';
-	const previewImage = `https://www.playhousemedia.net/images/pmg-social.jpg`;
+	const previewImage = `${server}/images/pmg-social.jpg`;
 	const twitterHandle = '@JChademwiri';
 
 	return (
