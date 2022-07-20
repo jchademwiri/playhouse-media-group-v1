@@ -28,14 +28,18 @@ const BlogPost = ({ post }) => {
 			}`,
 			images: [
 				{
-					url: `${server}/${post.mainImage} ? ${server}/${post.mainImage} : ${server}/images/pmg-social.jpg`,
+					url: `${urlFor(post.mainImage).url()} ? ${urlFor(
+						post.mainImage
+					).url()} : ${server}/images/pmg-social.jpg`,
 					width: 800,
 					height: 600,
 					alt: 'Playhouse Media Group',
 					type: 'image/jpeg',
 				},
 				{
-					url: `${server}/${post.mainImage} ? ${server}/${post.mainImage} : ${server}/images/pmg-social.jpg`,
+					url: `${urlFor(post.mainImage).url()} ? ${urlFor(
+						post.mainImage
+					).url()} : ${server}/images/pmg-social.jpg`,
 				},
 			],
 		},
