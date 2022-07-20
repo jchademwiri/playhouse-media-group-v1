@@ -20,10 +20,7 @@ const BlogPost = ({ post }) => {
 			url: `${server}/${post.slug.current}`,
 			title: `${post.title} | Playhouse Media Group`,
 			description: `${post.exempt}`,
-			// images: [
-			// 	`${urlFor(post.mainImage).url()}`,
-			// 	`${server}/images/pmg-social.jpg`,
-			// ],
+			type: 'article',
 			images: [
 				{
 					url: `${urlFor(post.mainImage).url()}`,
