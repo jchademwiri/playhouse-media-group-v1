@@ -13,6 +13,7 @@
 		"@sanity/block-content-to-react": "^3.0.0",
 		"@sanity/image-url": "^1.0.1",
 		"@sendgrid/mail": "^7.6.2",
+		"@tailwindcss/forms": "^0.5.2",
 		"cloudinary-build-url": "^0.2.1",
 		"framer-motion": "^6.3.0",
 		"moment": "^2.29.2",

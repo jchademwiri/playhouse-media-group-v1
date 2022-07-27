@@ -15,7 +15,6 @@ import { SanityClient } from '../../sanity';
 const index = ({ projects }) => {
 	return (
 		<>
-			{/* <NextSeo {...SEO} /> */}
 			<main className={styles.container}>
 				<Hero />
 
@@ -25,9 +24,9 @@ const index = ({ projects }) => {
 
 				<WhatWeDo />
 				{/* <Clients /> */}
-				<motion.div initial={{ x: -250 }} animate={{ x: 0 }}>
+				<div initial={{ x: -250 }} animate={{ x: 0 }}>
 					<StartProject />
-				</motion.div>
+				</div>
 			</main>
 		</>
 	);

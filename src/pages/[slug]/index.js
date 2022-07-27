@@ -6,8 +6,9 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { server } from '../../config';
 import ScrollIndicator from '../../components/ScrollIndicator';
-// import BlockContent from '@sanity/block-content-to-react';
+import BlockContent from '@sanity/block-content-to-react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
 
 const BlogPost = ({ post }) => {
 	// console.log(`${urlFor(post.mainImage).url()}`);
@@ -46,6 +47,22 @@ const BlogPost = ({ post }) => {
 				);
 			},
 		},
+		marks: {
+			annotations: [
+				{
+					title: 'Youtube Embed',
+					name: 'youtube',
+					type: 'object',
+					fields: [
+						{
+							title: 'URL',
+							name: 'href',
+							type: 'url',
+						},
+					],
+				},
+			],
+		},
 	};
 
 	return (
@@ -53,25 +70,118 @@ const BlogPost = ({ post }) => {
 			<NextSeo {...SEO} />
 			<ScrollIndicator />
 
-			<div className='relative w-full h-screen '>
+			{/* <div className=" bg-[url('/images/bg.jpg')] bg-no-repeat  min-h-[400px] shadow-[inset_0_0_1000px_rgb(27,25,52,0.8)]"> */}
+			<div className='  min-h-[400px] shadow-[inset_0_0_1000px_rgb(27,25,52,0.8)]'>
+				<div className='h-[90px]'></div>
+				{/* <div className="bg-[url('/images/bg.jpg')]  min-h-[400px] shadow-[inset_0_0_1000px_rgb(27,25,52,0.8)]"> */}
+				{/* <div className=' min-h-[400px] shadow-[inset_0_0_1000px_rgb(27,25,52,0.8)]'> */}
+				<div className=' min-h-[400px]'>
+					<div className='sm:w-11/12 lg:w-7/12 mx-auto rounded-t-lg  bg-[#1b1934]/80'>
+						<Image
+							className='rounded-t-lg'
+							src={urlFor(post.mainImage).url()}
+							width={1920}
+							height={1080}
+							alt={post.title}
+							placeholder='blur'
+							blurDataURL={urlFor(post.mainImage).url()}
+							objectFit='cover'
+						/>
+						<div className='p-4'>
+							<div className={styles.meta}>
+								<div className={styles.author}>
+									<div className='grid place-items-center bg-gradient-to-r p-[2px] rounded-full from-primary to-secondary'>
+										<Image
+											className='rounded-full'
+											src={urlFor(post.author.image).url()}
+											width={40}
+											height={40}
+											alt={post.author.name}
+											placeholder='blur'
+											blurDataURL={urlFor(post.author.image).url()}
+											objectFit='cover'
+										/>
+									</div>
+									<div className={styles.author_details}>
+										<small className={styles.author_name}>
+											{post.author.name}
+										</small>
+										<small>
+											Published:{' '}
+											{moment(post.publishedAt).format('DD MMMM YYYY')}
+										</small>
+									</div>
+								</div>
+
+								<div className={styles.categories}>
+									<div>
+										{post.categories &&
+											post.categories.map((category) => (
+												<span key={category.slug}>{category.title}</span>
+											))}
+									</div>
+								</div>
+							</div>
+
+							<article>
+								<h1 className='text-2xl font-bold'>{post.title}</h1>
+								<BlockContent blocks={post.body} serializers={serializers} />
+							</article>
+							<div>
+								<hr className='my-4' />
+							</div>
+							<div className={styles.postLinks}>
+								<div className='my-4'>
+									<Link href={`/#`}>
+										<a className={styles.postLink}>
+											<div className='flex items-center '>
+												<span className='pr-2'>
+													<BiArrowToLeft />
+												</span>
+												<span>Previous Post</span>
+											</div>
+										</a>
+									</Link>
+								</div>
+
+								<div>
+									<Link href={`/${post.slug.current}`}>
+										<a className={styles.postLink}>
+											<div className='flex items-center '>
+												<span>Next Post</span>
+												<span className='pl-2'>
+													<BiArrowToRight />
+												</span>
+											</div>
+										</a>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* <div className='relative w-full h-[600px] overflow-hidden'>
 				<div className='absolute top-0 left-0 z-10 w-full h-full bg-body opacity-60'></div>
 				<div className='grid'>
-					<div className='absolute z-30 flex flex-col items-center justify-center w-full h-full text-center '>
+					<div className='absolute z-30  grid w-[500px] h text-center '>
 						<h1 className='text-5xl font-bold'>{post.title}</h1>
 						<h2 className='text-xl '>{post.exempt}</h2>
 					</div>
 				</div>
+
 				<Image
-					className=''
+					className='object-cover '
 					src={urlFor(post.mainImage).url()}
-					width={960}
-					height={540}
+					width={1920}
+					height={1080}
 					alt={post.title}
 					placeholder='blur'
 					blurDataURL={urlFor(post.mainImage).url()}
 					objectFit='cover'
 				/>
-			</div>
+			</div> */}
 
 			{/* <section className={styles.container}>
 				<h1 className={styles.title}>{post.title}</h1>
@@ -162,9 +272,7 @@ export const getStaticProps = async ({ params }) => {
 	const query = `*[_type == "post" && slug.current == $slug][0]{
 			_id,
 			slug,
-			_createdAt,
-			_updatedAt,
-
+			publishedAt,
 			title,
 			author->{
 			name,

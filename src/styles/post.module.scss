@@ -70,12 +70,40 @@
 			}
 		}
 	}
-	.postLinks {
+}
+.meta {
+	display: flex;
+	justify-content: space-between;
+
+	.author {
 		display: flex;
-		justify-content: space-between;
-		.postLink {
-			color: $accent;
+		padding: 0 10px 10px 0;
+		align-items: center;
+
+		&_image {
+			border-radius: 50%;
 		}
+
+		&_details {
+			display: flex;
+			flex-direction: column;
+			margin-left: 10px;
+		}
+	}
+	.categories {
+		display: flex;
+		padding: 5px;
+		span {
+			color: $accent;
+			padding-right: 10px;
+		}
+	}
+}
+.postLinks {
+	display: flex;
+	justify-content: space-between;
+	.postLink {
+		color: $accent;
 	}
 }
 
