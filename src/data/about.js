@@ -1,3 +1,5 @@
+import { VscGithubAlt } from 'react-icons/vsc';
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 export const about = [
 	{
 		id: '1',
@@ -26,37 +28,37 @@ export const about = [
 				id: '1',
 				name: 'Github',
 				url: 'https://github.com/jchademwiri',
-				icon: '/images/email.png',
+				icon: <VscGithubAlt />,
 			},
 			{
 				id: '2',
 				name: 'LinkedIn',
 				url: 'https://www.linkedin.com/in/jchademwiri/',
-				icon: '/images/email.png',
+				icon: <FaLinkedinIn />,
 			},
 			{
 				id: '3',
 				name: 'YouTube',
 				url: 'https://www.youtube.com/PlayhouseMediaGroup',
-				icon: '/images/email.png',
+				icon: <FaLinkedinIn />,
 			},
 			{
 				id: '4',
 				name: 'Facebook',
 				url: 'https://www.facebook.com/jchademwiri',
-				icon: '/images/email.png',
+				icon: <FaFacebookF />,
 			},
 			{
 				id: '5',
 				name: 'Instagram',
 				url: 'https://www.instagram.com/jchademwiri/',
-				icon: '/images/email.png',
+				icon: <FaLinkedinIn />,
 			},
 			{
 				id: '6',
 				name: 'Twitter',
 				url: 'https://twitter.com/jchademwiri',
-				icon: '/images/email.png',
+				icon: <FaLinkedinIn />,
 			},
 		],
 		contacts: [

@@ -8,10 +8,10 @@ export const links = [
 		name: 'Home',
 		link: '/',
 	},
-	{
-		name: 'Projects',
-		link: '/projects',
-	},
+	// {
+	// 	name: 'Projects',
+	// 	link: '/projects',
+	// },
 	{
 		name: 'Services',
 		link: '/services',
@@ -49,7 +49,7 @@ export const icons = [
 	},
 	{
 		name: 'Facebook',
-		link: 'https://www.facebook.com/playhousemedia/',
+		link: 'https://www.facebook.com/playhousemediagroup',
 		icon: <FaFacebookF />,
 	},
 	{

@@ -52,17 +52,17 @@ const about = ({ details }) => {
 						Building Awesome Websites
 					</h3>
 					<p>
-						I am a Front-End Developer and an online marketing professional with
-						3 years of experience in the field of web development and digital
-						marketing. I specialize in building websites and digital marketing
-						campaigns to increase sales and conversions for your business. I
-						have a strong passion for creating clean and elegant designs. I am a
-						self-motivated individual who is always looking for new challenges
-						and opportunities to grow as a developer.
+						We are web Developers and online marketing professionals with more
+						than 5 years of experience in the field of web development and
+						digital marketing. We specialize in building websites that are SEO
+						friendly and digital marketing campaigns to increase sales and
+						conversions for your business. We have a strong passion for creating
+						clean and elegant designs that aims in converting visitors in to
+						clients.
 					</p>
 				</div>
 			</section>
-			<section className={styles.container}>
+			{/* <section className={styles.container}>
 				{details &&
 					details.map((detail, index) => (
 						<div
@@ -93,21 +93,17 @@ const about = ({ details }) => {
 									<h4>Flollow us on social networks</h4>
 									<div className={styles.about__social__links}>
 										{detail.links.map((link, index) => (
-											<a
-												className={styles.about__social__links__link}
-												key={index}
-												href={link.url}
-												target='_blank'
-												rel='noopener noreferrer'>
-												<Image
-													src={`${link.icon}`}
-													alt={link.name}
-													height={50}
-													width={50}
-													objectFit='cover'
-												/>
-												<p>{link.name}</p>
-											</a>
+											<>
+												<a
+													className={styles.about__social__links__link}
+													key={index}
+													href={link.url}
+													target='_blank'
+													rel='noopener noreferrer'>
+													<p>{link.icon}</p>
+													<p className='pb-4'>{link.name}</p>
+												</a>
+											</>
 										))}
 									</div>
 								</div>
@@ -134,7 +130,7 @@ const about = ({ details }) => {
 							</div>
 						</div>
 					))}
-			</section>
+			</section> */}
 			<motion.div initial={{ x: -250 }} animate={{ x: 0 }}>
 				<StartProject />
 			</motion.div>

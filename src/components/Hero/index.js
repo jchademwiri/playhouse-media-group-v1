@@ -14,7 +14,7 @@ const Hero = () => {
 
 					<div className='flex my-10'>
 						{/* <div className={styles.btn}> */}
-						<div className='my-3 mr-2 '>
+						<div className='my-3 mr-2'>
 							<a
 								className='px-5 py-5 rounded md:font-semibold md:px-10 bg-primary'
 								target='_blank'
@@ -24,7 +24,7 @@ const Hero = () => {
 							</a>
 						</div>
 						{/* <div className={styles.btn}> */}
-						<div className='my-3 ml-2 '>
+						<div className='my-3 ml-2'>
 							<Link href='/projects'>
 								<a className='px-5 py-5 rounded md:font-semibold md:px-10 bg-accent'>
 									See our work
