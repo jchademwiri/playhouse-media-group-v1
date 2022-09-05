@@ -19,7 +19,7 @@ const index = ({ projects }) => {
 				<Hero />
 
 				<Featured />
-				{projects.length > 0 && <RecentProjects projects={projects} />}
+				{/* {projects.length > 0 && <RecentProjects projects={projects} />} */}
 				<OurServices />
 
 				<WhatWeDo />
