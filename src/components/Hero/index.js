@@ -54,7 +54,7 @@ const Hero = () => {
 						rel='noopener noreferrer'>
 						<Image
 							className=''
-							src='/images/top-seo-company-main.svg'
+							src='/images/top-seo-company.svg'
 							width='100%'
 							height='100%'
 							alt='Top SEO Company '
