@@ -105,12 +105,12 @@
 			.container__right {
 				display: block;
 				margin: 0.625rem;
-				padding: 0.625rem;
 				border-radius: 0.3125rem;
 				background-color: rgba(14, 13, 29, 0.2);
-
+				padding: 0.625rem;
 				font-size: 1rem;
 				transition: all 1s ease-in-out;
+				height: 100%;
 
 				.quote__text {
 					.quotes {

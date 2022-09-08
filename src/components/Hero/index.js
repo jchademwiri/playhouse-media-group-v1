@@ -1,5 +1,6 @@
 import styles from './Hero.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 const Hero = () => {
 	return (
 		<header className={styles.container}>
@@ -34,7 +35,7 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className={styles.container__right}>
-					<p className={styles.quote__text}>
+					{/* <p className={styles.quote__text}>
 						<span className={styles.quotes}>“</span> Coming together is a
 						beginning, staying together is progress, and working together is
 						success.
@@ -43,7 +44,26 @@ const Hero = () => {
 						<small className={styles.quote__author}>
 							- Edward Everett Hale
 						</small>
-					</p>
+					</p> */}
+					{/* <Image src='/images/top-seo-company.svg' width='100%' hight='100%'> */}
+					{/* <div> */}
+					<a
+						className='grid h-full'
+						href='https://www.designrush.com/agency/search-engine-optimization'
+						target='_blank'
+						rel='noopener noreferrer'>
+						<Image
+							className=''
+							src='/images/top-seo-company-main.svg'
+							width='100%'
+							height='100%'
+							alt='Top SEO Company '
+							placeholder='blur'
+							blurDataURL='/images/top-seo-company.svg'
+							objectFit='cover'
+						/>
+					</a>
+					{/* </div> */}
 				</div>
 			</div>
 		</header>
