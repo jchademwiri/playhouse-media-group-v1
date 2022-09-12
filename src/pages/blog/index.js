@@ -47,6 +47,7 @@ const Blog = ({ posts }) => {
 											placeholder='blur'
 											blurDataURL={urlFor(post.mainImage).url()}
 											objectFit='cover'
+											priority={true}
 										/>
 										<h3 className='text-xl font-semibold hover:text-secondary'>
 											{post.title}
@@ -70,6 +71,7 @@ const Blog = ({ posts }) => {
 											placeholder='blur'
 											blurDataURL={urlFor(post.author.image).url()}
 											objectFit='cover'
+											priority={true}
 										/>
 									</div>
 									<div className={styles.authorDetails}>

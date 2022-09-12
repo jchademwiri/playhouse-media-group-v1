@@ -84,6 +84,7 @@ const BlogPost = ({ post }) => {
 							placeholder='blur'
 							blurDataURL={urlFor(post.mainImage).url()}
 							objectFit='cover'
+							priority={true}
 						/>
 						<div className='p-4'>
 							<div className={styles.meta}>
@@ -98,6 +99,7 @@ const BlogPost = ({ post }) => {
 											placeholder='blur'
 											blurDataURL={urlFor(post.author.image).url()}
 											objectFit='cover'
+											priority={true}
 										/>
 									</div>
 									<div className={styles.author_details}>

@@ -13,6 +13,7 @@ const Footer = () => {
 							alt={consulting.name}
 							width={36}
 							height={36}
+							priority={true}
 						/>
 						<h3>{consulting.name}</h3>
 						<p>{consulting.description}</p>

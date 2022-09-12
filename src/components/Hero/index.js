@@ -45,7 +45,7 @@ const Hero = () => {
 							- Edward Everett Hale
 						</small>
 					</p> */}
-					{/* <Image src='/images/top-seo-company.svg' width='100%' hight='100%'> */}
+					{/* <Image src='/images/top-seo-company.svg' priority={true} width='100%' hight='100%'> */}
 					{/* <div> */}
 					<a
 						className='grid h-full'
@@ -61,6 +61,7 @@ const Hero = () => {
 							placeholder='blur'
 							blurDataURL='/images/top-seo-company.svg'
 							objectFit='cover'
+							priority={true}
 						/>
 					</a>
 					{/* </div> */}

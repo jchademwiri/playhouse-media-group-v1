@@ -24,6 +24,7 @@ const WhatWeDo = () => {
 									alt='Analysis'
 									blurDataURL='/images/analysis.svg'
 									placeholder='blur'
+									priority={true}
 								/>
 							</div>
 							<h4>Analysis</h4>
@@ -37,6 +38,7 @@ const WhatWeDo = () => {
 									alt='Design'
 									blurDataURL='/images/design.svg'
 									placeholder='blur'
+									priority={true}
 								/>
 							</div>
 							<h4>Design</h4>
@@ -50,6 +52,7 @@ const WhatWeDo = () => {
 									alt='Development'
 									blurDataURL='/images/development-01.svg'
 									placeholder='blur'
+									priority={true}
 								/>
 							</div>
 							<h4>Development</h4>
@@ -63,6 +66,7 @@ const WhatWeDo = () => {
 								alt='Testing'
 								blurDataURL='/images/testing.svg'
 								placeholder='blur'
+								priority={true}
 							/>
 							<h4>Testing</h4>
 							{/* </div> */}
@@ -76,6 +80,7 @@ const WhatWeDo = () => {
 									alt='Deployment'
 									blurDataURL='/images/deployment.svg'
 									placeholder='blur'
+									priority={true}
 								/>
 							</div>
 

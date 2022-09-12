@@ -45,6 +45,7 @@ const projects = ({ projects }) => {
 											placeholder='blur'
 											blurDataURL={urlFor(project.mainImage).url()}
 											objectFit='cover'
+											priority={true}
 										/>
 									</div>
 									<h3>{project.title}</h3>
@@ -69,6 +70,7 @@ const projects = ({ projects }) => {
 																	placeholder='blur'
 																	blurDataURL={urlFor(projectType.image).url()}
 																	objectFit='cover'
+																	priority={true}
 																/>
 															</div>
 														</div>

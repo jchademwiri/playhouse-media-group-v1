@@ -45,6 +45,7 @@ const about = ({ details }) => {
 						width={1920}
 						height={1080}
 						objectFit='cover'
+						priority={true}
 					/>
 				</div>
 				<div className='col-span-2 '>

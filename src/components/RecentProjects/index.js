@@ -45,6 +45,7 @@ const RecentProjects = ({ projects }) => {
 												placeholder='blur'
 												blurDataURL={urlFor(project.mainImage).url()}
 												objectFit='cover'
+												priority={true}
 											/>
 										</div>
 									</>

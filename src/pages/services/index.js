@@ -51,6 +51,7 @@ const services = ({ services }) => {
 										width={1440}
 										height={1024}
 										objectFit='cover'
+										priority={true}
 									/>
 									<h3 className='py-2 text-xl'>
 										<Link href={`/services/${service.slug}`}>
