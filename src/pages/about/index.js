@@ -135,6 +135,9 @@ const about = ({ details }) => {
 			<motion.div initial={{ x: -250 }} animate={{ x: 0 }}>
 				<StartProject />
 			</motion.div>
+			<section className='grid w-11/12 max-w-[1200px] gap-4 my-4 content-center h-full mx-auto justify-content'>
+				<h3>Google Reviews</h3>
+			</section>
 		</>
 	);
 };
@@ -151,3 +154,5 @@ export async function getStaticProps() {
 		},
 	};
 }
+
+

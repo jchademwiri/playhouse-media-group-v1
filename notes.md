@@ -20,6 +20,8 @@
     *** new sites
     https://summertime.co.za/
 
+    https://intellicoreitech.com/
+
 <!-- next Config  -->
 
     const withMDX = require('@next/mdx')({

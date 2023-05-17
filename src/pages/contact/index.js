@@ -139,3 +139,19 @@ const contact = () => {
 };
 
 export default contact;
+
+// This gets called on every request
+export async function getServerSideProps() {
+	// Fetch data from external API
+	const res = await fetch(
+		`https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJaYx3036glR4RIKQtssmwCrc&key=AIzaSyDJia8d-EpG9mcO8i5oYfRSlm4wh449iJ8`
+	);
+	const reviews = await res.json();
+	console.log(reviews);
+
+	// Pass data to the page via props
+	return { props: { reviews } };
+}
+
+// `https://mybusiness.googleapis.com/v4/accounts/12230911554298719433/locations/ChIJZb_ij42hlR4RE4hPf99oLL4/reviews`
+// GOOGLE_API_KEY=AIzaSyDJia8d-EpG9mcO8i5oYfRSlm4wh449iJ8
